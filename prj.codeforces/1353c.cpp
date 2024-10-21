@@ -13,3 +13,4 @@ int main(){
         }
         std::cout << su * 8 << std::endl;
     }
+}
