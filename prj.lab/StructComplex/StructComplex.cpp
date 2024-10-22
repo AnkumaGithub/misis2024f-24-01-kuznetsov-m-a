@@ -1,69 +1,48 @@
+#include <StructComplex.hpp>
 #include <iostream>
 #include <sstream>
-struct Complex {
-    // Struct initialization
-    Complex() {};
-    explicit Complex(const double real);
-    Complex(const double real, const double imag);
-    //re & im initialization
-    double re = 0.0;
-    double im = 0.0;
-    //literals initialization
-    static const char LeftPart{'{'};
-    static const char Separator{','};
-    static const char RightPart{'}'};
-    //bool operators initialization
-    bool operator==(const Complex& rhs){return (re == rhs.re) && (im == rhs.im);};
-    bool operator!=(const Complex& rhs){return (re != rhs.re) || (im != rhs.im);};
-    //Prefix operators initialization
-    Complex& operator+=(const Complex& rhs);
-    Complex& operator+=(const double rhs);
-    Complex& operator-=(const Complex& rhs);
-    Complex& operator-=(const double rhs);
-    Complex& operator*=(const Complex& rhs);
-    Complex& operator*=(const double rhs);
-    Complex& operator/=(const Complex& rhs);
-    Complex& operator/=(const double rhs);
-    //streams initialization
-    std::ostream& writeTo(std::ostream& outstream) const;
-    std::istream& readFrom(std::istream& instream);
-};
-//Struct definition
-Complex::Complex(const double real) : Complex(real, 0.0){};
- 
-Complex::Complex(const double real, const double imag): 
- re(real),
- im(imag)
-{
-};
-//Prefix operators definition
-Complex& Complex::operator+=(const Complex& rhs){
+
+// Struct initialization
+//re & im initialization
+double re = 0.0;
+double im = 0.0;
+//literals initialization
+static const char LeftPart{'{'};
+static const char Separator{','};
+static const char RightPart{'}'};
+
+bool Complex::operator==(const Complex& rhs) const noexcept {return (re == rhs.re) && (im == rhs.im);};
+bool Complex::operator!=(const Complex& rhs) const noexcept {return (re != rhs.re) || (im != rhs.im);};
+
+Complex Complex::operator-() const noexcept { return Complex(-re, -im); }
+
+Complex& Complex::operator+=(const Complex& rhs) noexcept {
     re += rhs.re;
     im += rhs.im;
     return *this;
 }
-Complex& Complex::operator+=(const double rhs){
+Complex& Complex::operator+=(const double rhs) noexcept {
     re += rhs;
     return *this;
 }
  
-Complex& Complex::operator-=(const Complex& rhs){
+Complex& Complex::operator-=(const Complex& rhs) noexcept {
     re -= rhs.re;
     im -= rhs.im;
     return *this;
 }
-Complex& Complex::operator-=(const double rhs){
+Complex& Complex::operator-=(const double rhs) noexcept {
     re -= rhs;
     return *this;
 }
  
-Complex& Complex::operator*=(const Complex& rhs){
+Complex& Complex::operator*=(const Complex& rhs) noexcept {
     double zre = re;
     re = re * rhs.re - im * rhs.im;
     im = zre * rhs.im + rhs.re * im;
     return *this;
 }
-Complex& Complex::operator*=(const double rhs){
+Complex& Complex::operator*=(const double rhs) noexcept {
     re *= rhs;
     return *this;
 }
@@ -78,25 +57,35 @@ Complex& Complex::operator/=(const double rhs){
     re /= rhs;
     return *this;
 }
+
 //Postfix operators definition
-Complex operator+(const Complex& lhs, const Complex& rhs){
+Complex operator+(const Complex& lhs, const Complex& rhs) noexcept {
     return Complex(lhs.re + rhs.re, lhs.im + rhs.im);
 }
-Complex operator+(const Complex& lhs, const double rhs){
+Complex operator+(const Complex& lhs, const double rhs) noexcept {
+    return Complex(lhs.re + rhs, lhs.im);
+}
+Complex operator+(const double rhs, const Complex& lhs) noexcept {
     return Complex(lhs.re + rhs, lhs.im);
 }
  
-Complex operator-(const Complex& lhs, const Complex& rhs){
+Complex operator-(const Complex& lhs, const Complex& rhs) noexcept {
     return Complex(lhs.re - rhs.re, lhs.im - rhs.im);
 }
-Complex operator-(const Complex& lhs, const double rhs){
+Complex operator-(const Complex& lhs, const double rhs) noexcept {
+    return Complex(lhs.re - rhs, lhs.im);
+}
+Complex operator-(const double rhs, const Complex& lhs) noexcept {
     return Complex(lhs.re - rhs, lhs.im);
 }
  
-Complex operator*(const Complex& lhs, const Complex& rhs){
+Complex operator*(const Complex& lhs, const Complex& rhs) noexcept {
     return Complex(lhs.re * rhs.re - lhs.im * rhs.im, lhs.re * rhs.im + rhs.re * lhs.im);
 }
-Complex operator*(const Complex& lhs, const double rhs){
+Complex operator*(const Complex& lhs, const double rhs) noexcept {
+    return Complex(lhs.re * rhs, lhs.im * rhs);
+}
+Complex operator*(const double rhs, const Complex& lhs) noexcept {
     return Complex(lhs.re * rhs, lhs.im * rhs);
 }
  
@@ -107,19 +96,17 @@ Complex operator/(const Complex& lhs, const Complex& rhs){
 Complex operator/(const Complex& lhs, const double rhs){
     return Complex(lhs.re / rhs, lhs.im / rhs);
 }
+Complex operator/(const double rhs, const Complex& lhs){
+    return Complex(lhs.re / rhs, lhs.im / rhs);
+}
+
 //Outstream definition
-std::ostream& Complex::writeTo(std::ostream& out) const{
+std::ostream& Complex::writeTo(std::ostream& out) const noexcept{
     out << LeftPart << re << Separator << im << RightPart;
     return out;
 }
-std::ostream& operator<<(std::ostream& out,const Complex& rhs){
-    return rhs.writeTo(out);
-}
-//Istream definition
-std::istream& operator>>(std::istream& in,Complex& rhs){
-    return rhs.readFrom(in);
-}
-std::istream& Complex::readFrom(std::istream& in){
+
+std::istream& Complex::readFrom(std::istream& in) noexcept {
     char LeftPartIn(0);
     double realIn(0.0);
     char SeparatorIn(0);
@@ -152,34 +139,34 @@ bool test(std::string st){
 }
 int main(){
     Complex z, g, b1, b2, b3, b4;
-    g = {7, -6};
+    g = {700, -6};
     std::cout << "Cin and Cout test:" << std::endl;
     std::cin >> z;
     std::cout << z;
 
     std::cout << std::endl << "+ test:";
-    std::cout << z + g;
+    std::cout << z + g << " " << 1 + g << " " << g + 1;
     std::cout << std::endl << "+= test:";
     b1 = z;
     b1 += g;
     std::cout << b1;
 
     std::cout << std::endl << "- test:";
-    std::cout << z - g;
+    std::cout << z - g << " " << 1 - g << " " << g - 1;
     std::cout << std::endl << "-= test:";
     b2 = z;
     b2 -= g;
     std::cout << b2;
 
     std::cout << std::endl << "* test:";
-    std::cout << z * g;
+    std::cout << z * g << 10 * g << g * 10; 
     std::cout << std::endl << "*= test:";
     b3 = z;
     b3 *= g;
     std::cout << b3;
 
     std::cout << std::endl << "/ test:";
-    std::cout << z / g;
+    std::cout << z / g << 10 / g << g / 10;
     std::cout << std::endl << "/= test:";
     b4 = z;
     b4 /= g;
