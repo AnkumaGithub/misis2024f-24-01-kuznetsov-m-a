@@ -1,5 +1,5 @@
-#ifndef COMPLEX
-#define COMPLEX
+#ifndef COMPLEX_HPP
+#define COMPLEX_HPP
 
 #include <iostream>
 #include <iosfwd>
@@ -60,9 +60,9 @@ struct Complex {
 [[nodiscard]] Complex operator*(const Complex& lhs, const double rhs)noexcept;
 [[nodiscard]] Complex operator*(const double rhs, const Complex& lhs)noexcept;
 
-[[nodiscard]] Complex operator/(const Complex& lhs, const Complex& rhs)noexcept;
-[[nodiscard]] Complex operator/(const Complex& lhs, const double rhs)noexcept;
-[[nodiscard]] Complex operator/(const double rhs, const Complex& lhs)noexcept;
+[[nodiscard]] Complex operator/(const Complex& lhs, const Complex& rhs);
+[[nodiscard]] Complex operator/(const Complex& lhs, const double rhs);
+[[nodiscard]] Complex operator/(const double rhs, const Complex& lhs);
 
 std::ostream& operator<<(std::ostream& out,const Complex& rhs) noexcept {
     return rhs.writeTo(out);
