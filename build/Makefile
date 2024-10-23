@@ -57,10 +57,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1
+CMAKE_SOURCE_DIR = /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build
+CMAKE_BINARY_DIR = /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/CMakeFiles /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/CMakeFiles /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -389,6 +389,19 @@ StructComplex_test/fast:
 	$(MAKE) $(MAKESILENT) -f prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/build.make prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/build
 .PHONY : StructComplex_test/fast
 
+#=============================================================================
+# Target rules for targets named tests
+
+# Build rule for target.
+tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests
+.PHONY : tests
+
+# fast build rule for target.
+tests/fast:
+	$(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/tests.dir/build.make prj.test/CMakeFiles/tests.dir/build
+.PHONY : tests/fast
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -442,6 +455,7 @@ help:
 	@echo "... 1873d"
 	@echo "... StructComplex_test"
 	@echo "... main"
+	@echo "... tests"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

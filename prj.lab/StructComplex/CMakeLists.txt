@@ -1,1 +1,1 @@
-add_executable(StructComplex_test StructComplex.cpp StructComplex.hpp)
+add_library(StructComplex_test StructComplex.cpp StructComplex.hpp)

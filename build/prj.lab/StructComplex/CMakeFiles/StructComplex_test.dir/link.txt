@@ -1,1 +1,2 @@
-/Library/Developer/CommandLineTools/usr/bin/c++  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/StructComplex_test.dir/StructComplex.cpp.o -o /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/bin/StructComplex_test
+/Library/Developer/CommandLineTools/usr/bin/ar qc libStructComplex_test.a CMakeFiles/StructComplex_test.dir/StructComplex.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libStructComplex_test.a

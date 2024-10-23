@@ -57,10 +57,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1
+CMAKE_SOURCE_DIR = /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build
+CMAKE_BINARY_DIR = /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/CMakeFiles /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/prj.lab//CMakeFiles/progress.marks
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.lab/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/CMakeFiles 0
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/CMakeFiles /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.lab//CMakeFiles/progress.marks
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.lab/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.lab/clean
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.lab/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,17 +103,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.lab/preinstall
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.lab/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.lab/preinstall
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.lab/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -135,6 +135,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

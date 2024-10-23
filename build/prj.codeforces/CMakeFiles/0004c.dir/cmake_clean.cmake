@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/bin/0004c"
-  "/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/bin/0004c.pdb"
+  "/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/bin/0004c"
+  "/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/bin/0004c.pdb"
   "CMakeFiles/0004c.dir/0004c.cpp.o"
   "CMakeFiles/0004c.dir/0004c.cpp.o.d"
 )

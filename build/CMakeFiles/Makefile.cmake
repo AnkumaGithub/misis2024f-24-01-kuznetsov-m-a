@@ -37,13 +37,14 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/UnixPaths.cmake"
-  "/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/CMakeLists.txt"
+  "/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/CMakeLists.txt"
   "CMakeFiles/3.31.0-rc1/CMakeCCompiler.cmake"
   "CMakeFiles/3.31.0-rc1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.31.0-rc1/CMakeSystem.cmake"
-  "/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/prj.codeforces/CMakeLists.txt"
-  "/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/prj.lab/CMakeLists.txt"
-  "/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/prj.lab/StructComplex/CMakeLists.txt"
+  "/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/prj.codeforces/CMakeLists.txt"
+  "/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/prj.lab/CMakeLists.txt"
+  "/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/prj.lab/StructComplex/CMakeLists.txt"
+  "/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/prj.test/CMakeLists.txt"
   )
 
 # The corresponding makefile is:
@@ -58,6 +59,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "prj.codeforces/CMakeFiles/CMakeDirectoryInformation.cmake"
   "prj.lab/CMakeFiles/CMakeDirectoryInformation.cmake"
   "prj.lab/StructComplex/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "prj.test/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -83,4 +85,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "prj.codeforces/CMakeFiles/1873c.dir/DependInfo.cmake"
   "prj.codeforces/CMakeFiles/1873d.dir/DependInfo.cmake"
   "prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/DependInfo.cmake"
+  "prj.test/CMakeFiles/tests.dir/DependInfo.cmake"
   )

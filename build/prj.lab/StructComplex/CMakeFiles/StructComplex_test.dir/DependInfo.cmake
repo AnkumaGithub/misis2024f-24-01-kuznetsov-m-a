@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/prj.lab/StructComplex/StructComplex.cpp" "prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/StructComplex.cpp.o" "gcc" "prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/StructComplex.cpp.o.d"
+  "/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/prj.lab/StructComplex/StructComplex.cpp" "prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/StructComplex.cpp.o" "gcc" "prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/StructComplex.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

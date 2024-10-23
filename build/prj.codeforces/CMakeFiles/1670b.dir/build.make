@@ -53,10 +53,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1
+CMAKE_SOURCE_DIR = /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build
+CMAKE_BINARY_DIR = /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build
 
 # Include any dependencies generated for this target.
 include prj.codeforces/CMakeFiles/1670b.dir/depend.make
@@ -73,18 +73,18 @@ prj.codeforces/CMakeFiles/1670b.dir/codegen:
 .PHONY : prj.codeforces/CMakeFiles/1670b.dir/codegen
 
 prj.codeforces/CMakeFiles/1670b.dir/1670b.cpp.o: prj.codeforces/CMakeFiles/1670b.dir/flags.make
-prj.codeforces/CMakeFiles/1670b.dir/1670b.cpp.o: /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/prj.codeforces/1670b.cpp
+prj.codeforces/CMakeFiles/1670b.dir/1670b.cpp.o: /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/prj.codeforces/1670b.cpp
 prj.codeforces/CMakeFiles/1670b.dir/1670b.cpp.o: prj.codeforces/CMakeFiles/1670b.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object prj.codeforces/CMakeFiles/1670b.dir/1670b.cpp.o"
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/prj.codeforces && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT prj.codeforces/CMakeFiles/1670b.dir/1670b.cpp.o -MF CMakeFiles/1670b.dir/1670b.cpp.o.d -o CMakeFiles/1670b.dir/1670b.cpp.o -c /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/prj.codeforces/1670b.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object prj.codeforces/CMakeFiles/1670b.dir/1670b.cpp.o"
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.codeforces && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT prj.codeforces/CMakeFiles/1670b.dir/1670b.cpp.o -MF CMakeFiles/1670b.dir/1670b.cpp.o.d -o CMakeFiles/1670b.dir/1670b.cpp.o -c /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/prj.codeforces/1670b.cpp
 
 prj.codeforces/CMakeFiles/1670b.dir/1670b.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/1670b.dir/1670b.cpp.i"
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/prj.codeforces && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/prj.codeforces/1670b.cpp > CMakeFiles/1670b.dir/1670b.cpp.i
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.codeforces && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/prj.codeforces/1670b.cpp > CMakeFiles/1670b.dir/1670b.cpp.i
 
 prj.codeforces/CMakeFiles/1670b.dir/1670b.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/1670b.dir/1670b.cpp.s"
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/prj.codeforces && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/prj.codeforces/1670b.cpp -o CMakeFiles/1670b.dir/1670b.cpp.s
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.codeforces && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/prj.codeforces/1670b.cpp -o CMakeFiles/1670b.dir/1670b.cpp.s
 
 # Object files for target 1670b
 1670b_OBJECTS = \
@@ -93,21 +93,21 @@ prj.codeforces/CMakeFiles/1670b.dir/1670b.cpp.s: cmake_force
 # External object files for target 1670b
 1670b_EXTERNAL_OBJECTS =
 
-/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/bin/1670b: prj.codeforces/CMakeFiles/1670b.dir/1670b.cpp.o
-/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/bin/1670b: prj.codeforces/CMakeFiles/1670b.dir/build.make
-/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/bin/1670b: prj.codeforces/CMakeFiles/1670b.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/bin/1670b"
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/prj.codeforces && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/1670b.dir/link.txt --verbose=$(VERBOSE)
+/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/bin/1670b: prj.codeforces/CMakeFiles/1670b.dir/1670b.cpp.o
+/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/bin/1670b: prj.codeforces/CMakeFiles/1670b.dir/build.make
+/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/bin/1670b: prj.codeforces/CMakeFiles/1670b.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/bin/1670b"
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.codeforces && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/1670b.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-prj.codeforces/CMakeFiles/1670b.dir/build: /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/bin/1670b
+prj.codeforces/CMakeFiles/1670b.dir/build: /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/bin/1670b
 .PHONY : prj.codeforces/CMakeFiles/1670b.dir/build
 
 prj.codeforces/CMakeFiles/1670b.dir/clean:
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/prj.codeforces && $(CMAKE_COMMAND) -P CMakeFiles/1670b.dir/cmake_clean.cmake
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.codeforces && $(CMAKE_COMMAND) -P CMakeFiles/1670b.dir/cmake_clean.cmake
 .PHONY : prj.codeforces/CMakeFiles/1670b.dir/clean
 
 prj.codeforces/CMakeFiles/1670b.dir/depend:
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1 /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/prj.codeforces /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/prj.codeforces /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/prj.codeforces/CMakeFiles/1670b.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/prj.codeforces /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.codeforces /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.codeforces/CMakeFiles/1670b.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : prj.codeforces/CMakeFiles/1670b.dir/depend
 

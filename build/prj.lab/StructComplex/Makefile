@@ -57,10 +57,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1
+CMAKE_SOURCE_DIR = /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build
+CMAKE_BINARY_DIR = /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/CMakeFiles /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/prj.lab/StructComplex//CMakeFiles/progress.marks
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.lab/StructComplex/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/CMakeFiles 0
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/CMakeFiles /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.lab/StructComplex//CMakeFiles/progress.marks
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.lab/StructComplex/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.lab/StructComplex/clean
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.lab/StructComplex/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.lab/StructComplex/preinstall
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.lab/StructComplex/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.lab/StructComplex/preinstall
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.lab/StructComplex/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/rule:
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/rule
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/rule
 .PHONY : prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ StructComplex_test: prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/rule
 
 # fast build rule for target.
 StructComplex_test/fast:
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build && $(MAKE) $(MAKESILENT) -f prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/build.make prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/build
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/build.make prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/build
 .PHONY : StructComplex_test/fast
 
 StructComplex.o: StructComplex.cpp.o
@@ -135,7 +135,7 @@ StructComplex.o: StructComplex.cpp.o
 
 # target to build an object file
 StructComplex.cpp.o:
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build && $(MAKE) $(MAKESILENT) -f prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/build.make prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/StructComplex.cpp.o
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/build.make prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/StructComplex.cpp.o
 .PHONY : StructComplex.cpp.o
 
 StructComplex.i: StructComplex.cpp.i
@@ -143,7 +143,7 @@ StructComplex.i: StructComplex.cpp.i
 
 # target to preprocess a source file
 StructComplex.cpp.i:
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build && $(MAKE) $(MAKESILENT) -f prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/build.make prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/StructComplex.cpp.i
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/build.make prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/StructComplex.cpp.i
 .PHONY : StructComplex.cpp.i
 
 StructComplex.s: StructComplex.cpp.s
@@ -151,7 +151,7 @@ StructComplex.s: StructComplex.cpp.s
 
 # target to generate assembly for a file
 StructComplex.cpp.s:
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build && $(MAKE) $(MAKESILENT) -f prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/build.make prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/StructComplex.cpp.s
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/build.make prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/StructComplex.cpp.s
 .PHONY : StructComplex.cpp.s
 
 # Help Target
@@ -177,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

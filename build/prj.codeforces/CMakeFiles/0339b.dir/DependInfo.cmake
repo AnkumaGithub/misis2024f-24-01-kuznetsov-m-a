@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/prj.codeforces/0339b.cpp" "prj.codeforces/CMakeFiles/0339b.dir/0339b.cpp.o" "gcc" "prj.codeforces/CMakeFiles/0339b.dir/0339b.cpp.o.d"
+  "/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/prj.codeforces/0339b.cpp" "prj.codeforces/CMakeFiles/0339b.dir/0339b.cpp.o" "gcc" "prj.codeforces/CMakeFiles/0339b.dir/0339b.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

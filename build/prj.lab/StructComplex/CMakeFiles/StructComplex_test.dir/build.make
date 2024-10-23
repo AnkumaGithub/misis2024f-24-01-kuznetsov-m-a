@@ -53,10 +53,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1
+CMAKE_SOURCE_DIR = /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build
+CMAKE_BINARY_DIR = /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build
 
 # Include any dependencies generated for this target.
 include prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/depend.make
@@ -73,18 +73,18 @@ prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/codegen:
 .PHONY : prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/codegen
 
 prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/StructComplex.cpp.o: prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/flags.make
-prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/StructComplex.cpp.o: /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/prj.lab/StructComplex/StructComplex.cpp
+prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/StructComplex.cpp.o: /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/prj.lab/StructComplex/StructComplex.cpp
 prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/StructComplex.cpp.o: prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/StructComplex.cpp.o"
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/prj.lab/StructComplex && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/StructComplex.cpp.o -MF CMakeFiles/StructComplex_test.dir/StructComplex.cpp.o.d -o CMakeFiles/StructComplex_test.dir/StructComplex.cpp.o -c /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/prj.lab/StructComplex/StructComplex.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/StructComplex.cpp.o"
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.lab/StructComplex && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/StructComplex.cpp.o -MF CMakeFiles/StructComplex_test.dir/StructComplex.cpp.o.d -o CMakeFiles/StructComplex_test.dir/StructComplex.cpp.o -c /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/prj.lab/StructComplex/StructComplex.cpp
 
 prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/StructComplex.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/StructComplex_test.dir/StructComplex.cpp.i"
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/prj.lab/StructComplex && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/prj.lab/StructComplex/StructComplex.cpp > CMakeFiles/StructComplex_test.dir/StructComplex.cpp.i
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.lab/StructComplex && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/prj.lab/StructComplex/StructComplex.cpp > CMakeFiles/StructComplex_test.dir/StructComplex.cpp.i
 
 prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/StructComplex.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/StructComplex_test.dir/StructComplex.cpp.s"
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/prj.lab/StructComplex && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/prj.lab/StructComplex/StructComplex.cpp -o CMakeFiles/StructComplex_test.dir/StructComplex.cpp.s
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.lab/StructComplex && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/prj.lab/StructComplex/StructComplex.cpp -o CMakeFiles/StructComplex_test.dir/StructComplex.cpp.s
 
 # Object files for target StructComplex_test
 StructComplex_test_OBJECTS = \
@@ -93,21 +93,22 @@ StructComplex_test_OBJECTS = \
 # External object files for target StructComplex_test
 StructComplex_test_EXTERNAL_OBJECTS =
 
-/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/bin/StructComplex_test: prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/StructComplex.cpp.o
-/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/bin/StructComplex_test: prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/build.make
-/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/bin/StructComplex_test: prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/bin/StructComplex_test"
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/prj.lab/StructComplex && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/StructComplex_test.dir/link.txt --verbose=$(VERBOSE)
+prj.lab/StructComplex/libStructComplex_test.a: prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/StructComplex.cpp.o
+prj.lab/StructComplex/libStructComplex_test.a: prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/build.make
+prj.lab/StructComplex/libStructComplex_test.a: prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libStructComplex_test.a"
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.lab/StructComplex && $(CMAKE_COMMAND) -P CMakeFiles/StructComplex_test.dir/cmake_clean_target.cmake
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.lab/StructComplex && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/StructComplex_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/build: /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/bin/StructComplex_test
+prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/build: prj.lab/StructComplex/libStructComplex_test.a
 .PHONY : prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/build
 
 prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/clean:
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/prj.lab/StructComplex && $(CMAKE_COMMAND) -P CMakeFiles/StructComplex_test.dir/cmake_clean.cmake
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.lab/StructComplex && $(CMAKE_COMMAND) -P CMakeFiles/StructComplex_test.dir/cmake_clean.cmake
 .PHONY : prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/clean
 
 prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/depend:
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1 /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/prj.lab/StructComplex /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/prj.lab/StructComplex /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/prj.lab/StructComplex /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.lab/StructComplex /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/depend
 

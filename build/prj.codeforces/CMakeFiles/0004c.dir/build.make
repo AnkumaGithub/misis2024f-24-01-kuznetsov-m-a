@@ -53,10 +53,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1
+CMAKE_SOURCE_DIR = /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build
+CMAKE_BINARY_DIR = /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build
 
 # Include any dependencies generated for this target.
 include prj.codeforces/CMakeFiles/0004c.dir/depend.make
@@ -73,18 +73,18 @@ prj.codeforces/CMakeFiles/0004c.dir/codegen:
 .PHONY : prj.codeforces/CMakeFiles/0004c.dir/codegen
 
 prj.codeforces/CMakeFiles/0004c.dir/0004c.cpp.o: prj.codeforces/CMakeFiles/0004c.dir/flags.make
-prj.codeforces/CMakeFiles/0004c.dir/0004c.cpp.o: /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/prj.codeforces/0004c.cpp
+prj.codeforces/CMakeFiles/0004c.dir/0004c.cpp.o: /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/prj.codeforces/0004c.cpp
 prj.codeforces/CMakeFiles/0004c.dir/0004c.cpp.o: prj.codeforces/CMakeFiles/0004c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object prj.codeforces/CMakeFiles/0004c.dir/0004c.cpp.o"
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/prj.codeforces && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT prj.codeforces/CMakeFiles/0004c.dir/0004c.cpp.o -MF CMakeFiles/0004c.dir/0004c.cpp.o.d -o CMakeFiles/0004c.dir/0004c.cpp.o -c /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/prj.codeforces/0004c.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object prj.codeforces/CMakeFiles/0004c.dir/0004c.cpp.o"
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.codeforces && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT prj.codeforces/CMakeFiles/0004c.dir/0004c.cpp.o -MF CMakeFiles/0004c.dir/0004c.cpp.o.d -o CMakeFiles/0004c.dir/0004c.cpp.o -c /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/prj.codeforces/0004c.cpp
 
 prj.codeforces/CMakeFiles/0004c.dir/0004c.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/0004c.dir/0004c.cpp.i"
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/prj.codeforces && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/prj.codeforces/0004c.cpp > CMakeFiles/0004c.dir/0004c.cpp.i
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.codeforces && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/prj.codeforces/0004c.cpp > CMakeFiles/0004c.dir/0004c.cpp.i
 
 prj.codeforces/CMakeFiles/0004c.dir/0004c.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/0004c.dir/0004c.cpp.s"
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/prj.codeforces && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/prj.codeforces/0004c.cpp -o CMakeFiles/0004c.dir/0004c.cpp.s
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.codeforces && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/prj.codeforces/0004c.cpp -o CMakeFiles/0004c.dir/0004c.cpp.s
 
 # Object files for target 0004c
 0004c_OBJECTS = \
@@ -93,21 +93,21 @@ prj.codeforces/CMakeFiles/0004c.dir/0004c.cpp.s: cmake_force
 # External object files for target 0004c
 0004c_EXTERNAL_OBJECTS =
 
-/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/bin/0004c: prj.codeforces/CMakeFiles/0004c.dir/0004c.cpp.o
-/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/bin/0004c: prj.codeforces/CMakeFiles/0004c.dir/build.make
-/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/bin/0004c: prj.codeforces/CMakeFiles/0004c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/bin/0004c"
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/prj.codeforces && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/0004c.dir/link.txt --verbose=$(VERBOSE)
+/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/bin/0004c: prj.codeforces/CMakeFiles/0004c.dir/0004c.cpp.o
+/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/bin/0004c: prj.codeforces/CMakeFiles/0004c.dir/build.make
+/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/bin/0004c: prj.codeforces/CMakeFiles/0004c.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/bin/0004c"
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.codeforces && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/0004c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-prj.codeforces/CMakeFiles/0004c.dir/build: /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/bin/0004c
+prj.codeforces/CMakeFiles/0004c.dir/build: /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/bin/0004c
 .PHONY : prj.codeforces/CMakeFiles/0004c.dir/build
 
 prj.codeforces/CMakeFiles/0004c.dir/clean:
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/prj.codeforces && $(CMAKE_COMMAND) -P CMakeFiles/0004c.dir/cmake_clean.cmake
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.codeforces && $(CMAKE_COMMAND) -P CMakeFiles/0004c.dir/cmake_clean.cmake
 .PHONY : prj.codeforces/CMakeFiles/0004c.dir/clean
 
 prj.codeforces/CMakeFiles/0004c.dir/depend:
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1 /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/prj.codeforces /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/prj.codeforces /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a-1/build/prj.codeforces/CMakeFiles/0004c.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/prj.codeforces /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.codeforces /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.codeforces/CMakeFiles/0004c.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : prj.codeforces/CMakeFiles/0004c.dir/depend
 

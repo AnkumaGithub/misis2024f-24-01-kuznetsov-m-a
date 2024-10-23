@@ -61,11 +61,11 @@ Complex operator/(const Complex& lhs, const Complex& rhs);
 Complex operator/(const Complex& lhs, const double rhs);
 Complex operator/(const double rhs, const Complex& lhs);
 
-std::ostream& operator<<(std::ostream& out,const Complex& rhs) noexcept {
+inline std::ostream& operator<<(std::ostream& out,const Complex& rhs) noexcept {
     return rhs.writeTo(out);
 }
 //Istream definition
-std::istream& operator>>(std::istream& in,Complex& rhs) noexcept {
+inline std::istream& operator>>(std::istream& in,Complex& rhs) noexcept {
     return rhs.readFrom(in);
 }
  
