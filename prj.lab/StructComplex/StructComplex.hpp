@@ -15,13 +15,10 @@ struct Complex {
 
     Complex& operator=(Complex&&) = default;
 
-    //! Деструктор.
-    ~Complex() = default;
+    Complex operator-() const noexcept;
 
-    [[nodiscard]] Complex operator-() const noexcept;
-
-    [[nodiscard]] bool operator==(const Complex& rhs) const noexcept;
-    [[nodiscard]] bool operator!=(const Complex& rhs) const noexcept;
+    bool operator==(const Complex& rhs) const noexcept;
+    bool operator!=(const Complex& rhs) const noexcept;
 
     Complex& operator+=(const Complex& rhs) noexcept;
     Complex& operator+=(const double rhs) noexcept;
@@ -43,26 +40,26 @@ struct Complex {
     static const char Separator{','};
     static const char RightPart{'}'};
     //streams initialization
-    [[nodiscard]] std::ostream& writeTo(std::ostream& outstream) const noexcept;
-    [[nodiscard]] std::istream& readFrom(std::istream& instream) noexcept;
+    std::ostream& writeTo(std::ostream& outstream) const noexcept;
+    std::istream& readFrom(std::istream& instream) noexcept;
 };
 
 //Postfix operators definition
-[[nodiscard]] Complex operator+(const Complex& lhs, const Complex& rhs) noexcept;
-[[nodiscard]] Complex operator+(const Complex& lhs, const double rhs)noexcept;
-[[nodiscard]] Complex operator+(const double rhs, const Complex& lhs)noexcept;
+Complex operator+(const Complex& lhs, const Complex& rhs) noexcept;
+Complex operator+(const Complex& lhs, const double rhs)noexcept;
+Complex operator+(const double rhs, const Complex& lhs)noexcept;
  
-[[nodiscard]] Complex operator-(const Complex& lhs, const Complex& rhs)noexcept;
-[[nodiscard]] Complex operator-(const Complex& lhs, const double rhs)noexcept;
-[[nodiscard]] Complex operator-(const double rhs, const Complex& lhs)noexcept;
+Complex operator-(const Complex& lhs, const Complex& rhs)noexcept;
+Complex operator-(const Complex& lhs, const double rhs)noexcept;
+Complex operator-(const double rhs, const Complex& lhs)noexcept;
  
-[[nodiscard]] Complex operator*(const Complex& lhs, const Complex& rhs)noexcept;
-[[nodiscard]] Complex operator*(const Complex& lhs, const double rhs)noexcept;
-[[nodiscard]] Complex operator*(const double rhs, const Complex& lhs)noexcept;
+Complex operator*(const Complex& lhs, const Complex& rhs)noexcept;
+Complex operator*(const Complex& lhs, const double rhs)noexcept;
+Complex operator*(const double rhs, const Complex& lhs)noexcept;
 
-[[nodiscard]] Complex operator/(const Complex& lhs, const Complex& rhs);
-[[nodiscard]] Complex operator/(const Complex& lhs, const double rhs);
-[[nodiscard]] Complex operator/(const double rhs, const Complex& lhs);
+Complex operator/(const Complex& lhs, const Complex& rhs);
+Complex operator/(const Complex& lhs, const double rhs);
+Complex operator/(const double rhs, const Complex& lhs);
 
 std::ostream& operator<<(std::ostream& out,const Complex& rhs) noexcept {
     return rhs.writeTo(out);

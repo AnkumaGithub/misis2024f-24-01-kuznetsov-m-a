@@ -76,7 +76,7 @@ Complex operator-(const Complex& lhs, const double rhs) noexcept {
     return Complex(lhs.re - rhs, lhs.im);
 }
 Complex operator-(const double rhs, const Complex& lhs) noexcept {
-    return Complex(lhs.re - rhs, lhs.im);
+    return Complex(rhs - lhs.re, -lhs.im);
 }
  
 Complex operator*(const Complex& lhs, const Complex& rhs) noexcept {
@@ -97,7 +97,7 @@ Complex operator/(const Complex& lhs, const double rhs){
     return Complex(lhs.re / rhs, lhs.im / rhs);
 }
 Complex operator/(const double rhs, const Complex& lhs){
-    return Complex(lhs.re / rhs, lhs.im / rhs);
+    return Complex(rhs / lhs.re, rhs / lhs.im);
 }
 
 //Outstream definition
