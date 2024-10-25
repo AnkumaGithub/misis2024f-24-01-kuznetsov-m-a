@@ -1,4 +1,4 @@
-# Install script for directory: /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/prj.lab
+# Install script for directory: /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/prj.lab/complex
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -37,14 +37,9 @@ if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/Library/Developer/CommandLineTools/usr/bin/objdump")
 endif()
 
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.lab/complex/cmake_install.cmake")
-endif()
-
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.lab/install_local_manifest.txt"
+  file(WRITE "/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.lab/complex/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

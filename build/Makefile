@@ -377,30 +377,30 @@ main/fast:
 .PHONY : 1873d/fast
 
 #=============================================================================
-# Target rules for targets named StructComplex_test
+# Target rules for targets named complex_test
 
 # Build rule for target.
-StructComplex_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 StructComplex_test
-.PHONY : StructComplex_test
+complex_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 complex_test
+.PHONY : complex_test
 
 # fast build rule for target.
-StructComplex_test/fast:
-	$(MAKE) $(MAKESILENT) -f prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/build.make prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/build
-.PHONY : StructComplex_test/fast
+complex_test/fast:
+	$(MAKE) $(MAKESILENT) -f prj.lab/complex/CMakeFiles/complex_test.dir/build.make prj.lab/complex/CMakeFiles/complex_test.dir/build
+.PHONY : complex_test/fast
 
 #=============================================================================
-# Target rules for targets named tests
+# Target rules for targets named complex_doctest
 
 # Build rule for target.
-tests: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests
-.PHONY : tests
+complex_doctest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 complex_doctest
+.PHONY : complex_doctest
 
 # fast build rule for target.
-tests/fast:
-	$(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/tests.dir/build.make prj.test/CMakeFiles/tests.dir/build
-.PHONY : tests/fast
+complex_doctest/fast:
+	$(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/complex_doctest.dir/build.make prj.test/CMakeFiles/complex_doctest.dir/build
+.PHONY : complex_doctest/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -453,9 +453,9 @@ help:
 	@echo "... 1872a"
 	@echo "... 1873c"
 	@echo "... 1873d"
-	@echo "... StructComplex_test"
+	@echo "... complex_doctest"
+	@echo "... complex_test"
 	@echo "... main"
-	@echo "... tests"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

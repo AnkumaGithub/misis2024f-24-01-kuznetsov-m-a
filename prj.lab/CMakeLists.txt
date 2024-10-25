@@ -1,1 +1,1 @@
-add_subdirectory(StructComplex)
+add_subdirectory(complex)

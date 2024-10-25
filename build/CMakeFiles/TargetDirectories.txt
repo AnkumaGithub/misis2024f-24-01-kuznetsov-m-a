@@ -24,9 +24,9 @@
 /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.codeforces/CMakeFiles/rebuild_cache.dir
 /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.lab/CMakeFiles/edit_cache.dir
 /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.lab/CMakeFiles/rebuild_cache.dir
-/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir
-/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.lab/StructComplex/CMakeFiles/edit_cache.dir
-/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.lab/StructComplex/CMakeFiles/rebuild_cache.dir
-/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.test/CMakeFiles/tests.dir
+/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.lab/complex/CMakeFiles/complex_test.dir
+/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.lab/complex/CMakeFiles/edit_cache.dir
+/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.lab/complex/CMakeFiles/rebuild_cache.dir
+/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.test/CMakeFiles/complex_doctest.dir
 /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.test/CMakeFiles/edit_cache.dir
 /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.test/CMakeFiles/rebuild_cache.dir

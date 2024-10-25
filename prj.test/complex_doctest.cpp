@@ -1,4 +1,4 @@
-#include <StructComplex/StructComplex.hpp>
+#include <complex/complex.hpp>
 #include <iostream>
 #include <sstream>
 

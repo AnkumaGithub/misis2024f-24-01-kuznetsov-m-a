@@ -43,7 +43,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.31.0-rc1/CMakeSystem.cmake"
   "/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/prj.codeforces/CMakeLists.txt"
   "/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/prj.lab/CMakeLists.txt"
-  "/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/prj.lab/StructComplex/CMakeLists.txt"
+  "/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/prj.lab/complex/CMakeLists.txt"
   "/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/prj.test/CMakeLists.txt"
   )
 
@@ -58,7 +58,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "prj.codeforces/CMakeFiles/CMakeDirectoryInformation.cmake"
   "prj.lab/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "prj.lab/StructComplex/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "prj.lab/complex/CMakeFiles/CMakeDirectoryInformation.cmake"
   "prj.test/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
@@ -84,6 +84,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "prj.codeforces/CMakeFiles/1872a.dir/DependInfo.cmake"
   "prj.codeforces/CMakeFiles/1873c.dir/DependInfo.cmake"
   "prj.codeforces/CMakeFiles/1873d.dir/DependInfo.cmake"
-  "prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/DependInfo.cmake"
-  "prj.test/CMakeFiles/tests.dir/DependInfo.cmake"
+  "prj.lab/complex/CMakeFiles/complex_test.dir/DependInfo.cmake"
+  "prj.test/CMakeFiles/complex_doctest.dir/DependInfo.cmake"
   )

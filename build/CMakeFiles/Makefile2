@@ -166,49 +166,49 @@ prj.codeforces/clean: prj.codeforces/CMakeFiles/1873d.dir/clean
 # Directory level rules for directory prj.lab
 
 # Recursive "all" directory target.
-prj.lab/all: prj.lab/StructComplex/all
+prj.lab/all: prj.lab/complex/all
 .PHONY : prj.lab/all
 
 # Recursive "codegen" directory target.
-prj.lab/codegen: prj.lab/StructComplex/codegen
+prj.lab/codegen: prj.lab/complex/codegen
 .PHONY : prj.lab/codegen
 
 # Recursive "preinstall" directory target.
-prj.lab/preinstall: prj.lab/StructComplex/preinstall
+prj.lab/preinstall: prj.lab/complex/preinstall
 .PHONY : prj.lab/preinstall
 
 # Recursive "clean" directory target.
-prj.lab/clean: prj.lab/StructComplex/clean
+prj.lab/clean: prj.lab/complex/clean
 .PHONY : prj.lab/clean
 
 #=============================================================================
-# Directory level rules for directory prj.lab/StructComplex
+# Directory level rules for directory prj.lab/complex
 
 # Recursive "all" directory target.
-prj.lab/StructComplex/all: prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/all
-.PHONY : prj.lab/StructComplex/all
+prj.lab/complex/all: prj.lab/complex/CMakeFiles/complex_test.dir/all
+.PHONY : prj.lab/complex/all
 
 # Recursive "codegen" directory target.
-prj.lab/StructComplex/codegen: prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/codegen
-.PHONY : prj.lab/StructComplex/codegen
+prj.lab/complex/codegen: prj.lab/complex/CMakeFiles/complex_test.dir/codegen
+.PHONY : prj.lab/complex/codegen
 
 # Recursive "preinstall" directory target.
-prj.lab/StructComplex/preinstall:
-.PHONY : prj.lab/StructComplex/preinstall
+prj.lab/complex/preinstall:
+.PHONY : prj.lab/complex/preinstall
 
 # Recursive "clean" directory target.
-prj.lab/StructComplex/clean: prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/clean
-.PHONY : prj.lab/StructComplex/clean
+prj.lab/complex/clean: prj.lab/complex/CMakeFiles/complex_test.dir/clean
+.PHONY : prj.lab/complex/clean
 
 #=============================================================================
 # Directory level rules for directory prj.test
 
 # Recursive "all" directory target.
-prj.test/all: prj.test/CMakeFiles/tests.dir/all
+prj.test/all: prj.test/CMakeFiles/complex_doctest.dir/all
 .PHONY : prj.test/all
 
 # Recursive "codegen" directory target.
-prj.test/codegen: prj.test/CMakeFiles/tests.dir/codegen
+prj.test/codegen: prj.test/CMakeFiles/complex_doctest.dir/codegen
 .PHONY : prj.test/codegen
 
 # Recursive "preinstall" directory target.
@@ -216,7 +216,7 @@ prj.test/preinstall:
 .PHONY : prj.test/preinstall
 
 # Recursive "clean" directory target.
-prj.test/clean: prj.test/CMakeFiles/tests.dir/clean
+prj.test/clean: prj.test/CMakeFiles/complex_doctest.dir/clean
 .PHONY : prj.test/clean
 
 #=============================================================================
@@ -226,7 +226,7 @@ prj.test/clean: prj.test/CMakeFiles/tests.dir/clean
 CMakeFiles/main.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/CMakeFiles --progress-num=41,42 "Built target main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/CMakeFiles --progress-num=43,44 "Built target main"
 .PHONY : CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -840,66 +840,66 @@ prj.codeforces/CMakeFiles/1873d.dir/clean:
 .PHONY : prj.codeforces/CMakeFiles/1873d.dir/clean
 
 #=============================================================================
-# Target rules for target prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir
+# Target rules for target prj.lab/complex/CMakeFiles/complex_test.dir
 
 # All Build rule for target.
-prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/all:
-	$(MAKE) $(MAKESILENT) -f prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/build.make prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/depend
-	$(MAKE) $(MAKESILENT) -f prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/build.make prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/CMakeFiles --progress-num=39,40 "Built target StructComplex_test"
-.PHONY : prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/all
+prj.lab/complex/CMakeFiles/complex_test.dir/all:
+	$(MAKE) $(MAKESILENT) -f prj.lab/complex/CMakeFiles/complex_test.dir/build.make prj.lab/complex/CMakeFiles/complex_test.dir/depend
+	$(MAKE) $(MAKESILENT) -f prj.lab/complex/CMakeFiles/complex_test.dir/build.make prj.lab/complex/CMakeFiles/complex_test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/CMakeFiles --progress-num=41,42 "Built target complex_test"
+.PHONY : prj.lab/complex/CMakeFiles/complex_test.dir/all
 
 # Build rule for subdir invocation for target.
-prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/rule: cmake_check_build_system
+prj.lab/complex/CMakeFiles/complex_test.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.lab/complex/CMakeFiles/complex_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/CMakeFiles 0
-.PHONY : prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/rule
+.PHONY : prj.lab/complex/CMakeFiles/complex_test.dir/rule
 
 # Convenience name for target.
-StructComplex_test: prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/rule
-.PHONY : StructComplex_test
+complex_test: prj.lab/complex/CMakeFiles/complex_test.dir/rule
+.PHONY : complex_test
 
 # codegen rule for target.
-prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/build.make prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/codegen
-.PHONY : prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/codegen
+prj.lab/complex/CMakeFiles/complex_test.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f prj.lab/complex/CMakeFiles/complex_test.dir/build.make prj.lab/complex/CMakeFiles/complex_test.dir/codegen
+.PHONY : prj.lab/complex/CMakeFiles/complex_test.dir/codegen
 
 # clean rule for target.
-prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/clean:
-	$(MAKE) $(MAKESILENT) -f prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/build.make prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/clean
-.PHONY : prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/clean
+prj.lab/complex/CMakeFiles/complex_test.dir/clean:
+	$(MAKE) $(MAKESILENT) -f prj.lab/complex/CMakeFiles/complex_test.dir/build.make prj.lab/complex/CMakeFiles/complex_test.dir/clean
+.PHONY : prj.lab/complex/CMakeFiles/complex_test.dir/clean
 
 #=============================================================================
-# Target rules for target prj.test/CMakeFiles/tests.dir
+# Target rules for target prj.test/CMakeFiles/complex_doctest.dir
 
 # All Build rule for target.
-prj.test/CMakeFiles/tests.dir/all: prj.lab/StructComplex/CMakeFiles/StructComplex_test.dir/all
-	$(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/tests.dir/build.make prj.test/CMakeFiles/tests.dir/depend
-	$(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/tests.dir/build.make prj.test/CMakeFiles/tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/CMakeFiles --progress-num=43,44 "Built target tests"
-.PHONY : prj.test/CMakeFiles/tests.dir/all
+prj.test/CMakeFiles/complex_doctest.dir/all: prj.lab/complex/CMakeFiles/complex_test.dir/all
+	$(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/complex_doctest.dir/build.make prj.test/CMakeFiles/complex_doctest.dir/depend
+	$(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/complex_doctest.dir/build.make prj.test/CMakeFiles/complex_doctest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/CMakeFiles --progress-num=39,40 "Built target complex_doctest"
+.PHONY : prj.test/CMakeFiles/complex_doctest.dir/all
 
 # Build rule for subdir invocation for target.
-prj.test/CMakeFiles/tests.dir/rule: cmake_check_build_system
+prj.test/CMakeFiles/complex_doctest.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.test/CMakeFiles/tests.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.test/CMakeFiles/complex_doctest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/CMakeFiles 0
-.PHONY : prj.test/CMakeFiles/tests.dir/rule
+.PHONY : prj.test/CMakeFiles/complex_doctest.dir/rule
 
 # Convenience name for target.
-tests: prj.test/CMakeFiles/tests.dir/rule
-.PHONY : tests
+complex_doctest: prj.test/CMakeFiles/complex_doctest.dir/rule
+.PHONY : complex_doctest
 
 # codegen rule for target.
-prj.test/CMakeFiles/tests.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/tests.dir/build.make prj.test/CMakeFiles/tests.dir/codegen
-.PHONY : prj.test/CMakeFiles/tests.dir/codegen
+prj.test/CMakeFiles/complex_doctest.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/complex_doctest.dir/build.make prj.test/CMakeFiles/complex_doctest.dir/codegen
+.PHONY : prj.test/CMakeFiles/complex_doctest.dir/codegen
 
 # clean rule for target.
-prj.test/CMakeFiles/tests.dir/clean:
-	$(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/tests.dir/build.make prj.test/CMakeFiles/tests.dir/clean
-.PHONY : prj.test/CMakeFiles/tests.dir/clean
+prj.test/CMakeFiles/complex_doctest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/complex_doctest.dir/build.make prj.test/CMakeFiles/complex_doctest.dir/clean
+.PHONY : prj.test/CMakeFiles/complex_doctest.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
