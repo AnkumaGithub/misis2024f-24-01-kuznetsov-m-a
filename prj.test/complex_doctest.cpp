@@ -19,35 +19,63 @@ int main(){
     g = {700, -6};
     std::cout << "Cin and Cout test:" << std::endl;
     std::cin >> z;
-    std::cout << z;
+    std::cout << z << std::endl;
 
-    std::cout << std::endl << "+ test:";
-    std::cout << z + g << " " << 1 + g << " " << g + 1;
-    std::cout << std::endl << "+= test:";
+    std::cout << std::endl << "+ test:" << std::endl;
+    std::cout << z << " + " << g << " = ";
+    std::cout << z + g << std::endl;
+    std::cout << z << " + " << '2' << " = ";
+    std::cout << z + 2 << std::endl;
+    std::cout << '2' << " + " << z << " = ";
+    std::cout << 2 + z;
+    std::cout << std::endl;
+
+    std::cout << std::endl << "+= test:" << std::endl;
     b1 = z;
     b1 += g;
-    std::cout << b1;
+    std::cout << z << " += " << g << " = " << b1 << std::endl;
 
-    std::cout << std::endl << "- test:";
-    std::cout << z - g << " " << 1 - g << " " << g - 1;
-    std::cout << std::endl << "-= test:";
+    std::cout << std::endl << "- test:" << std::endl;
+    std::cout << z << " - " << g << " = ";
+    std::cout << z - g << std::endl;
+    std::cout << z << " - " << '2' << " = ";
+    std::cout << z - 2 << std::endl;
+    std::cout << '2' << " - " << z << " = ";
+    std::cout << 2 - z;
+    std::cout << std::endl;
+
+    std::cout << std::endl << "-= test:" << std::endl;
     b2 = z;
     b2 -= g;
-    std::cout << b2;
+    std::cout << z << " -= " << g << " = " << b2 << std::endl;
 
-    std::cout << std::endl << "* test:";
-    std::cout << z * g << 10 * g << g * 10; 
-    std::cout << std::endl << "*= test:";
+    std::cout << std::endl << "* test:" << std::endl;
+    std::cout << z << " * " << g << " = ";
+    std::cout << z * g << std::endl;
+    std::cout << z << " * " << '2' << " = ";
+    std::cout << z * 2 << std::endl;
+    std::cout << '2' << " * " << z << " = ";
+    std::cout << 2 * z;
+    std::cout << std::endl;
+
+    std::cout << std::endl << "*= test:" << std::endl;
     b3 = z;
     b3 *= g;
-    std::cout << b3;
+    std::cout << z << " *= " << g << " = " << b3 << std::endl;
 
-    std::cout << std::endl << "/ test:";
-    std::cout << z / g << 10 / g << g / 10;
-    std::cout << std::endl << "/= test:";
+    std::cout << std::endl << "/ test:" << std::endl;
+    std::cout << z << " / " << g << " = ";
+    std::cout << z / g << std::endl;
+    std::cout << z << " / " << '2' << " = ";
+    std::cout << z / 2 << std::endl;
+    std::cout << '2' << " / " << z << " = ";
+    std::cout << 2 / z;
+    std::cout << std::endl;
+
+    std::cout << std::endl << "/= test:" << std::endl;
     b4 = z;
     b4 /= g;
-    std::cout << b4;
+    std::cout << z << " /= " << g << " = " << b4 << std::endl;
 
     std::cout << std::endl << "1 test: ";
     test("{8.7, 9.3}"); //normal (1)

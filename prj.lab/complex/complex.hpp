@@ -11,14 +11,16 @@ struct Complex {
     explicit Complex(const double real) : re(real) {}
     Complex(const double real, const double imag) : re(real), im(imag) {}
 
+    // assignment operators initialization
     Complex& operator=(const Complex&) = default;
-
     Complex& operator=(Complex&&) = default;
 
-    Complex operator-() const noexcept;
-
+    // bool operators initialization
     bool operator==(const Complex& rhs) const noexcept;
     bool operator!=(const Complex& rhs) const noexcept;
+
+    // prefix operators initialization
+    Complex operator-() const noexcept;
 
     Complex& operator+=(const Complex& rhs) noexcept;
     Complex& operator+=(const double rhs) noexcept;
@@ -32,19 +34,21 @@ struct Complex {
     Complex& operator/=(const Complex& rhs);
     Complex& operator/=(const double rhs);
 
-    //re & im initialization
+    // numbers initialization
     double re = 0.0;
     double im = 0.0;
-    //literals initialization
+
+    // separators initialization
     static const char LeftPart{'{'};
     static const char Separator{','};
     static const char RightPart{'}'};
-    //streams initialization
+
+    // streams initialization
     std::ostream& writeTo(std::ostream& outstream) const noexcept;
     std::istream& readFrom(std::istream& instream) noexcept;
 };
 
-//Postfix operators definition
+// Postfix operators initialization
 Complex operator+(const Complex& lhs, const Complex& rhs) noexcept;
 Complex operator+(const Complex& lhs, const double rhs)noexcept;
 Complex operator+(const double rhs, const Complex& lhs)noexcept;
@@ -61,10 +65,11 @@ Complex operator/(const Complex& lhs, const Complex& rhs);
 Complex operator/(const Complex& lhs, const double rhs);
 Complex operator/(const double rhs, const Complex& lhs);
 
+// streams initialization
 inline std::ostream& operator<<(std::ostream& out,const Complex& rhs) noexcept {
     return rhs.writeTo(out);
 }
-//Istream definition
+
 inline std::istream& operator>>(std::istream& in,Complex& rhs) noexcept {
     return rhs.readFrom(in);
 }

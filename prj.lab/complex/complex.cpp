@@ -2,17 +2,20 @@
 #include <iostream>
 #include <sstream>
 
-
+// numbers definition
 double re = 0.0;
 double im = 0.0;
 
+// separators definition
 static const char LeftPart{'{'};
 static const char Separator{','};
 static const char RightPart{'}'};
 
+// bool operators definition
 bool Complex::operator==(const Complex& rhs) const noexcept {return (re == rhs.re) && (im == rhs.im);};
 bool Complex::operator!=(const Complex& rhs) const noexcept {return (re != rhs.re) || (im != rhs.im);};
 
+// prefix operators definition
 Complex Complex::operator-() const noexcept { return Complex(-re, -im); }
 
 Complex& Complex::operator+=(const Complex& rhs) noexcept {
@@ -45,7 +48,7 @@ Complex& Complex::operator*=(const double rhs) noexcept {
     re *= rhs;
     return *this;
 }
- 
+
 Complex& Complex::operator/=(const Complex& rhs){
     double zre = re;
     re = (re * rhs.re + im * rhs.im) / (rhs.re * rhs.re + rhs.im * rhs.im);
@@ -57,7 +60,7 @@ Complex& Complex::operator/=(const double rhs){
     return *this;
 }
 
-//Postfix operators definition
+// postfix operators definition
 Complex operator+(const Complex& lhs, const Complex& rhs) noexcept {
     return Complex(lhs.re + rhs.re, lhs.im + rhs.im);
 }
@@ -67,7 +70,7 @@ Complex operator+(const Complex& lhs, const double rhs) noexcept {
 Complex operator+(const double rhs, const Complex& lhs) noexcept {
     return Complex(lhs.re + rhs, lhs.im);
 }
- 
+
 Complex operator-(const Complex& lhs, const Complex& rhs) noexcept {
     return Complex(lhs.re - rhs.re, lhs.im - rhs.im);
 }
@@ -77,7 +80,7 @@ Complex operator-(const Complex& lhs, const double rhs) noexcept {
 Complex operator-(const double rhs, const Complex& lhs) noexcept {
     return Complex(rhs - lhs.re, -lhs.im);
 }
- 
+
 Complex operator*(const Complex& lhs, const Complex& rhs) noexcept {
     return Complex(lhs.re * rhs.re - lhs.im * rhs.im, lhs.re * rhs.im + rhs.re * lhs.im);
 }
@@ -87,7 +90,7 @@ Complex operator*(const Complex& lhs, const double rhs) noexcept {
 Complex operator*(const double rhs, const Complex& lhs) noexcept {
     return Complex(lhs.re * rhs, lhs.im * rhs);
 }
- 
+
 Complex operator/(const Complex& lhs, const Complex& rhs){
     return Complex((lhs.re * rhs.re + lhs.im * rhs.im) / (rhs.re * rhs.re + rhs.im * rhs.im),
     (lhs.im * rhs.re - lhs.re * rhs.im) / (rhs.re * rhs.re + rhs.im * rhs.im));
@@ -99,7 +102,7 @@ Complex operator/(const double rhs, const Complex& lhs){
     return Complex(rhs / lhs.re, rhs / lhs.im);
 }
 
-//Outstream definition
+// streams sdefinition
 std::ostream& Complex::writeTo(std::ostream& out) const noexcept{
     out << LeftPart << re << Separator << im << RightPart;
     return out;
