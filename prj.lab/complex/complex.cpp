@@ -15,7 +15,7 @@ static const char RightPart{'}'};
 bool Complex::operator==(const Complex& rhs) const noexcept {return (re == rhs.re) && (im == rhs.im);};
 bool Complex::operator!=(const Complex& rhs) const noexcept {return (re != rhs.re) || (im != rhs.im);};
 
-// prefix operators definition
+// += -= *= /= operators definition
 Complex Complex::operator-() const noexcept { return Complex(-re, -im); }
 
 Complex& Complex::operator+=(const Complex& rhs) noexcept {
@@ -60,7 +60,7 @@ Complex& Complex::operator/=(const double rhs){
     return *this;
 }
 
-// postfix operators definition
+// + - * / operators definition
 Complex operator+(const Complex& lhs, const Complex& rhs) noexcept {
     return Complex(lhs.re + rhs.re, lhs.im + rhs.im);
 }

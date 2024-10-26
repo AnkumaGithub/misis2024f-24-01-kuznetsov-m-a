@@ -19,9 +19,10 @@ struct Complex {
     bool operator==(const Complex& rhs) const noexcept;
     bool operator!=(const Complex& rhs) const noexcept;
 
-    // prefix operators initialization
+    //
     Complex operator-() const noexcept;
 
+    // += -= *= /= operators initialization
     Complex& operator+=(const Complex& rhs) noexcept;
     Complex& operator+=(const double rhs) noexcept;
 
@@ -48,7 +49,7 @@ struct Complex {
     std::istream& readFrom(std::istream& instream) noexcept;
 };
 
-// Postfix operators initialization
+// + - * / operators initialization
 Complex operator+(const Complex& lhs, const Complex& rhs) noexcept;
 Complex operator+(const Complex& lhs, const double rhs)noexcept;
 Complex operator+(const double rhs, const Complex& lhs)noexcept;
