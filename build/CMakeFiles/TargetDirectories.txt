@@ -6,9 +6,11 @@
 /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.codeforces/CMakeFiles/0004c.dir
 /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.codeforces/CMakeFiles/0018a.dir
 /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.codeforces/CMakeFiles/0039d.dir
+/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.codeforces/CMakeFiles/0158a.dir
 /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.codeforces/CMakeFiles/0271a.dir
 /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.codeforces/CMakeFiles/0339b.dir
 /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.codeforces/CMakeFiles/0617a.dir
+/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.codeforces/CMakeFiles/0935b.dir
 /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.codeforces/CMakeFiles/0978a.dir
 /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.codeforces/CMakeFiles/0978b.dir
 /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.codeforces/CMakeFiles/1330a.dir
@@ -18,6 +20,7 @@
 /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.codeforces/CMakeFiles/1670b.dir
 /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.codeforces/CMakeFiles/1717b.dir
 /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.codeforces/CMakeFiles/1872a.dir
+/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.codeforces/CMakeFiles/1873b.dir
 /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.codeforces/CMakeFiles/1873c.dir
 /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.codeforces/CMakeFiles/1873d.dir
 /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.codeforces/CMakeFiles/edit_cache.dir

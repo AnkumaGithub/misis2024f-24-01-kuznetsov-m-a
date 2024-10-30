@@ -195,6 +195,19 @@ main/fast:
 .PHONY : 0039d/fast
 
 #=============================================================================
+# Target rules for targets named 0158a
+
+# Build rule for target.
+0158a: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 0158a
+.PHONY : 0158a
+
+# fast build rule for target.
+0158a/fast:
+	$(MAKE) $(MAKESILENT) -f prj.codeforces/CMakeFiles/0158a.dir/build.make prj.codeforces/CMakeFiles/0158a.dir/build
+.PHONY : 0158a/fast
+
+#=============================================================================
 # Target rules for targets named 0271a
 
 # Build rule for target.
@@ -232,6 +245,19 @@ main/fast:
 0617a/fast:
 	$(MAKE) $(MAKESILENT) -f prj.codeforces/CMakeFiles/0617a.dir/build.make prj.codeforces/CMakeFiles/0617a.dir/build
 .PHONY : 0617a/fast
+
+#=============================================================================
+# Target rules for targets named 0935b
+
+# Build rule for target.
+0935b: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 0935b
+.PHONY : 0935b
+
+# fast build rule for target.
+0935b/fast:
+	$(MAKE) $(MAKESILENT) -f prj.codeforces/CMakeFiles/0935b.dir/build.make prj.codeforces/CMakeFiles/0935b.dir/build
+.PHONY : 0935b/fast
 
 #=============================================================================
 # Target rules for targets named 0978a
@@ -351,6 +377,19 @@ main/fast:
 .PHONY : 1872a/fast
 
 #=============================================================================
+# Target rules for targets named 1873b
+
+# Build rule for target.
+1873b: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 1873b
+.PHONY : 1873b
+
+# fast build rule for target.
+1873b/fast:
+	$(MAKE) $(MAKESILENT) -f prj.codeforces/CMakeFiles/1873b.dir/build.make prj.codeforces/CMakeFiles/1873b.dir/build
+.PHONY : 1873b/fast
+
+#=============================================================================
 # Target rules for targets named 1873c
 
 # Build rule for target.
@@ -439,9 +478,11 @@ help:
 	@echo "... 0004c"
 	@echo "... 0018a"
 	@echo "... 0039d"
+	@echo "... 0158a"
 	@echo "... 0271a"
 	@echo "... 0339b"
 	@echo "... 0617a"
+	@echo "... 0935b"
 	@echo "... 0978a"
 	@echo "... 0978b"
 	@echo "... 1330a"
@@ -451,6 +492,7 @@ help:
 	@echo "... 1670b"
 	@echo "... 1717b"
 	@echo "... 1872a"
+	@echo "... 1873b"
 	@echo "... 1873c"
 	@echo "... 1873d"
 	@echo "... complex_doctest"

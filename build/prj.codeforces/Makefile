@@ -187,6 +187,20 @@ prj.codeforces/CMakeFiles/0039d.dir/rule:
 .PHONY : 0039d/fast
 
 # Convenience name for target.
+prj.codeforces/CMakeFiles/0158a.dir/rule:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.codeforces/CMakeFiles/0158a.dir/rule
+.PHONY : prj.codeforces/CMakeFiles/0158a.dir/rule
+
+# Convenience name for target.
+0158a: prj.codeforces/CMakeFiles/0158a.dir/rule
+.PHONY : 0158a
+
+# fast build rule for target.
+0158a/fast:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.codeforces/CMakeFiles/0158a.dir/build.make prj.codeforces/CMakeFiles/0158a.dir/build
+.PHONY : 0158a/fast
+
+# Convenience name for target.
 prj.codeforces/CMakeFiles/0271a.dir/rule:
 	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.codeforces/CMakeFiles/0271a.dir/rule
 .PHONY : prj.codeforces/CMakeFiles/0271a.dir/rule
@@ -227,6 +241,20 @@ prj.codeforces/CMakeFiles/0617a.dir/rule:
 0617a/fast:
 	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.codeforces/CMakeFiles/0617a.dir/build.make prj.codeforces/CMakeFiles/0617a.dir/build
 .PHONY : 0617a/fast
+
+# Convenience name for target.
+prj.codeforces/CMakeFiles/0935b.dir/rule:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.codeforces/CMakeFiles/0935b.dir/rule
+.PHONY : prj.codeforces/CMakeFiles/0935b.dir/rule
+
+# Convenience name for target.
+0935b: prj.codeforces/CMakeFiles/0935b.dir/rule
+.PHONY : 0935b
+
+# fast build rule for target.
+0935b/fast:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.codeforces/CMakeFiles/0935b.dir/build.make prj.codeforces/CMakeFiles/0935b.dir/build
+.PHONY : 0935b/fast
 
 # Convenience name for target.
 prj.codeforces/CMakeFiles/0978a.dir/rule:
@@ -353,6 +381,20 @@ prj.codeforces/CMakeFiles/1872a.dir/rule:
 1872a/fast:
 	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.codeforces/CMakeFiles/1872a.dir/build.make prj.codeforces/CMakeFiles/1872a.dir/build
 .PHONY : 1872a/fast
+
+# Convenience name for target.
+prj.codeforces/CMakeFiles/1873b.dir/rule:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.codeforces/CMakeFiles/1873b.dir/rule
+.PHONY : prj.codeforces/CMakeFiles/1873b.dir/rule
+
+# Convenience name for target.
+1873b: prj.codeforces/CMakeFiles/1873b.dir/rule
+.PHONY : 1873b
+
+# fast build rule for target.
+1873b/fast:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.codeforces/CMakeFiles/1873b.dir/build.make prj.codeforces/CMakeFiles/1873b.dir/build
+.PHONY : 1873b/fast
 
 # Convenience name for target.
 prj.codeforces/CMakeFiles/1873c.dir/rule:
@@ -502,6 +544,30 @@ prj.codeforces/CMakeFiles/1873d.dir/rule:
 	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.codeforces/CMakeFiles/0039d.dir/build.make prj.codeforces/CMakeFiles/0039d.dir/0039d.cpp.s
 .PHONY : 0039d.cpp.s
 
+0158a.o: 0158a.cpp.o
+.PHONY : 0158a.o
+
+# target to build an object file
+0158a.cpp.o:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.codeforces/CMakeFiles/0158a.dir/build.make prj.codeforces/CMakeFiles/0158a.dir/0158a.cpp.o
+.PHONY : 0158a.cpp.o
+
+0158a.i: 0158a.cpp.i
+.PHONY : 0158a.i
+
+# target to preprocess a source file
+0158a.cpp.i:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.codeforces/CMakeFiles/0158a.dir/build.make prj.codeforces/CMakeFiles/0158a.dir/0158a.cpp.i
+.PHONY : 0158a.cpp.i
+
+0158a.s: 0158a.cpp.s
+.PHONY : 0158a.s
+
+# target to generate assembly for a file
+0158a.cpp.s:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.codeforces/CMakeFiles/0158a.dir/build.make prj.codeforces/CMakeFiles/0158a.dir/0158a.cpp.s
+.PHONY : 0158a.cpp.s
+
 0271a.o: 0271a.cpp.o
 .PHONY : 0271a.o
 
@@ -573,6 +639,30 @@ prj.codeforces/CMakeFiles/1873d.dir/rule:
 0617a.cpp.s:
 	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.codeforces/CMakeFiles/0617a.dir/build.make prj.codeforces/CMakeFiles/0617a.dir/0617a.cpp.s
 .PHONY : 0617a.cpp.s
+
+0935b.o: 0935b.cpp.o
+.PHONY : 0935b.o
+
+# target to build an object file
+0935b.cpp.o:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.codeforces/CMakeFiles/0935b.dir/build.make prj.codeforces/CMakeFiles/0935b.dir/0935b.cpp.o
+.PHONY : 0935b.cpp.o
+
+0935b.i: 0935b.cpp.i
+.PHONY : 0935b.i
+
+# target to preprocess a source file
+0935b.cpp.i:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.codeforces/CMakeFiles/0935b.dir/build.make prj.codeforces/CMakeFiles/0935b.dir/0935b.cpp.i
+.PHONY : 0935b.cpp.i
+
+0935b.s: 0935b.cpp.s
+.PHONY : 0935b.s
+
+# target to generate assembly for a file
+0935b.cpp.s:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.codeforces/CMakeFiles/0935b.dir/build.make prj.codeforces/CMakeFiles/0935b.dir/0935b.cpp.s
+.PHONY : 0935b.cpp.s
 
 0978a.o: 0978a.cpp.o
 .PHONY : 0978a.o
@@ -790,6 +880,30 @@ prj.codeforces/CMakeFiles/1873d.dir/rule:
 	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.codeforces/CMakeFiles/1872a.dir/build.make prj.codeforces/CMakeFiles/1872a.dir/1872a.cpp.s
 .PHONY : 1872a.cpp.s
 
+1873b.o: 1873b.cpp.o
+.PHONY : 1873b.o
+
+# target to build an object file
+1873b.cpp.o:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.codeforces/CMakeFiles/1873b.dir/build.make prj.codeforces/CMakeFiles/1873b.dir/1873b.cpp.o
+.PHONY : 1873b.cpp.o
+
+1873b.i: 1873b.cpp.i
+.PHONY : 1873b.i
+
+# target to preprocess a source file
+1873b.cpp.i:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.codeforces/CMakeFiles/1873b.dir/build.make prj.codeforces/CMakeFiles/1873b.dir/1873b.cpp.i
+.PHONY : 1873b.cpp.i
+
+1873b.s: 1873b.cpp.s
+.PHONY : 1873b.s
+
+# target to generate assembly for a file
+1873b.cpp.s:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.codeforces/CMakeFiles/1873b.dir/build.make prj.codeforces/CMakeFiles/1873b.dir/1873b.cpp.s
+.PHONY : 1873b.cpp.s
+
 1873c.o: 1873c.cpp.o
 .PHONY : 1873c.o
 
@@ -851,9 +965,11 @@ help:
 	@echo "... 0004c"
 	@echo "... 0018a"
 	@echo "... 0039d"
+	@echo "... 0158a"
 	@echo "... 0271a"
 	@echo "... 0339b"
 	@echo "... 0617a"
+	@echo "... 0935b"
 	@echo "... 0978a"
 	@echo "... 0978b"
 	@echo "... 1330a"
@@ -863,6 +979,7 @@ help:
 	@echo "... 1670b"
 	@echo "... 1717b"
 	@echo "... 1872a"
+	@echo "... 1873b"
 	@echo "... 1873c"
 	@echo "... 1873d"
 	@echo "... 0002a.o"
@@ -880,6 +997,9 @@ help:
 	@echo "... 0039d.o"
 	@echo "... 0039d.i"
 	@echo "... 0039d.s"
+	@echo "... 0158a.o"
+	@echo "... 0158a.i"
+	@echo "... 0158a.s"
 	@echo "... 0271a.o"
 	@echo "... 0271a.i"
 	@echo "... 0271a.s"
@@ -889,6 +1009,9 @@ help:
 	@echo "... 0617a.o"
 	@echo "... 0617a.i"
 	@echo "... 0617a.s"
+	@echo "... 0935b.o"
+	@echo "... 0935b.i"
+	@echo "... 0935b.s"
 	@echo "... 0978a.o"
 	@echo "... 0978a.i"
 	@echo "... 0978a.s"
@@ -916,6 +1039,9 @@ help:
 	@echo "... 1872a.o"
 	@echo "... 1872a.i"
 	@echo "... 1872a.s"
+	@echo "... 1873b.o"
+	@echo "... 1873b.i"
+	@echo "... 1873b.s"
 	@echo "... 1873c.o"
 	@echo "... 1873c.i"
 	@echo "... 1873c.s"
