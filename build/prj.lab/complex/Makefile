@@ -117,25 +117,25 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-prj.lab/complex/CMakeFiles/complex_test.dir/rule:
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.lab/complex/CMakeFiles/complex_test.dir/rule
-.PHONY : prj.lab/complex/CMakeFiles/complex_test.dir/rule
+prj.lab/complex/CMakeFiles/complex_l.dir/rule:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.lab/complex/CMakeFiles/complex_l.dir/rule
+.PHONY : prj.lab/complex/CMakeFiles/complex_l.dir/rule
 
 # Convenience name for target.
-complex_test: prj.lab/complex/CMakeFiles/complex_test.dir/rule
-.PHONY : complex_test
+complex_l: prj.lab/complex/CMakeFiles/complex_l.dir/rule
+.PHONY : complex_l
 
 # fast build rule for target.
-complex_test/fast:
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.lab/complex/CMakeFiles/complex_test.dir/build.make prj.lab/complex/CMakeFiles/complex_test.dir/build
-.PHONY : complex_test/fast
+complex_l/fast:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.lab/complex/CMakeFiles/complex_l.dir/build.make prj.lab/complex/CMakeFiles/complex_l.dir/build
+.PHONY : complex_l/fast
 
 complex.o: complex.cpp.o
 .PHONY : complex.o
 
 # target to build an object file
 complex.cpp.o:
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.lab/complex/CMakeFiles/complex_test.dir/build.make prj.lab/complex/CMakeFiles/complex_test.dir/complex.cpp.o
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.lab/complex/CMakeFiles/complex_l.dir/build.make prj.lab/complex/CMakeFiles/complex_l.dir/complex.cpp.o
 .PHONY : complex.cpp.o
 
 complex.i: complex.cpp.i
@@ -143,7 +143,7 @@ complex.i: complex.cpp.i
 
 # target to preprocess a source file
 complex.cpp.i:
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.lab/complex/CMakeFiles/complex_test.dir/build.make prj.lab/complex/CMakeFiles/complex_test.dir/complex.cpp.i
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.lab/complex/CMakeFiles/complex_l.dir/build.make prj.lab/complex/CMakeFiles/complex_l.dir/complex.cpp.i
 .PHONY : complex.cpp.i
 
 complex.s: complex.cpp.s
@@ -151,7 +151,7 @@ complex.s: complex.cpp.s
 
 # target to generate assembly for a file
 complex.cpp.s:
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.lab/complex/CMakeFiles/complex_test.dir/build.make prj.lab/complex/CMakeFiles/complex_test.dir/complex.cpp.s
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.lab/complex/CMakeFiles/complex_l.dir/build.make prj.lab/complex/CMakeFiles/complex_l.dir/complex.cpp.s
 .PHONY : complex.cpp.s
 
 # Help Target
@@ -162,7 +162,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... complex_test"
+	@echo "... complex_l"
 	@echo "... complex.o"
 	@echo "... complex.i"
 	@echo "... complex.s"

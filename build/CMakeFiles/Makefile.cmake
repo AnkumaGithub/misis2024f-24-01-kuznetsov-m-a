@@ -87,6 +87,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "prj.codeforces/CMakeFiles/1873b.dir/DependInfo.cmake"
   "prj.codeforces/CMakeFiles/1873c.dir/DependInfo.cmake"
   "prj.codeforces/CMakeFiles/1873d.dir/DependInfo.cmake"
-  "prj.lab/complex/CMakeFiles/complex_test.dir/DependInfo.cmake"
-  "prj.test/CMakeFiles/complex_doctest.dir/DependInfo.cmake"
+  "prj.lab/complex/CMakeFiles/complex_l.dir/DependInfo.cmake"
+  "prj.test/CMakeFiles/complex_test.dir/DependInfo.cmake"
   )

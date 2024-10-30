@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libStructComplex_test.a CMakeFiles/StructComplex_test.dir/StructComplex.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libStructComplex_test.a

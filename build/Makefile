@@ -416,6 +416,19 @@ main/fast:
 .PHONY : 1873d/fast
 
 #=============================================================================
+# Target rules for targets named complex_l
+
+# Build rule for target.
+complex_l: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 complex_l
+.PHONY : complex_l
+
+# fast build rule for target.
+complex_l/fast:
+	$(MAKE) $(MAKESILENT) -f prj.lab/complex/CMakeFiles/complex_l.dir/build.make prj.lab/complex/CMakeFiles/complex_l.dir/build
+.PHONY : complex_l/fast
+
+#=============================================================================
 # Target rules for targets named complex_test
 
 # Build rule for target.
@@ -425,21 +438,8 @@ complex_test: cmake_check_build_system
 
 # fast build rule for target.
 complex_test/fast:
-	$(MAKE) $(MAKESILENT) -f prj.lab/complex/CMakeFiles/complex_test.dir/build.make prj.lab/complex/CMakeFiles/complex_test.dir/build
+	$(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/complex_test.dir/build.make prj.test/CMakeFiles/complex_test.dir/build
 .PHONY : complex_test/fast
-
-#=============================================================================
-# Target rules for targets named complex_doctest
-
-# Build rule for target.
-complex_doctest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 complex_doctest
-.PHONY : complex_doctest
-
-# fast build rule for target.
-complex_doctest/fast:
-	$(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/complex_doctest.dir/build.make prj.test/CMakeFiles/complex_doctest.dir/build
-.PHONY : complex_doctest/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -495,7 +495,7 @@ help:
 	@echo "... 1873b"
 	@echo "... 1873c"
 	@echo "... 1873d"
-	@echo "... complex_doctest"
+	@echo "... complex_l"
 	@echo "... complex_test"
 	@echo "... main"
 	@echo "... main.o"
