@@ -429,6 +429,19 @@ complex_l/fast:
 .PHONY : complex_l/fast
 
 #=============================================================================
+# Target rules for targets named ration_l
+
+# Build rule for target.
+ration_l: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ration_l
+.PHONY : ration_l
+
+# fast build rule for target.
+ration_l/fast:
+	$(MAKE) $(MAKESILENT) -f prj.lab/ration/CMakeFiles/ration_l.dir/build.make prj.lab/ration/CMakeFiles/ration_l.dir/build
+.PHONY : ration_l/fast
+
+#=============================================================================
 # Target rules for targets named complex_test
 
 # Build rule for target.
@@ -440,6 +453,32 @@ complex_test: cmake_check_build_system
 complex_test/fast:
 	$(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/complex_test.dir/build.make prj.test/CMakeFiles/complex_test.dir/build
 .PHONY : complex_test/fast
+
+#=============================================================================
+# Target rules for targets named complex_doctest
+
+# Build rule for target.
+complex_doctest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 complex_doctest
+.PHONY : complex_doctest
+
+# fast build rule for target.
+complex_doctest/fast:
+	$(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/complex_doctest.dir/build.make prj.test/CMakeFiles/complex_doctest.dir/build
+.PHONY : complex_doctest/fast
+
+#=============================================================================
+# Target rules for targets named ration_test
+
+# Build rule for target.
+ration_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ration_test
+.PHONY : ration_test
+
+# fast build rule for target.
+ration_test/fast:
+	$(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/ration_test.dir/build.make prj.test/CMakeFiles/ration_test.dir/build
+.PHONY : ration_test/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -495,9 +534,12 @@ help:
 	@echo "... 1873b"
 	@echo "... 1873c"
 	@echo "... 1873d"
+	@echo "... complex_doctest"
 	@echo "... complex_l"
 	@echo "... complex_test"
 	@echo "... main"
+	@echo "... ration_l"
+	@echo "... ration_test"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

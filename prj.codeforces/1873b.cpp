@@ -13,12 +13,16 @@ int main(){
             std::cin >> x;
             data[j] = x;
             p = p * x;
-            ocounter += 1;
+            if (data[j] == 0){
+                ocounter += 1;
+            }
         }
         for (int i = 0;i < n;++i){
-            pn = p / data[i] * (data[i] + 1);
-            if (pn > mxp){
-                mxp = pn;
+            if (data[i] != 0){
+                pn = p / data[i] * (data[i] + 1);
+                if (pn > mxp){
+                    mxp = pn;
+                }
             }
         }
         if (ocounter == 0){
@@ -30,8 +34,8 @@ int main(){
                 if (data[i] != 0){
                     totalp *= data[i];
                 }
-            std::cout << totalp << std::endl;
             }
+            std::cout << totalp << std::endl;
         }
         if (ocounter >= 2){
             std::cout << mxp << std::endl;

@@ -130,6 +130,58 @@ complex_test/fast:
 	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/complex_test.dir/build.make prj.test/CMakeFiles/complex_test.dir/build
 .PHONY : complex_test/fast
 
+# Convenience name for target.
+prj.test/CMakeFiles/complex_doctest.dir/rule:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.test/CMakeFiles/complex_doctest.dir/rule
+.PHONY : prj.test/CMakeFiles/complex_doctest.dir/rule
+
+# Convenience name for target.
+complex_doctest: prj.test/CMakeFiles/complex_doctest.dir/rule
+.PHONY : complex_doctest
+
+# fast build rule for target.
+complex_doctest/fast:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/complex_doctest.dir/build.make prj.test/CMakeFiles/complex_doctest.dir/build
+.PHONY : complex_doctest/fast
+
+# Convenience name for target.
+prj.test/CMakeFiles/ration_test.dir/rule:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.test/CMakeFiles/ration_test.dir/rule
+.PHONY : prj.test/CMakeFiles/ration_test.dir/rule
+
+# Convenience name for target.
+ration_test: prj.test/CMakeFiles/ration_test.dir/rule
+.PHONY : ration_test
+
+# fast build rule for target.
+ration_test/fast:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/ration_test.dir/build.make prj.test/CMakeFiles/ration_test.dir/build
+.PHONY : ration_test/fast
+
+complex_doctest.o: complex_doctest.cpp.o
+.PHONY : complex_doctest.o
+
+# target to build an object file
+complex_doctest.cpp.o:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/complex_doctest.dir/build.make prj.test/CMakeFiles/complex_doctest.dir/complex_doctest.cpp.o
+.PHONY : complex_doctest.cpp.o
+
+complex_doctest.i: complex_doctest.cpp.i
+.PHONY : complex_doctest.i
+
+# target to preprocess a source file
+complex_doctest.cpp.i:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/complex_doctest.dir/build.make prj.test/CMakeFiles/complex_doctest.dir/complex_doctest.cpp.i
+.PHONY : complex_doctest.cpp.i
+
+complex_doctest.s: complex_doctest.cpp.s
+.PHONY : complex_doctest.s
+
+# target to generate assembly for a file
+complex_doctest.cpp.s:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/complex_doctest.dir/build.make prj.test/CMakeFiles/complex_doctest.dir/complex_doctest.cpp.s
+.PHONY : complex_doctest.cpp.s
+
 complex_test.o: complex_test.cpp.o
 .PHONY : complex_test.o
 
@@ -154,6 +206,30 @@ complex_test.cpp.s:
 	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/complex_test.dir/build.make prj.test/CMakeFiles/complex_test.dir/complex_test.cpp.s
 .PHONY : complex_test.cpp.s
 
+ration_test.o: ration_test.cpp.o
+.PHONY : ration_test.o
+
+# target to build an object file
+ration_test.cpp.o:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/ration_test.dir/build.make prj.test/CMakeFiles/ration_test.dir/ration_test.cpp.o
+.PHONY : ration_test.cpp.o
+
+ration_test.i: ration_test.cpp.i
+.PHONY : ration_test.i
+
+# target to preprocess a source file
+ration_test.cpp.i:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/ration_test.dir/build.make prj.test/CMakeFiles/ration_test.dir/ration_test.cpp.i
+.PHONY : ration_test.cpp.i
+
+ration_test.s: ration_test.cpp.s
+.PHONY : ration_test.s
+
+# target to generate assembly for a file
+ration_test.cpp.s:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/ration_test.dir/build.make prj.test/CMakeFiles/ration_test.dir/ration_test.cpp.s
+.PHONY : ration_test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,10 +238,18 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... complex_doctest"
 	@echo "... complex_test"
+	@echo "... ration_test"
+	@echo "... complex_doctest.o"
+	@echo "... complex_doctest.i"
+	@echo "... complex_doctest.s"
 	@echo "... complex_test.o"
 	@echo "... complex_test.i"
 	@echo "... complex_test.s"
+	@echo "... ration_test.o"
+	@echo "... ration_test.i"
+	@echo "... ration_test.s"
 .PHONY : help
 
 
