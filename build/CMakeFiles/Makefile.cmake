@@ -94,4 +94,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "prj.test/CMakeFiles/complex_test.dir/DependInfo.cmake"
   "prj.test/CMakeFiles/complex_doctest.dir/DependInfo.cmake"
   "prj.test/CMakeFiles/rational_test.dir/DependInfo.cmake"
+  "prj.test/CMakeFiles/rational_doctest.dir/DependInfo.cmake"
   )

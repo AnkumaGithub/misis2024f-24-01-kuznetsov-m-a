@@ -158,6 +158,20 @@ rational_test/fast:
 	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/rational_test.dir/build.make prj.test/CMakeFiles/rational_test.dir/build
 .PHONY : rational_test/fast
 
+# Convenience name for target.
+prj.test/CMakeFiles/rational_doctest.dir/rule:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.test/CMakeFiles/rational_doctest.dir/rule
+.PHONY : prj.test/CMakeFiles/rational_doctest.dir/rule
+
+# Convenience name for target.
+rational_doctest: prj.test/CMakeFiles/rational_doctest.dir/rule
+.PHONY : rational_doctest
+
+# fast build rule for target.
+rational_doctest/fast:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/rational_doctest.dir/build.make prj.test/CMakeFiles/rational_doctest.dir/build
+.PHONY : rational_doctest/fast
+
 complex_doctest.o: complex_doctest.cpp.o
 .PHONY : complex_doctest.o
 
@@ -206,6 +220,30 @@ complex_test.cpp.s:
 	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/complex_test.dir/build.make prj.test/CMakeFiles/complex_test.dir/complex_test.cpp.s
 .PHONY : complex_test.cpp.s
 
+rational_doctest.o: rational_doctest.cpp.o
+.PHONY : rational_doctest.o
+
+# target to build an object file
+rational_doctest.cpp.o:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/rational_doctest.dir/build.make prj.test/CMakeFiles/rational_doctest.dir/rational_doctest.cpp.o
+.PHONY : rational_doctest.cpp.o
+
+rational_doctest.i: rational_doctest.cpp.i
+.PHONY : rational_doctest.i
+
+# target to preprocess a source file
+rational_doctest.cpp.i:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/rational_doctest.dir/build.make prj.test/CMakeFiles/rational_doctest.dir/rational_doctest.cpp.i
+.PHONY : rational_doctest.cpp.i
+
+rational_doctest.s: rational_doctest.cpp.s
+.PHONY : rational_doctest.s
+
+# target to generate assembly for a file
+rational_doctest.cpp.s:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/rational_doctest.dir/build.make prj.test/CMakeFiles/rational_doctest.dir/rational_doctest.cpp.s
+.PHONY : rational_doctest.cpp.s
+
 rational_test.o: rational_test.cpp.o
 .PHONY : rational_test.o
 
@@ -240,6 +278,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... complex_doctest"
 	@echo "... complex_test"
+	@echo "... rational_doctest"
 	@echo "... rational_test"
 	@echo "... complex_doctest.o"
 	@echo "... complex_doctest.i"
@@ -247,6 +286,9 @@ help:
 	@echo "... complex_test.o"
 	@echo "... complex_test.i"
 	@echo "... complex_test.s"
+	@echo "... rational_doctest.o"
+	@echo "... rational_doctest.i"
+	@echo "... rational_doctest.s"
 	@echo "... rational_test.o"
 	@echo "... rational_test.i"
 	@echo "... rational_test.s"

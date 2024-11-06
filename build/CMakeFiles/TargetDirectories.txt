@@ -36,5 +36,6 @@
 /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.test/CMakeFiles/complex_test.dir
 /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.test/CMakeFiles/complex_doctest.dir
 /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.test/CMakeFiles/rational_test.dir
+/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.test/CMakeFiles/rational_doctest.dir
 /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.test/CMakeFiles/edit_cache.dir
 /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/prj.test/CMakeFiles/rebuild_cache.dir

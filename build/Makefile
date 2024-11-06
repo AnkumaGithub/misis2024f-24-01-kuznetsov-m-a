@@ -480,6 +480,19 @@ rational_test/fast:
 	$(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/rational_test.dir/build.make prj.test/CMakeFiles/rational_test.dir/build
 .PHONY : rational_test/fast
 
+#=============================================================================
+# Target rules for targets named rational_doctest
+
+# Build rule for target.
+rational_doctest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rational_doctest
+.PHONY : rational_doctest
+
+# fast build rule for target.
+rational_doctest/fast:
+	$(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/rational_doctest.dir/build.make prj.test/CMakeFiles/rational_doctest.dir/build
+.PHONY : rational_doctest/fast
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -538,6 +551,7 @@ help:
 	@echo "... complex_l"
 	@echo "... complex_test"
 	@echo "... main"
+	@echo "... rational_doctest"
 	@echo "... rational_l"
 	@echo "... rational_test"
 	@echo "... main.o"
