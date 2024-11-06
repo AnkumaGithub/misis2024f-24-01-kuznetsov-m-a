@@ -429,17 +429,17 @@ complex_l/fast:
 .PHONY : complex_l/fast
 
 #=============================================================================
-# Target rules for targets named ration_l
+# Target rules for targets named rational_l
 
 # Build rule for target.
-ration_l: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ration_l
-.PHONY : ration_l
+rational_l: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rational_l
+.PHONY : rational_l
 
 # fast build rule for target.
-ration_l/fast:
-	$(MAKE) $(MAKESILENT) -f prj.lab/ration/CMakeFiles/ration_l.dir/build.make prj.lab/ration/CMakeFiles/ration_l.dir/build
-.PHONY : ration_l/fast
+rational_l/fast:
+	$(MAKE) $(MAKESILENT) -f prj.lab/rational/CMakeFiles/rational_l.dir/build.make prj.lab/rational/CMakeFiles/rational_l.dir/build
+.PHONY : rational_l/fast
 
 #=============================================================================
 # Target rules for targets named complex_test
@@ -468,17 +468,17 @@ complex_doctest/fast:
 .PHONY : complex_doctest/fast
 
 #=============================================================================
-# Target rules for targets named ration_test
+# Target rules for targets named rational_test
 
 # Build rule for target.
-ration_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ration_test
-.PHONY : ration_test
+rational_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rational_test
+.PHONY : rational_test
 
 # fast build rule for target.
-ration_test/fast:
-	$(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/ration_test.dir/build.make prj.test/CMakeFiles/ration_test.dir/build
-.PHONY : ration_test/fast
+rational_test/fast:
+	$(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/rational_test.dir/build.make prj.test/CMakeFiles/rational_test.dir/build
+.PHONY : rational_test/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -538,8 +538,8 @@ help:
 	@echo "... complex_l"
 	@echo "... complex_test"
 	@echo "... main"
-	@echo "... ration_l"
-	@echo "... ration_test"
+	@echo "... rational_l"
+	@echo "... rational_test"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

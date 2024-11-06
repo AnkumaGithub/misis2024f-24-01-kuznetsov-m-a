@@ -1,1 +1,0 @@
-add_library(ration_l ration.cpp ration.hpp)

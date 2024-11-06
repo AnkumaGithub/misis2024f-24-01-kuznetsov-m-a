@@ -145,18 +145,18 @@ complex_doctest/fast:
 .PHONY : complex_doctest/fast
 
 # Convenience name for target.
-prj.test/CMakeFiles/ration_test.dir/rule:
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.test/CMakeFiles/ration_test.dir/rule
-.PHONY : prj.test/CMakeFiles/ration_test.dir/rule
+prj.test/CMakeFiles/rational_test.dir/rule:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.test/CMakeFiles/rational_test.dir/rule
+.PHONY : prj.test/CMakeFiles/rational_test.dir/rule
 
 # Convenience name for target.
-ration_test: prj.test/CMakeFiles/ration_test.dir/rule
-.PHONY : ration_test
+rational_test: prj.test/CMakeFiles/rational_test.dir/rule
+.PHONY : rational_test
 
 # fast build rule for target.
-ration_test/fast:
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/ration_test.dir/build.make prj.test/CMakeFiles/ration_test.dir/build
-.PHONY : ration_test/fast
+rational_test/fast:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/rational_test.dir/build.make prj.test/CMakeFiles/rational_test.dir/build
+.PHONY : rational_test/fast
 
 complex_doctest.o: complex_doctest.cpp.o
 .PHONY : complex_doctest.o
@@ -206,29 +206,29 @@ complex_test.cpp.s:
 	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/complex_test.dir/build.make prj.test/CMakeFiles/complex_test.dir/complex_test.cpp.s
 .PHONY : complex_test.cpp.s
 
-ration_test.o: ration_test.cpp.o
-.PHONY : ration_test.o
+rational_test.o: rational_test.cpp.o
+.PHONY : rational_test.o
 
 # target to build an object file
-ration_test.cpp.o:
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/ration_test.dir/build.make prj.test/CMakeFiles/ration_test.dir/ration_test.cpp.o
-.PHONY : ration_test.cpp.o
+rational_test.cpp.o:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/rational_test.dir/build.make prj.test/CMakeFiles/rational_test.dir/rational_test.cpp.o
+.PHONY : rational_test.cpp.o
 
-ration_test.i: ration_test.cpp.i
-.PHONY : ration_test.i
+rational_test.i: rational_test.cpp.i
+.PHONY : rational_test.i
 
 # target to preprocess a source file
-ration_test.cpp.i:
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/ration_test.dir/build.make prj.test/CMakeFiles/ration_test.dir/ration_test.cpp.i
-.PHONY : ration_test.cpp.i
+rational_test.cpp.i:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/rational_test.dir/build.make prj.test/CMakeFiles/rational_test.dir/rational_test.cpp.i
+.PHONY : rational_test.cpp.i
 
-ration_test.s: ration_test.cpp.s
-.PHONY : ration_test.s
+rational_test.s: rational_test.cpp.s
+.PHONY : rational_test.s
 
 # target to generate assembly for a file
-ration_test.cpp.s:
-	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/ration_test.dir/build.make prj.test/CMakeFiles/ration_test.dir/ration_test.cpp.s
-.PHONY : ration_test.cpp.s
+rational_test.cpp.s:
+	cd /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build && $(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/rational_test.dir/build.make prj.test/CMakeFiles/rational_test.dir/rational_test.cpp.s
+.PHONY : rational_test.cpp.s
 
 # Help Target
 help:
@@ -240,16 +240,16 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... complex_doctest"
 	@echo "... complex_test"
-	@echo "... ration_test"
+	@echo "... rational_test"
 	@echo "... complex_doctest.o"
 	@echo "... complex_doctest.i"
 	@echo "... complex_doctest.s"
 	@echo "... complex_test.o"
 	@echo "... complex_test.i"
 	@echo "... complex_test.s"
-	@echo "... ration_test.o"
-	@echo "... ration_test.i"
-	@echo "... ration_test.s"
+	@echo "... rational_test.o"
+	@echo "... rational_test.i"
+	@echo "... rational_test.s"
 .PHONY : help
 
 

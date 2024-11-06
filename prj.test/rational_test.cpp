@@ -1,4 +1,4 @@
-#include <ration/ration.hpp>
+#include <rational/rational.hpp>
 #include <iostream>
 
 bool test(std::string st){

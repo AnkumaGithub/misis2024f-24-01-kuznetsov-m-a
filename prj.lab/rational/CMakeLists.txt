@@ -1,0 +1,1 @@
+add_library(rational_l rational.cpp rational.hpp)

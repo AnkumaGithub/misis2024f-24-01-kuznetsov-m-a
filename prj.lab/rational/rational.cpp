@@ -1,4 +1,4 @@
-#include "ration.hpp"
+#include "rational.hpp"
 #include <iostream>
 #include <sstream>
 

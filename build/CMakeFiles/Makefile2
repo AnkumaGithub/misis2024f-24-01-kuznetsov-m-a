@@ -176,22 +176,22 @@ prj.codeforces/clean: prj.codeforces/CMakeFiles/1873d.dir/clean
 
 # Recursive "all" directory target.
 prj.lab/all: prj.lab/complex/all
-prj.lab/all: prj.lab/ration/all
+prj.lab/all: prj.lab/rational/all
 .PHONY : prj.lab/all
 
 # Recursive "codegen" directory target.
 prj.lab/codegen: prj.lab/complex/codegen
-prj.lab/codegen: prj.lab/ration/codegen
+prj.lab/codegen: prj.lab/rational/codegen
 .PHONY : prj.lab/codegen
 
 # Recursive "preinstall" directory target.
 prj.lab/preinstall: prj.lab/complex/preinstall
-prj.lab/preinstall: prj.lab/ration/preinstall
+prj.lab/preinstall: prj.lab/rational/preinstall
 .PHONY : prj.lab/preinstall
 
 # Recursive "clean" directory target.
 prj.lab/clean: prj.lab/complex/clean
-prj.lab/clean: prj.lab/ration/clean
+prj.lab/clean: prj.lab/rational/clean
 .PHONY : prj.lab/clean
 
 #=============================================================================
@@ -214,23 +214,23 @@ prj.lab/complex/clean: prj.lab/complex/CMakeFiles/complex_l.dir/clean
 .PHONY : prj.lab/complex/clean
 
 #=============================================================================
-# Directory level rules for directory prj.lab/ration
+# Directory level rules for directory prj.lab/rational
 
 # Recursive "all" directory target.
-prj.lab/ration/all: prj.lab/ration/CMakeFiles/ration_l.dir/all
-.PHONY : prj.lab/ration/all
+prj.lab/rational/all: prj.lab/rational/CMakeFiles/rational_l.dir/all
+.PHONY : prj.lab/rational/all
 
 # Recursive "codegen" directory target.
-prj.lab/ration/codegen: prj.lab/ration/CMakeFiles/ration_l.dir/codegen
-.PHONY : prj.lab/ration/codegen
+prj.lab/rational/codegen: prj.lab/rational/CMakeFiles/rational_l.dir/codegen
+.PHONY : prj.lab/rational/codegen
 
 # Recursive "preinstall" directory target.
-prj.lab/ration/preinstall:
-.PHONY : prj.lab/ration/preinstall
+prj.lab/rational/preinstall:
+.PHONY : prj.lab/rational/preinstall
 
 # Recursive "clean" directory target.
-prj.lab/ration/clean: prj.lab/ration/CMakeFiles/ration_l.dir/clean
-.PHONY : prj.lab/ration/clean
+prj.lab/rational/clean: prj.lab/rational/CMakeFiles/rational_l.dir/clean
+.PHONY : prj.lab/rational/clean
 
 #=============================================================================
 # Directory level rules for directory prj.test
@@ -238,13 +238,13 @@ prj.lab/ration/clean: prj.lab/ration/CMakeFiles/ration_l.dir/clean
 # Recursive "all" directory target.
 prj.test/all: prj.test/CMakeFiles/complex_test.dir/all
 prj.test/all: prj.test/CMakeFiles/complex_doctest.dir/all
-prj.test/all: prj.test/CMakeFiles/ration_test.dir/all
+prj.test/all: prj.test/CMakeFiles/rational_test.dir/all
 .PHONY : prj.test/all
 
 # Recursive "codegen" directory target.
 prj.test/codegen: prj.test/CMakeFiles/complex_test.dir/codegen
 prj.test/codegen: prj.test/CMakeFiles/complex_doctest.dir/codegen
-prj.test/codegen: prj.test/CMakeFiles/ration_test.dir/codegen
+prj.test/codegen: prj.test/CMakeFiles/rational_test.dir/codegen
 .PHONY : prj.test/codegen
 
 # Recursive "preinstall" directory target.
@@ -254,7 +254,7 @@ prj.test/preinstall:
 # Recursive "clean" directory target.
 prj.test/clean: prj.test/CMakeFiles/complex_test.dir/clean
 prj.test/clean: prj.test/CMakeFiles/complex_doctest.dir/clean
-prj.test/clean: prj.test/CMakeFiles/ration_test.dir/clean
+prj.test/clean: prj.test/CMakeFiles/rational_test.dir/clean
 .PHONY : prj.test/clean
 
 #=============================================================================
@@ -1002,35 +1002,35 @@ prj.lab/complex/CMakeFiles/complex_l.dir/clean:
 .PHONY : prj.lab/complex/CMakeFiles/complex_l.dir/clean
 
 #=============================================================================
-# Target rules for target prj.lab/ration/CMakeFiles/ration_l.dir
+# Target rules for target prj.lab/rational/CMakeFiles/rational_l.dir
 
 # All Build rule for target.
-prj.lab/ration/CMakeFiles/ration_l.dir/all:
-	$(MAKE) $(MAKESILENT) -f prj.lab/ration/CMakeFiles/ration_l.dir/build.make prj.lab/ration/CMakeFiles/ration_l.dir/depend
-	$(MAKE) $(MAKESILENT) -f prj.lab/ration/CMakeFiles/ration_l.dir/build.make prj.lab/ration/CMakeFiles/ration_l.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/CMakeFiles --progress-num=53,54 "Built target ration_l"
-.PHONY : prj.lab/ration/CMakeFiles/ration_l.dir/all
+prj.lab/rational/CMakeFiles/rational_l.dir/all:
+	$(MAKE) $(MAKESILENT) -f prj.lab/rational/CMakeFiles/rational_l.dir/build.make prj.lab/rational/CMakeFiles/rational_l.dir/depend
+	$(MAKE) $(MAKESILENT) -f prj.lab/rational/CMakeFiles/rational_l.dir/build.make prj.lab/rational/CMakeFiles/rational_l.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/CMakeFiles --progress-num=53,54 "Built target rational_l"
+.PHONY : prj.lab/rational/CMakeFiles/rational_l.dir/all
 
 # Build rule for subdir invocation for target.
-prj.lab/ration/CMakeFiles/ration_l.dir/rule: cmake_check_build_system
+prj.lab/rational/CMakeFiles/rational_l.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.lab/ration/CMakeFiles/ration_l.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.lab/rational/CMakeFiles/rational_l.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/CMakeFiles 0
-.PHONY : prj.lab/ration/CMakeFiles/ration_l.dir/rule
+.PHONY : prj.lab/rational/CMakeFiles/rational_l.dir/rule
 
 # Convenience name for target.
-ration_l: prj.lab/ration/CMakeFiles/ration_l.dir/rule
-.PHONY : ration_l
+rational_l: prj.lab/rational/CMakeFiles/rational_l.dir/rule
+.PHONY : rational_l
 
 # codegen rule for target.
-prj.lab/ration/CMakeFiles/ration_l.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f prj.lab/ration/CMakeFiles/ration_l.dir/build.make prj.lab/ration/CMakeFiles/ration_l.dir/codegen
-.PHONY : prj.lab/ration/CMakeFiles/ration_l.dir/codegen
+prj.lab/rational/CMakeFiles/rational_l.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f prj.lab/rational/CMakeFiles/rational_l.dir/build.make prj.lab/rational/CMakeFiles/rational_l.dir/codegen
+.PHONY : prj.lab/rational/CMakeFiles/rational_l.dir/codegen
 
 # clean rule for target.
-prj.lab/ration/CMakeFiles/ration_l.dir/clean:
-	$(MAKE) $(MAKESILENT) -f prj.lab/ration/CMakeFiles/ration_l.dir/build.make prj.lab/ration/CMakeFiles/ration_l.dir/clean
-.PHONY : prj.lab/ration/CMakeFiles/ration_l.dir/clean
+prj.lab/rational/CMakeFiles/rational_l.dir/clean:
+	$(MAKE) $(MAKESILENT) -f prj.lab/rational/CMakeFiles/rational_l.dir/build.make prj.lab/rational/CMakeFiles/rational_l.dir/clean
+.PHONY : prj.lab/rational/CMakeFiles/rational_l.dir/clean
 
 #=============================================================================
 # Target rules for target prj.test/CMakeFiles/complex_test.dir
@@ -1095,35 +1095,35 @@ prj.test/CMakeFiles/complex_doctest.dir/clean:
 .PHONY : prj.test/CMakeFiles/complex_doctest.dir/clean
 
 #=============================================================================
-# Target rules for target prj.test/CMakeFiles/ration_test.dir
+# Target rules for target prj.test/CMakeFiles/rational_test.dir
 
 # All Build rule for target.
-prj.test/CMakeFiles/ration_test.dir/all: prj.lab/ration/CMakeFiles/ration_l.dir/all
-	$(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/ration_test.dir/build.make prj.test/CMakeFiles/ration_test.dir/depend
-	$(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/ration_test.dir/build.make prj.test/CMakeFiles/ration_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/CMakeFiles --progress-num=55,56 "Built target ration_test"
-.PHONY : prj.test/CMakeFiles/ration_test.dir/all
+prj.test/CMakeFiles/rational_test.dir/all: prj.lab/rational/CMakeFiles/rational_l.dir/all
+	$(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/rational_test.dir/build.make prj.test/CMakeFiles/rational_test.dir/depend
+	$(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/rational_test.dir/build.make prj.test/CMakeFiles/rational_test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/CMakeFiles --progress-num=55,56 "Built target rational_test"
+.PHONY : prj.test/CMakeFiles/rational_test.dir/all
 
 # Build rule for subdir invocation for target.
-prj.test/CMakeFiles/ration_test.dir/rule: cmake_check_build_system
+prj.test/CMakeFiles/rational_test.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.test/CMakeFiles/ration_test.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prj.test/CMakeFiles/rational_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksimkuznetsov/Documents/misis2024f-24-01-kuznetsov-m-a/build/CMakeFiles 0
-.PHONY : prj.test/CMakeFiles/ration_test.dir/rule
+.PHONY : prj.test/CMakeFiles/rational_test.dir/rule
 
 # Convenience name for target.
-ration_test: prj.test/CMakeFiles/ration_test.dir/rule
-.PHONY : ration_test
+rational_test: prj.test/CMakeFiles/rational_test.dir/rule
+.PHONY : rational_test
 
 # codegen rule for target.
-prj.test/CMakeFiles/ration_test.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/ration_test.dir/build.make prj.test/CMakeFiles/ration_test.dir/codegen
-.PHONY : prj.test/CMakeFiles/ration_test.dir/codegen
+prj.test/CMakeFiles/rational_test.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/rational_test.dir/build.make prj.test/CMakeFiles/rational_test.dir/codegen
+.PHONY : prj.test/CMakeFiles/rational_test.dir/codegen
 
 # clean rule for target.
-prj.test/CMakeFiles/ration_test.dir/clean:
-	$(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/ration_test.dir/build.make prj.test/CMakeFiles/ration_test.dir/clean
-.PHONY : prj.test/CMakeFiles/ration_test.dir/clean
+prj.test/CMakeFiles/rational_test.dir/clean:
+	$(MAKE) $(MAKESILENT) -f prj.test/CMakeFiles/rational_test.dir/build.make prj.test/CMakeFiles/rational_test.dir/clean
+.PHONY : prj.test/CMakeFiles/rational_test.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
