@@ -5,75 +5,75 @@
 #include <iostream>
 
 struct Ration {
-    int integ = 0;
-    int nat = 0;
+    int32_t integ = 0;
+    int32_t nat = 1;
 
     Ration() = default;
     Ration(Ration&&) = default;
-    explicit Ration(const int lhs) : integ(lhs) {}
-    Ration(const int lhs, const int rhs) : integ(lhs), nat(rhs) {}
+    explicit Ration(const int32_t lhs) : integ(lhs) {}
+    Ration(const int32_t lhs, const int32_t rhs) : integ(lhs), nat(rhs) {}
 
     Ration& operator=(const Ration&) = default;
     Ration& operator=(Ration&&) = default;
 
     bool operator==(const Ration &rhs) const noexcept;
-    bool operator==(const int &rhs) const noexcept;
+    bool operator==(const int32_t &rhs) const noexcept;
 
     bool operator!=(const Ration &rhs) const noexcept;
-    bool operator!=(const int &rhs) const noexcept;
+    bool operator!=(const int32_t &rhs) const noexcept;
 
     bool operator>=(const Ration &rhs) const noexcept;
-    bool operator>=(const int &rhs) const noexcept;
+    bool operator>=(const int32_t &rhs) const noexcept;
 
     bool operator<=(const Ration &rhs) const noexcept;
-    bool operator<=(const int &rhs) const noexcept;
+    bool operator<=(const int32_t &rhs) const noexcept;
 
     bool operator>(const Ration &rhs) const noexcept;
-    bool operator>(const int &rhs) const noexcept;
+    bool operator>(const int32_t &rhs) const noexcept;
 
     bool operator<(const Ration &rhs) const noexcept;
-    bool operator<(const int &rhs) const noexcept;
+    bool operator<(const int32_t &rhs) const noexcept;
 
     Ration& operator+=(const Ration &rhs) noexcept;
-    Ration& operator+=(const int &rhs) noexcept;
+    Ration& operator+=(const int32_t &rhs) noexcept;
 
     Ration& operator-=(const Ration &rhs) noexcept;
-    Ration& operator-=(const int &rhs) noexcept;
+    Ration& operator-=(const int32_t &rhs) noexcept;
 
     Ration& operator*=(const Ration &rhs) noexcept;
-    Ration& operator*=(const int &rhs) noexcept;
+    Ration& operator*=(const int32_t &rhs) noexcept;
 
     Ration& operator/=(const Ration &rhs) noexcept;
-    Ration& operator/=(const int &rhs) noexcept;
+    Ration& operator/=(const int32_t &rhs) noexcept;
 
     std::ostream& writeto(std::ostream& outs) const noexcept;
     std::istream& readfrom(std::istream& ins) noexcept;
 
-    static const char LeftPart{'{'};
     static const char Separator{'/'};
-    static const char RightPart{'}'};
 };
 
-Ration operator+=(const int &lhs, const Ration &rhs) noexcept;
-Ration operator-=(const int &lhs, const Ration &rhs) noexcept;
-Ration operator*=(const int &lhs, const Ration &rhs) noexcept;
-Ration operator/=(const int &lhs, const Ration &rhs) noexcept;
+Ration operator+=(const int32_t &lhs, const Ration &rhs) noexcept;
+Ration operator-=(const int32_t &lhs, const Ration &rhs) noexcept;
+Ration operator*=(const int32_t &lhs, const Ration &rhs) noexcept;
+Ration operator/=(const int32_t &lhs, const Ration &rhs) noexcept;
 
 Ration operator+(const Ration &lhs, const Ration &rhs) noexcept;
-Ration operator+(const Ration &lhs, const int &rhs) noexcept;
-Ration operator+(const int &lhs, const Ration &rhs) noexcept;
+Ration operator+(const Ration &lhs, const int32_t &rhs) noexcept;
+Ration operator+(const int32_t &lhs, const Ration &rhs) noexcept;
 
 Ration operator-(const Ration &lhs, const Ration &rhs) noexcept;
-Ration operator-(const Ration &lhs, const int &rhs) noexcept;
-Ration operator-(const int &lhs, const Ration &rhs) noexcept;
+Ration operator-(const Ration &lhs, const int32_t &rhs) noexcept;
+Ration operator-(const int32_t &lhs, const Ration &rhs) noexcept;
 
 Ration operator*(const Ration &lhs, const Ration &rhs) noexcept;
-Ration operator*(const Ration &lhs, const int &rhs) noexcept;
-Ration operator*(const int &lhs, const Ration &rhs) noexcept;
+Ration operator*(const Ration &lhs, const int32_t &rhs) noexcept;
+Ration operator*(const int32_t &lhs, const Ration &rhs) noexcept;
 
 Ration operator/(const Ration &lhs, const Ration &rhs) noexcept;
-Ration operator/(const Ration &lhs, const int &rhs) noexcept;
-Ration operator/(const int &lhs, const Ration &rhs) noexcept;
+Ration operator/(const Ration &lhs, const int32_t &rhs) noexcept;
+Ration operator/(const int32_t &lhs, const Ration &rhs) noexcept;
+
+int64_t NOD(int32_t up, int32_t low);
 
 inline std::ostream& operator<<(std::ostream& out,const Ration& rhs) noexcept {
     return rhs.writeto(out);
