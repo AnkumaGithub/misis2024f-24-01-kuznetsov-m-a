@@ -41,3 +41,6 @@ build
 build.*
 bin
 bin.*
+
+# others
+.idea
