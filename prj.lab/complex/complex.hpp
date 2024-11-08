@@ -7,9 +7,14 @@
 struct Complex {
     // Struct initialization
     Complex() = default;
+    //copy constructor
+    Complex(const Complex&) = default;
     Complex(Complex&&) = default;
+    //default constructors
     explicit Complex(const double real) : re(real) {}
     Complex(const double real, const double imag) : re(real), im(imag) {}
+
+    ~Complex() = default;
 
     // assignment operators initialization
     Complex& operator=(const Complex&) = default;

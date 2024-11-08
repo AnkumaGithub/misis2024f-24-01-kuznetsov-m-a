@@ -19,36 +19,57 @@ bool Ration::operator!=(const int32_t &rhs) const noexcept{
     return integ != rhs || nat != rhs;
 }
 
+Ration Ration::operator-() const noexcept
+{
+    return {-integ, nat};
+}
+
 // >=
 bool Ration::operator>=(const Ration &rhs) const noexcept{
-    return double(integ / nat) >= double(rhs.integ / rhs.nat);
+    Ration z = Ration(integ, nat) - rhs;
+    if (z.integ >= 0) {return true;}
+    else {return false;}
 }
 bool Ration::operator>=(const int32_t &rhs) const noexcept{
-    return double(integ / nat) >= rhs;
+    Ration z = Ration(integ, nat) - Ration(rhs);
+    if (z.integ >= 0) {return true;}
+    else {return false;}
 }
 
 // <=
 bool Ration::operator<=(const Ration &rhs) const noexcept{
-    return double(integ / nat) <= double(rhs.integ / rhs.nat);
+    Ration z = Ration(integ, nat) - rhs;
+    if (z.integ <= 0) {return true;}
+    else {return false;}
 }
 bool Ration::operator<=(const int32_t &rhs) const noexcept{
-    return double(integ / nat) <= rhs;
+    Ration z = Ration(integ, nat) - rhs;
+    if (z.integ <= 0) {return true;}
+    else {return false;}
 }
 
 // >
 bool Ration::operator>(const Ration &rhs) const noexcept{
-    return double(integ / nat) > double(rhs.integ / rhs.nat);
+    Ration z = Ration(integ, nat) - rhs;
+    if (z.integ > 0) {return true;}
+    else {return false;}
 }
 bool Ration::operator>(const int32_t &rhs) const noexcept{
-    return double(integ / nat) > rhs;
+    Ration z = Ration(integ, nat) - rhs;
+    if (z.integ > 0) {return true;}
+    else {return false;}
 }
 
 // <
 bool Ration::operator<(const Ration &rhs) const noexcept{
-    return double(integ / nat) < double(rhs.integ / rhs.nat);
+    Ration z = Ration(integ, nat) - rhs;
+    if (z.integ < 0) {return true;}
+    else {return false;}
 }
 bool Ration::operator<(const int32_t &rhs) const noexcept{
-    return double(integ / nat) < rhs;
+    Ration z = Ration(integ, nat) - rhs;
+    if (z.integ < 0) {return true;}
+    else {return false;}
 }
 
 // += -= *= /= operators 
@@ -63,7 +84,7 @@ Ration& Ration::operator+=(const int32_t &rhs) noexcept{
     return *this;
 }
 Ration operator+=(const int32_t &lhs, const Ration &rhs) noexcept{
-    return Ration(lhs * rhs.nat + rhs.integ, rhs.nat);
+    return {lhs * rhs.nat + rhs.integ, rhs.nat};
 }
 
 // -=
@@ -77,7 +98,7 @@ Ration& Ration::operator-=(const int32_t &rhs) noexcept{
     return *this;
 }
 Ration operator-=(const int32_t lhs, const Ration &rhs) noexcept{
-    return Ration(lhs * rhs.nat - rhs.integ, rhs.nat);
+    return {lhs * rhs.nat - rhs.integ, rhs.nat};
 }
 
 // *=
@@ -91,7 +112,7 @@ Ration& Ration::operator*=(const int32_t &rhs) noexcept{
     return *this;
 }
 Ration operator*=(const int32_t &lhs, const Ration &rhs) noexcept{
-    return Ration(lhs * rhs.integ, rhs.nat);
+    return {lhs * rhs.integ, rhs.nat};
 }
 
 // /=
@@ -105,67 +126,67 @@ Ration& Ration::operator/=(const int32_t &rhs) noexcept{
     return *this;
 }
 Ration operator/=(const int32_t &lhs, const Ration &rhs) noexcept{
-    return Ration(lhs * rhs.nat, rhs.integ);
+    return {lhs * rhs.nat, rhs.integ};
 }
 
 //+ - * / operators
 // +
 Ration operator+(const Ration &lhs, const Ration &rhs) noexcept{
-    return Ration(lhs.integ * rhs.nat + rhs.integ * lhs.nat
-    , lhs.nat * rhs.nat);
+    return {lhs.integ * rhs.nat + rhs.integ * lhs.nat
+    , lhs.nat * rhs.nat};
 }
 Ration operator+(const Ration &lhs, const int32_t &rhs) noexcept{
-    return Ration(lhs.integ + lhs.nat * rhs
-    , lhs.nat);
+    return {lhs.integ + lhs.nat * rhs
+    , lhs.nat};
 }
 Ration operator+(const int32_t &lhs, const Ration &rhs) noexcept{
-    return Ration(rhs.integ + lhs * rhs.nat
-    , rhs.nat);
+    return {rhs.integ + lhs * rhs.nat
+    , rhs.nat};
 }
 
 // -
 Ration operator-(const Ration &lhs, const Ration &rhs) noexcept{
-    return Ration(lhs.integ * rhs.nat - rhs.integ * lhs.nat
-    , lhs.nat * rhs.nat);
+    return {lhs.integ * rhs.nat - rhs.integ * lhs.nat
+    , lhs.nat * rhs.nat};
 }
 Ration operator-(const Ration &lhs, const int32_t &rhs) noexcept{
-    return Ration(lhs.integ - lhs.nat * rhs
-    , lhs.nat);
+    return {lhs.integ - lhs.nat * rhs
+    , lhs.nat};
 }
 Ration operator-(const int32_t &lhs, const Ration &rhs) noexcept{
-    return Ration(lhs * rhs.nat - rhs.integ
-    , rhs.nat);
+    return {lhs * rhs.nat - rhs.integ
+    , rhs.nat};
 }
 
 // *
 Ration operator*(const Ration &lhs, const Ration &rhs) noexcept{
-    return Ration(lhs.integ * rhs.integ
-    , lhs.nat * rhs.nat);
+    return {lhs.integ * rhs.integ
+    , lhs.nat * rhs.nat};
 }
 Ration operator*(const Ration &lhs, const int32_t &rhs) noexcept{
-    return Ration(lhs.integ * rhs
-    , lhs.nat);
+    return {lhs.integ * rhs
+    , lhs.nat};
 }
 Ration operator*(const int32_t &lhs, const Ration &rhs) noexcept{
-    return Ration(lhs * rhs.integ
-    , rhs.nat);
+    return {lhs * rhs.integ
+    , rhs.nat};
 }
 
 // /
 Ration operator/(const Ration &lhs, const Ration &rhs) noexcept{
-    return Ration(lhs.integ * rhs.nat
-    , lhs.nat * rhs.integ);
+    return {lhs.integ * rhs.nat
+    , lhs.nat * rhs.integ};
 }
 Ration operator/(const Ration &lhs, const int32_t &rhs) noexcept{
-    return Ration(lhs.integ
-    , lhs.nat * rhs);
+    return {lhs.integ
+    , lhs.nat * rhs};
 }
 Ration operator/(const int32_t &lhs, const Ration &rhs) noexcept{
-    return Ration(lhs * rhs.nat
-    , rhs.integ);
+    return {lhs * rhs.nat
+    , rhs.integ};
 }
 
-int64_t NOD(int32_t up, int32_t low) {
+int32_t NOD(int32_t up, int32_t low) {
     while (up && low)
         if (up > low) up %= low;
         else low %= up;
