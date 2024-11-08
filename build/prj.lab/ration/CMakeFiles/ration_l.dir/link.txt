@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libration_l.a CMakeFiles/ration_l.dir/ration.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libration_l.a
