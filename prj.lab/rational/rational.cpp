@@ -133,7 +133,7 @@ Ration operator-(const Ration &lhs, const int32_t &rhs) noexcept{
     , lhs.nat);
 }
 Ration operator-(const int32_t &lhs, const Ration &rhs) noexcept{
-    return Ration(rhs.integ - lhs * rhs.nat
+    return Ration(lhs * rhs.nat - rhs.integ
     , rhs.nat);
 }
 
@@ -180,8 +180,29 @@ std::istream& operator>>(std::istream in,Ration rhs) noexcept{
 }
 
 std::ostream& Ration::writeto(std::ostream& out) const noexcept {
-    int32_t nod = NOD(integ, nat);
-    out << integ / nod << Separator << nat / nod;
+    int32_t nod = NOD(abs(integ), abs(nat));
+    if (integ == 0 or nat / nod == 1)
+    {
+        out << integ / nod;
+    }
+    else
+    {
+        if (nat / nod == -1)
+        {
+            out << -integ / nod;
+        }
+        else
+        {
+            if ((nat < 0 and integ > 0) or (nat < 0 and integ < 0))
+            {
+                out << -integ / nod << Separator << -nat / nod;
+            }
+            if ((nat > 0 and integ < 0) or (nat > 0 and integ > 0))
+            {
+                out << integ / nod << Separator << nat / nod;
+            }
+        }
+    }
     return out;
 }
 
@@ -201,7 +222,7 @@ std::istream& Ration::readfrom(std::istream& in) noexcept {
             nat = natin;
         }
         else{
-            std::cout << "ERROR! Please write like {Z/N}" << std::endl;
+            std::cout << "ERROR! Please write like Z/N" << std::endl;
             std::cout << "Z - integer numbers" << std::endl;
             std::cout << "N - natural numbers" << std::endl;
         }
