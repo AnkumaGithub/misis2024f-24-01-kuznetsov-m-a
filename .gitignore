@@ -44,3 +44,4 @@ bin.*
 
 # others
 .idea
+.idea*
