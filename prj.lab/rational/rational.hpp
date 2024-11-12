@@ -6,10 +6,12 @@
 
 class Ration {
 private:
-public:
     int32_t integ = 0;
     int32_t nat = 1;
 
+    inline void sokrin();
+
+public:
     Ration() = default;
     Ration(const Ration&) = default;
     Ration(Ration&&) = default;
@@ -22,6 +24,9 @@ public:
     Ration& operator=(Ration&&) = default;
 
     Ration operator-() const noexcept;
+
+    int32_t get_integ() noexcept {return integ;};
+    int32_t get_nat() noexcept {return nat;};
 
     bool operator==(const Ration &rhs) const noexcept;
     bool operator==(const int32_t &rhs) const noexcept;
@@ -59,6 +64,10 @@ public:
     static const char Separator{'/'};
 };
 
+int32_t NOD(int32_t up, int32_t low);
+
+Ration sokrout(int32_t up, int32_t low);
+
 Ration operator+=(const int32_t &lhs, const Ration &rhs) noexcept;
 Ration operator-=(const int32_t &lhs, const Ration &rhs) noexcept;
 Ration operator*=(const int32_t &lhs, const Ration &rhs) noexcept;
@@ -79,8 +88,6 @@ Ration operator*(const int32_t &lhs, const Ration &rhs) noexcept;
 Ration operator/(const Ration &lhs, const Ration &rhs) noexcept;
 Ration operator/(const Ration &lhs, const int32_t &rhs) noexcept;
 Ration operator/(const int32_t &lhs, const Ration &rhs) noexcept;
-
-int32_t NOD(int32_t up, int32_t low);
 
 inline std::ostream& operator<<(std::ostream& out,const Ration& rhs) noexcept {
     return rhs.writeto(out);

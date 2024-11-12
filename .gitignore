@@ -37,10 +37,10 @@
 out
 
 # Build Artifacts
-build
-build.*
-bin
-bin.*
+cmake-build-debug
+cmake-build-debug.*
+bin.dbg
+bin.dbg.*
 
 # others
 .idea
