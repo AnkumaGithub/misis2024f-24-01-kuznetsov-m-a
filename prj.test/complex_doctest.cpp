@@ -1,7 +1,7 @@
 #include <complex/complex.hpp>
 
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "doctest.h"
+#include <doctest/doctest.h>
 
 void test_bool(const double nat1, const double imag1, const double nat2, const double imag2)
 {

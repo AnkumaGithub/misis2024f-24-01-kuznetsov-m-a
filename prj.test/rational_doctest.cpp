@@ -1,7 +1,7 @@
 #include <rational/rational.hpp>
 
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "doctest.h"
+#include <doctest/doctest.h>
 
 void test_bool(const int32_t num1, const int32_t det1, const int32_t num2, const int32_t det2)
 {
