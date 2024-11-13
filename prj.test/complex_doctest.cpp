@@ -3,6 +3,8 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include <doctest/doctest.h>
 
+#include <iostream>
+
 void test_bool(const double nat1, const double imag1, const double nat2, const double imag2)
 {
   Complex a(nat1, imag1);
@@ -10,14 +12,14 @@ void test_bool(const double nat1, const double imag1, const double nat2, const d
   // ==
   if (nat1 == nat2 && imag1 == imag2)
   {
-    if (a == b) { std::cout << "== is correct" << std::endl;;}
-    else { std::cout << "== not is correct" << std::endl;;}
+    if (a == b) { std::cout << "== is correct" << std::endl;}
+    else { std::cout << "== not is correct" << std::endl;}
   }
   // !=
   else
   {
-    if (a != b) { std::cout << "!= is correct" << std::endl;;}
-    else { std::cout << "!= not is correct" << std::endl;;}
+    if (a != b) { std::cout << "!= is correct" << std::endl;}
+    else { std::cout << "!= not is correct" << std::endl;}
   }
 }
 
@@ -29,7 +31,7 @@ void test_plus(const double nat1, const double imag1, const double nat2, const d
   Complex n3(nat3, imag3);
   CHECK((n1 + n2) == n3);
   if ((n1 + n2) == n3) {}
-  else { std::cout << "+ not is correct" << std::endl;;}
+  else { std::cout << "+ not is correct" << std::endl;}
 }
 
 void test_minus(const double nat1, const double imag1, const double nat2, const double imag2,
@@ -40,7 +42,7 @@ void test_minus(const double nat1, const double imag1, const double nat2, const 
   Complex n3(nat3, imag3);
   CHECK((n1 - n2) == n3);
   if ((n1 - n2) == n3) {}
-  else { std::cout << "- not is correct" << std::endl;;}
+  else { std::cout << "- not is correct" << std::endl;}
 }
 
 void test_mul(const double nat1, const double imag1, const double nat2, const double imag2,
@@ -51,7 +53,7 @@ void test_mul(const double nat1, const double imag1, const double nat2, const do
   Complex n3(nat3, imag3);
   CHECK((n1 * n2) == n3);
   if ((n1 * n2) == n3) {}
-  else { std::cout << "* not is correct" << std::endl;;}
+  else { std::cout << "* not is correct" << std::endl;}
 }
 
 void test_div(const double nat1, const double imag1, const double nat2, const double imag2,
@@ -62,7 +64,7 @@ void test_div(const double nat1, const double imag1, const double nat2, const do
   Complex n3(nat3, imag3);
   CHECK((n1 / n2) == n3);
   if ((n1 / n2) == n3) {}
-  else { std::cout << "/ not is correct" << std::endl;;}
+  else { std::cout << "/ not is correct" << std::endl;}
 }
 
 void test_eqplus(const double nat1, const double imag1, const double nat2, const double imag2,
@@ -74,7 +76,7 @@ void test_eqplus(const double nat1, const double imag1, const double nat2, const
   n1 += n2;
   CHECK(n1 == n3);
   if (n1 == n3) {}
-  else { std::cout << "+= not is correct" << std::endl;;}
+  else { std::cout << "+= not is correct" << std::endl;}
 }
 
 void test_eqminus(const double nat1, const double imag1, const double nat2, const double imag2,
@@ -86,7 +88,7 @@ void test_eqminus(const double nat1, const double imag1, const double nat2, cons
   n1 -= n2;
   CHECK(n1 == n3);
   if (n1 == n3) {}
-  else { std::cout << "-= not is correct" << std::endl;;}
+  else { std::cout << "-= not is correct" << std::endl;}
 }
 
 void test_eqmul(const double nat1, const double imag1, const double nat2, const double imag2,
@@ -98,7 +100,7 @@ void test_eqmul(const double nat1, const double imag1, const double nat2, const 
   n1 *= n2;
   CHECK(n1 == n3);
   if (n1 == n3) {}
-  else { std::cout << "*= not is correct" << std::endl;;}
+  else { std::cout << "*= not is correct" << std::endl;}
 }
 
 void test_eqdiv(const double nat1, const double imag1, const double nat2, const double imag2,
@@ -110,7 +112,7 @@ void test_eqdiv(const double nat1, const double imag1, const double nat2, const 
   n1 /= n2;
   CHECK(n1 == n3);
   if (n1 == n3) {}
-  else { std::cout << "/= not is correct" << std::endl;;}
+  else { std::cout << "/= not is correct" << std::endl;}
 }
 
 TEST_CASE("[complex] - ctor") {

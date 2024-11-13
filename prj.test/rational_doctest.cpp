@@ -3,6 +3,8 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include <doctest/doctest.h>
 
+#include <iostream>
+
 void test_bool(const int32_t num1, const int32_t det1, const int32_t num2, const int32_t det2)
 {
   Ration a(num1, det1);
@@ -10,14 +12,14 @@ void test_bool(const int32_t num1, const int32_t det1, const int32_t num2, const
   // ==
   if (num1 == num2 && det1 == det2)
   {
-    if (a == b) { std::cout << "== is correct" << std::endl;;}
-    else { std::cout << "== not is correct" << std::endl;;}
+    if (a == b) { std::cout << "== is correct" << std::endl;}
+    else { std::cout << "== not is correct" << std::endl;}
   }
   // !=
   if (num1 != num2 || det1 != det2)
   {
-    if (a != b) { std::cout << "!= is correct" << std::endl;;}
-    else { std::cout << "!= not is correct" << std::endl;;}
+    if (a != b) { std::cout << "!= is correct" << std::endl;}
+    else { std::cout << "!= not is correct" << std::endl;}
   }
 }
 
@@ -29,7 +31,7 @@ void test_plus(const int32_t num1, const int32_t det1, const int32_t num2, const
   Ration n3(num3, det3);
   CHECK((n1 + n2) == n3);
   if ((n1 + n2) == n3) {}
-  else { std::cout << "+ not is correct" << std::endl;;}
+  else { std::cout << "+ not is correct" << std::endl;}
 }
 
 void test_minus(const int32_t num1, const int32_t det1, const int32_t num2, const int32_t det2,
@@ -40,7 +42,7 @@ void test_minus(const int32_t num1, const int32_t det1, const int32_t num2, cons
   Ration n3(num3, det3);
   CHECK((n1 - n2) == n3);
   if ((n1 - n2) == n3) {}
-  else { std::cout << "- not is correct" << std::endl;;}
+  else { std::cout << "- not is correct" << std::endl;}
 }
 
 void test_mul(const int32_t num1, const int32_t det1, const int32_t num2, const int32_t det2,
@@ -51,7 +53,7 @@ void test_mul(const int32_t num1, const int32_t det1, const int32_t num2, const 
   Ration n3(num3, det3);
   CHECK((n1 * n2) == n3);
   if ((n1 * n2) == n3) {}
-  else { std::cout << "* not is correct" << std::endl;;}
+  else { std::cout << "* not is correct" << std::endl;}
 }
 
 void test_div(const int32_t num1, const int32_t det1, const int32_t num2, const int32_t det2,
@@ -62,7 +64,7 @@ void test_div(const int32_t num1, const int32_t det1, const int32_t num2, const 
   Ration n3(num3, det3);
   CHECK((n1 / n2) == n3);
   if ((n1 / n2) == n3) {}
-  else { std::cout << "/ not is correct" << std::endl;;}
+  else { std::cout << "/ not is correct" << std::endl;}
 }
 
 void test_eqplus(const int32_t num1, const int32_t det1, const int32_t num2, const int32_t det2,
@@ -74,7 +76,7 @@ void test_eqplus(const int32_t num1, const int32_t det1, const int32_t num2, con
   n1 += n2;
   CHECK(n1 == n3);
   if (n1 == n3) {}
-  else { std::cout << "+= not is correct" << std::endl;;}
+  else { std::cout << "+= not is correct" << std::endl;}
 }
 
 void test_eqminus(const int32_t num1, const int32_t det1, const int32_t num2, const int32_t det2,
@@ -86,7 +88,7 @@ void test_eqminus(const int32_t num1, const int32_t det1, const int32_t num2, co
   n1 -= n2;
   CHECK(n1 == n3);
   if (n1 == n3) {}
-  else { std::cout << "-= not is correct" << std::endl;;}
+  else { std::cout << "-= not is correct" << std::endl;}
 }
 
 void test_eqmul(const int32_t num1, const int32_t det1, const int32_t num2, const int32_t det2,
@@ -98,7 +100,7 @@ void test_eqmul(const int32_t num1, const int32_t det1, const int32_t num2, cons
   n1 *= n2;
   CHECK(n1 == n3);
   if (n1 == n3) {}
-  else { std::cout << "*= not is correct" << std::endl;;}
+  else { std::cout << "*= not is correct" << std::endl;}
 }
 
 void test_eqdiv(const int32_t num1, const int32_t det1, const int32_t num2, const int32_t det2,
@@ -110,7 +112,7 @@ void test_eqdiv(const int32_t num1, const int32_t det1, const int32_t num2, cons
   n1 /= n2;
   CHECK(n1 == n3);
   if (n1 == n3) {}
-  else { std::cout << "/= not is correct" << std::endl;;}
+  else { std::cout << "/= not is correct" << std::endl;}
 }
 
 TEST_CASE("[complex] - ctor") {

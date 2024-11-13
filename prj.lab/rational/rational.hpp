@@ -25,8 +25,8 @@ public:
 
     Ration operator-() const noexcept;
 
-    int32_t get_integ() noexcept {return integ;};
-    int32_t get_nat() noexcept {return nat;};
+    [[nodiscard]] int32_t get_integ() const noexcept {return integ;}
+    [[nodiscard]] int32_t get_nat() const noexcept {return nat;}
 
     bool operator==(const Ration &rhs) const noexcept;
     bool operator==(const int32_t &rhs) const noexcept;

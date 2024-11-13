@@ -1,4 +1,4 @@
-#include "rational.hpp"
+#include <rational/rational.hpp>
 #include <iostream>
 #include <sstream>
 
@@ -275,9 +275,7 @@ std::ostream& Ration::writeto(std::ostream& out) const noexcept {
 std::istream& Ration::readfrom(std::istream& in) noexcept {
     int32_t integin{0};
     int32_t natin{0};
-    char LeftPartin{'{'};
     char Separatorin{'/'};
-    char RightPartin{'}'};
 
     in >> integin >> Separatorin >> natin;
 
