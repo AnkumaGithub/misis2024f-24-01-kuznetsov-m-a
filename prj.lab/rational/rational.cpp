@@ -245,13 +245,6 @@ Ration operator/(const int32_t &lhs, const Ration &rhs) noexcept{
     return sokrout(buf.get_integ(), buf.get_nat());
 }
 
-std::ostream& operator<<(std::ostream out, const Ration rhs) noexcept{
-    return rhs.writeto(out);
-}
-std::istream& operator>>(std::istream in,Ration rhs) noexcept{
-    return rhs.readfrom(in);
-}
-
 std::ostream& Ration::writeto(std::ostream& out) const noexcept {
     if (integ == 0 or nat == 1)
     {
