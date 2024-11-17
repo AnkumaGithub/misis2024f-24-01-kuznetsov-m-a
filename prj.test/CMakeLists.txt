@@ -2,9 +2,13 @@ add_executable(complex_test complex_test.cpp)
 add_executable(complex_doctest complex_doctest.cpp)
 add_executable(rational_test rational_test.cpp)
 add_executable(rational_doctest rational_doctest.cpp)
+add_executable(marray_test marray_test.cpp)
+add_executable(marray_doctest marray_doctest.cpp)
 
 target_link_libraries(complex_test complex_l)
 target_link_libraries(complex_doctest complex_l)
 target_link_libraries(rational_test rational_l)
 target_link_libraries(rational_doctest rational_l)
+target_link_libraries(marray_test marray_l)
+target_link_libraries(marray_doctest marray_l)
 

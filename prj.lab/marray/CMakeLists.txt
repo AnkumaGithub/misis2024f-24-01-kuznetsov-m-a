@@ -1,0 +1,1 @@
+add_library(marray_l marray.cpp marray.hpp)
