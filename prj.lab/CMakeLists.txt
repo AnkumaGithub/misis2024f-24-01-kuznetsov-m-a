@@ -1,4 +1,4 @@
 add_subdirectory(complex)
 add_subdirectory(rational)
 add_subdirectory(doctest)
-add_subdirectory(Marray)
+add_subdirectory(marray)

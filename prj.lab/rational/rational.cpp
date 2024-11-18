@@ -246,7 +246,7 @@ Ration operator/(const int32_t &lhs, const Ration &rhs) noexcept{
 }
 
 std::ostream& Ration::writeto(std::ostream& out) const noexcept {
-    if (integ == 0 or nat == 1)
+    if (integ == 0 || nat == 1)
     {
         out << integ;
     }
@@ -258,11 +258,11 @@ std::ostream& Ration::writeto(std::ostream& out) const noexcept {
         }
         else
         {
-            if ((nat < 0 and integ > 0) or (nat < 0 and integ < 0))
+            if ((nat < 0 && integ > 0) || (nat < 0 && integ < 0))
             {
                 out << -integ << Separator << -nat;
             }
-            if ((nat > 0 and integ < 0) or (nat > 0 and integ > 0))
+            if ((nat > 0 && integ < 0) || (nat > 0 && integ > 0))
             {
                 out << integ << Separator << nat;
             }
@@ -270,7 +270,6 @@ std::ostream& Ration::writeto(std::ostream& out) const noexcept {
     }
     return out;
 }
-
 
 std::istream& Ration::readfrom(std::istream& in) noexcept {
     int32_t integin{0};

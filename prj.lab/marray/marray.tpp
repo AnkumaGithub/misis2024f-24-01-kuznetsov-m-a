@@ -1,7 +1,8 @@
 #include <marray/marray.hpp>
 #include <iostream>
 
-void Marray::resize(int32_t newmaxlen)
+template <class T>
+void Marray<T>::resize(int32_t newmaxlen)
 {
     int32_t* newdata = new int32_t[newmaxlen];
     for (int i = 0; i < len; i++)
@@ -13,7 +14,8 @@ void Marray::resize(int32_t newmaxlen)
     maxlen = newmaxlen;
 }
 
-Marray& Marray::operator=(const Marray& other)
+template <class T>
+Marray<T>& Marray<T>::operator=(const Marray& other)
 {
     if (this != &other)
     {
@@ -29,7 +31,8 @@ Marray& Marray::operator=(const Marray& other)
     return *this;
 }
 
-void Marray::push_back(int32_t &value)
+template <class T>
+void Marray<T>::push_back(T &value)
 {
     if (maxlen == len)
     {
@@ -40,23 +43,27 @@ void Marray::push_back(int32_t &value)
     data[len + 1] = value;
 }
 
-void Marray::pop_back()
+template <class T>
+void Marray<T>::pop_back()
 {
     if (len > 0){len-=1;}
     else { std::cout << "Array is empty!" << std::endl; }
 }
 
-int32_t Marray::size() const
+template <class T>
+int32_t Marray<T>::size() const
 {
     return len;
 }
 
-bool Marray::empty() const
+template <class T>
+bool Marray<T>::empty() const
 {
     return len == 0;
 }
 
-int& Marray::operator[](int index)
+template <class T>
+T& Marray<T>::operator[](int index)
 {
     if (index < 0 || index >= len)
     {

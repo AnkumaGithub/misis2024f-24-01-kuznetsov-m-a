@@ -6,11 +6,6 @@
 double re = 0.0;
 double im = 0.0;
 
-// separators definition
-static const char LeftPart{'{'};
-static const char Separator{','};
-static const char RightPart{'}'};
-
 // bool operators definition
 bool Complex::operator==(const Complex& rhs) const noexcept {return (re == rhs.re) && (im == rhs.im);};
 bool Complex::operator!=(const Complex& rhs) const noexcept {return (re != rhs.re) || (im != rhs.im);};
