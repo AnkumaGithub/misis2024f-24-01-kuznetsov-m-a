@@ -4,7 +4,7 @@
 #include <iostream>
 
 template<class T>
-class Marray
+class Arrayd
 {
 private:
   int32_t len = 0;
@@ -14,25 +14,25 @@ private:
   void resize(int32_t newmaxlen);
 public:
   // Constructors
-  Marray() : data(nullptr), len(0) , maxlen(0), value(0) {}
-  Marray(int32_t olen) :len(olen), maxlen(olen * 2)
+  Arrayd() : data(nullptr), len(0) , maxlen(0), value(0) {}
+  Arrayd(int32_t olen) :len(olen), maxlen(olen * 2)
   {
     data = new T[maxlen];
     for (int32_t i = 0; i < len; i++) {data[i] = 0;}
   }
-  Marray(int32_t olen, T ovalue) :len(olen), maxlen(olen * 2), value(ovalue)
+  Arrayd(int32_t olen, T ovalue) :len(olen), maxlen(olen * 2), value(ovalue)
   {
     data = new T[maxlen];
     for (int32_t i = 0; i < len; i++) {data[i] = value;}
   }
   // Copy constructor
-  Marray(const Marray &other) : len(other.len), maxlen(other.maxlen)
+  Arrayd(const Arrayd &other) : len(other.len), maxlen(other.maxlen)
   {
     data = new T[maxlen];
     for (int32_t i = 0; i < len; i++) { data[i] = other.data[i]; }
   }
   // Destructor
-  ~Marray(){ delete[] data; }
+  ~Arrayd(){ delete[] data; }
 
   // Functions
   void push_back(T &value);
@@ -41,7 +41,7 @@ public:
   bool empty() const;
   T& operator[](int index);
 
-  Marray& operator=(const Marray &other);
+  Arrayd& operator=(const Arrayd &other);
 };
-#include <marray/marray.tpp>
+#include <arrayd/arrayd.tpp>
 #endif

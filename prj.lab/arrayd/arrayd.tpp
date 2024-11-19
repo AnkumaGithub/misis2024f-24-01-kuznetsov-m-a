@@ -1,8 +1,8 @@
-#include <marray/marray.hpp>
+#include <arrayd/arrayd.hpp>
 #include <iostream>
 
 template <class T>
-void Marray<T>::resize(int32_t newmaxlen)
+void Arrayd<T>::resize(int32_t newmaxlen)
 {
     int32_t* newdata = new int32_t[newmaxlen];
     for (int i = 0; i < len; i++)
@@ -15,7 +15,7 @@ void Marray<T>::resize(int32_t newmaxlen)
 }
 
 template <class T>
-Marray<T>& Marray<T>::operator=(const Marray& other)
+Arrayd<T>& Arrayd<T>::operator=(const Arrayd& other)
 {
     if (this != &other)
     {
@@ -32,7 +32,7 @@ Marray<T>& Marray<T>::operator=(const Marray& other)
 }
 
 template <class T>
-void Marray<T>::push_back(T &value)
+void Arrayd<T>::push_back(T &value)
 {
     if (maxlen == len)
     {
@@ -44,26 +44,26 @@ void Marray<T>::push_back(T &value)
 }
 
 template <class T>
-void Marray<T>::pop_back()
+void Arrayd<T>::pop_back()
 {
     if (len > 0){len-=1;}
     else { std::cout << "Array is empty!" << std::endl; }
 }
 
 template <class T>
-int32_t Marray<T>::size() const
+int32_t Arrayd<T>::size() const
 {
     return len;
 }
 
 template <class T>
-bool Marray<T>::empty() const
+bool Arrayd<T>::empty() const
 {
     return len == 0;
 }
 
 template <class T>
-T& Marray<T>::operator[](int index)
+T& Arrayd<T>::operator[](int index)
 {
     if (index < 0 || index >= len)
     {
