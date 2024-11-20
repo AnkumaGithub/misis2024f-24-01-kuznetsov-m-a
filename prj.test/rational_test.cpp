@@ -2,7 +2,7 @@
 #include <iostream>
 
 bool test(std::string st){
-    Ration z;
+    Rational z;
     std::istringstream istr(st);
     istr >> z;
     if (istr.good()){
@@ -14,7 +14,7 @@ bool test(std::string st){
     return istr.good();
 }
 int main(){
-    Ration z, g, b1, b2, b3, b4;
+    Rational z, g, b1, b2, b3, b4;
     std::cout << "Cin and Cout test:" << std::endl;
     std::cin >> z >> g;
     std::cout << z << std::endl;
