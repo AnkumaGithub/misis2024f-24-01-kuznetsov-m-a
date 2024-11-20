@@ -1,6 +1,7 @@
 #include <complex/complex.hpp>
 #include <iostream>
 #include <sstream>
+#include <cstdint>
 
 // numbers definition
 double re = 0.0;
@@ -98,12 +99,12 @@ Complex operator/(const double rhs, const Complex& lhs){
 }
 
 // streams sdefinition
-std::ostream& Complex::writeTo(std::ostream& out) const noexcept{
+std::ostream& Complex::WriteTo(std::ostream& out) const noexcept{
     out << LeftPart << re << Separator << im << RightPart;
     return out;
 }
 
-std::istream& Complex::readFrom(std::istream& in) noexcept {
+std::istream& Complex::ReadFrom(std::istream& in) noexcept {
     char LeftPartIn(0);
     double realIn(0.0);
     char SeparatorIn(0);

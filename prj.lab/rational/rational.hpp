@@ -3,6 +3,7 @@
 #include <iosfwd>
 #include <sstream>
 #include <iostream>
+#include <cstdint>
 
 class Rational {
 private:
@@ -58,8 +59,8 @@ public:
     Rational& operator/=(const Rational &rhs) noexcept;
     Rational& operator/=(const int32_t &rhs) noexcept;
 
-    std::ostream& writeto(std::ostream& outs) const noexcept;
-    std::istream& readfrom(std::istream& ins) noexcept;
+    std::ostream& Writeto(std::ostream& outs) const noexcept;
+    std::istream& Readfrom(std::istream& ins) noexcept;
 
     static const char Separator{'/'};
 };
@@ -90,10 +91,10 @@ Rational operator/(const Rational &lhs, const int32_t &rhs) noexcept;
 Rational operator/(const int32_t &lhs, const Rational &rhs) noexcept;
 
 inline std::ostream& operator<<(std::ostream& out,const Rational& rhs) noexcept {
-    return rhs.writeto(out);
+    return rhs.Writeto(out);
 }
 inline std::istream& operator>>(std::istream& in,Rational& rhs) noexcept {
-    return rhs.readfrom(in);
+    return rhs.Readfrom(in);
 }
 
 #endif

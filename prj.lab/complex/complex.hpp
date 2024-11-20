@@ -4,6 +4,7 @@
 #include <iostream>
 #include <iosfwd>
 #include <sstream>
+#include <cstdint>
 struct Complex {
     // Struct initialization
     Complex() = default;
@@ -50,8 +51,8 @@ struct Complex {
     static const char RightPart{'}'};
 
     // streams initialization
-    std::ostream& writeTo(std::ostream& outstream) const noexcept;
-    std::istream& readFrom(std::istream& instream) noexcept;
+    std::ostream& WriteTo(std::ostream& outstream) const noexcept;
+    std::istream& ReadFrom(std::istream& instream) noexcept;
 };
 
 // + - * / operators initialization
@@ -73,11 +74,11 @@ Complex operator/(const double rhs, const Complex& lhs);
 
 // streams initialization
 inline std::ostream& operator<<(std::ostream& out,const Complex& rhs) noexcept {
-    return rhs.writeTo(out);
+    return rhs.WriteTo(out);
 }
 
 inline std::istream& operator>>(std::istream& in,Complex& rhs) noexcept {
-    return rhs.readFrom(in);
+    return rhs.ReadFrom(in);
 }
  
 #endif

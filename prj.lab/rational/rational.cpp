@@ -1,6 +1,7 @@
 #include <rational/rational.hpp>
 #include <iostream>
 #include <sstream>
+#include <cstdint>
 
 
 int32_t NOD(int32_t up, int32_t low)
@@ -245,7 +246,7 @@ Rational operator/(const int32_t &lhs, const Rational &rhs) noexcept{
     return sokrout(buf.get_integ(), buf.get_nat());
 }
 
-std::ostream& Rational::writeto(std::ostream& out) const noexcept {
+std::ostream& Rational::Writeto(std::ostream& out) const noexcept {
     if (integ == 0 || nat == 1)
     {
         out << integ;
@@ -271,7 +272,7 @@ std::ostream& Rational::writeto(std::ostream& out) const noexcept {
     return out;
 }
 
-std::istream& Rational::readfrom(std::istream& in) noexcept {
+std::istream& Rational::Readfrom(std::istream& in) noexcept {
     int32_t integin{0};
     int32_t natin{0};
     char Separatorin{'/'};

@@ -1,47 +1,37 @@
 #ifndef MARRAY_HPP
 #define MARRAY_HPP
 #include <iosfwd>
+#include <cstdint>
 #include <iostream>
 
 template<class T>
 class Arrayd
 {
 private:
-  int32_t len = 0;
-  int32_t maxlen = 0;
+  ptrdiff_t len = 0;
+  ptrdiff_t maxlen = 0;
   T value;
   T *data;
-  void resize(int32_t newmaxlen);
 public:
   // Constructors
-  Arrayd() : data(nullptr), len(0) , maxlen(0), value(0) {}
-  Arrayd(int32_t olen) :len(olen), maxlen(olen * 2)
-  {
-    data = new T[maxlen];
-    for (int32_t i = 0; i < len; i++) {data[i] = 0;}
-  }
-  Arrayd(int32_t olen, T ovalue) :len(olen), maxlen(olen * 2), value(ovalue)
-  {
-    data = new T[maxlen];
-    for (int32_t i = 0; i < len; i++) {data[i] = value;}
-  }
+  Arrayd(): data(nullptr), len(0) , maxlen(0), value(0) {}
+  Arrayd(ptrdiff_t olen);
+  Arrayd(ptrdiff_t olen, T ovalue);
   // Copy constructor
-  Arrayd(const Arrayd &other) : len(other.len), maxlen(other.maxlen)
-  {
-    data = new T[maxlen];
-    for (int32_t i = 0; i < len; i++) { data[i] = other.data[i]; }
-  }
+  Arrayd(const Arrayd &other);
+  //
+  Arrayd& operator=(const Arrayd &other);
   // Destructor
-  ~Arrayd(){ delete[] data; }
+  ~Arrayd();
 
   // Functions
-  void push_back(T &value);
-  void pop_back();
-  int32_t size() const;
-  bool empty() const;
-  T& operator[](int index);
-
-  Arrayd& operator=(const Arrayd &other);
+  void Resize(ptrdiff_t newmaxlen);
+  void Push_back(T &value);
+  void Pop_back();
+  ptrdiff_t Size() const;
+  bool Empty() const;
+  T& operator[](ptrdiff_t index);
+  T operator[](ptrdiff_t index) const;
 };
-#include <arrayd/arrayd.tpp>
+#include <arrayd/arrayd.cpp>
 #endif
