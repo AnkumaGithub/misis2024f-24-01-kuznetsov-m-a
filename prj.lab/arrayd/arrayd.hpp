@@ -5,7 +5,7 @@
 #include <iostream>
 
 template<class T>
-class Arrayd
+class ArrayD
 {
 private:
   ptrdiff_t len = 0;
@@ -14,15 +14,15 @@ private:
   T *data;
 public:
   // Constructors
-  Arrayd(): data(nullptr), len(0) , maxlen(0), value(0) {}
-  Arrayd(ptrdiff_t olen);
-  Arrayd(ptrdiff_t olen, T ovalue);
+  ArrayD(): data(nullptr), len(0) , maxlen(0), value(0) {}
+  ArrayD(ptrdiff_t olen);
+  ArrayD(ptrdiff_t olen, T ovalue);
   // Copy constructor
-  Arrayd(const Arrayd &other);
+  ArrayD(const ArrayD &other);
   //
-  Arrayd& operator=(const Arrayd &other);
+  ArrayD& operator=(const ArrayD &other);
   // Destructor
-  ~Arrayd();
+  ~ArrayD();
 
   // Functions
   void Resize(ptrdiff_t newmaxlen);

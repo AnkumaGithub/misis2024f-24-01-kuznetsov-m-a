@@ -3,31 +3,31 @@
 #include <cstdint>
 
 template <class T>
-Arrayd<T>::Arrayd(ptrdiff_t olen) :len(olen), maxlen(olen * 2)
+ArrayD<T>::ArrayD(ptrdiff_t olen) :len(olen), maxlen(olen * 2)
 {
     data = new T[maxlen];
     for (ptrdiff_t i = 0; i < len; i++) {data[i] = 0;}
 }
 
 template <class T>
-Arrayd<T>::Arrayd(ptrdiff_t olen, T ovalue) :len(olen), maxlen(olen * 2), value(ovalue)
+ArrayD<T>::ArrayD(ptrdiff_t olen, T ovalue) :len(olen), maxlen(olen * 2), value(ovalue)
 {
     data = new T[maxlen];
     for (ptrdiff_t i = 0; i < len; i++) {data[i] = value;}
 }
 
 template <class T>
-Arrayd<T>::Arrayd(const Arrayd &other) : len(other.len), maxlen(other.maxlen)
+ArrayD<T>::ArrayD(const ArrayD &other) : len(other.len), maxlen(other.maxlen)
 {
     data = new T[maxlen];
     for (ptrdiff_t i = 0; i < len; i++) { data[i] = other.data[i]; }
 }
 
 template <class T>
-Arrayd<T>::~Arrayd(){ delete[] data; }
+ArrayD<T>::~ArrayD(){ delete[] data; }
 
 template <class T>
-void Arrayd<T>::Resize(ptrdiff_t newmaxlen)
+void ArrayD<T>::Resize(ptrdiff_t newmaxlen)
 {
     ptrdiff_t* newdata = new ptrdiff_t[newmaxlen];
     for (ptrdiff_t i = 0; i < len; i++)
@@ -40,7 +40,7 @@ void Arrayd<T>::Resize(ptrdiff_t newmaxlen)
 }
 
 template <class T>
-Arrayd<T>& Arrayd<T>::operator=(const Arrayd& other)
+ArrayD<T>& ArrayD<T>::operator=(const ArrayD& other)
 {
     if (this != &other)
     {
@@ -57,7 +57,7 @@ Arrayd<T>& Arrayd<T>::operator=(const Arrayd& other)
 }
 
 template <class T>
-void Arrayd<T>::Push_back(T &value)
+void ArrayD<T>::Push_back(T &value)
 {
     if (maxlen == len)
     {
@@ -69,26 +69,26 @@ void Arrayd<T>::Push_back(T &value)
 }
 
 template <class T>
-void Arrayd<T>::Pop_back()
+void ArrayD<T>::Pop_back()
 {
     if (len > 0){len-=1;}
     else { std::cout << "Array is empty!" << std::endl; }
 }
 
 template <class T>
-ptrdiff_t Arrayd<T>::Size() const
+ptrdiff_t ArrayD<T>::Size() const
 {
     return len;
 }
 
 template <class T>
-bool Arrayd<T>::Empty() const
+bool ArrayD<T>::Empty() const
 {
     return len == 0;
 }
 
 template <class T>
-T& Arrayd<T>::operator[](ptrdiff_t index)
+T& ArrayD<T>::operator[](ptrdiff_t index)
 {
     if (index < 0 || index >= len)
     {
@@ -98,7 +98,7 @@ T& Arrayd<T>::operator[](ptrdiff_t index)
 }
 
 template <class T>
-T Arrayd<T>::operator[](ptrdiff_t index) const
+T ArrayD<T>::operator[](ptrdiff_t index) const
 {
     if (index < 0 || index >= len)
     {
