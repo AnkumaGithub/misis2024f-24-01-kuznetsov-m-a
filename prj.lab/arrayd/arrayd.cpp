@@ -2,34 +2,29 @@
 #include <iostream>
 #include <cstdint>
 
-template <class T>
-ArrayD<T>::ArrayD(ptrdiff_t olen) :len(olen), maxlen(olen * 2)
+ArrayD::ArrayD(ptrdiff_t olen) :len(olen), maxlen(olen * 2)
 {
-    data = new T[maxlen];
+    data = new double[maxlen];
     for (ptrdiff_t i = 0; i < len; i++) {data[i] = 0;}
 }
 
-template <class T>
-ArrayD<T>::ArrayD(ptrdiff_t olen, T ovalue) :len(olen), maxlen(olen * 2), value(ovalue)
+ArrayD::ArrayD(ptrdiff_t olen, double ovalue) :len(olen), maxlen(olen * 2), value(ovalue)
 {
-    data = new T[maxlen];
+    data = new double[maxlen];
     for (ptrdiff_t i = 0; i < len; i++) {data[i] = value;}
 }
 
-template <class T>
-ArrayD<T>::ArrayD(const ArrayD &other) : len(other.len), maxlen(other.maxlen)
+ArrayD::ArrayD(const ArrayD &other) : len(other.len), maxlen(other.maxlen)
 {
-    data = new T[maxlen];
+    data = new double[maxlen];
     for (ptrdiff_t i = 0; i < len; i++) { data[i] = other.data[i]; }
 }
 
-template <class T>
-ArrayD<T>::~ArrayD(){ delete[] data; }
+ArrayD::~ArrayD(){ delete[] data; }
 
-template <class T>
-void ArrayD<T>::Resize(ptrdiff_t newmaxlen)
+void ArrayD::Resize(ptrdiff_t newmaxlen)
 {
-    ptrdiff_t* newdata = new ptrdiff_t[newmaxlen];
+    double* newdata = new double[newmaxlen];
     for (ptrdiff_t i = 0; i < len; i++)
     {
         newdata[i] = data[i];
@@ -39,8 +34,7 @@ void ArrayD<T>::Resize(ptrdiff_t newmaxlen)
     maxlen = newmaxlen;
 }
 
-template <class T>
-ArrayD<T>& ArrayD<T>::operator=(const ArrayD& other)
+ArrayD& ArrayD::operator=(const ArrayD& other)
 {
     if (this != &other)
     {
@@ -56,8 +50,7 @@ ArrayD<T>& ArrayD<T>::operator=(const ArrayD& other)
     return *this;
 }
 
-template <class T>
-void ArrayD<T>::Push_back(T &value)
+void ArrayD::Push_back(double &value)
 {
     if (maxlen == len)
     {
@@ -68,27 +61,23 @@ void ArrayD<T>::Push_back(T &value)
     data[len + 1] = value;
 }
 
-template <class T>
-void ArrayD<T>::Pop_back()
+void ArrayD::Pop_back()
 {
     if (len > 0){len-=1;}
     else { std::cout << "Array is empty!" << std::endl; }
 }
 
-template <class T>
-ptrdiff_t ArrayD<T>::Size() const
+ptrdiff_t ArrayD::Size() const
 {
     return len;
 }
 
-template <class T>
-bool ArrayD<T>::Empty() const
+bool ArrayD::Empty() const
 {
     return len == 0;
 }
 
-template <class T>
-T& ArrayD<T>::operator[](ptrdiff_t index)
+double& ArrayD::operator[](ptrdiff_t index)
 {
     if (index < 0 || index >= len)
     {
@@ -97,8 +86,7 @@ T& ArrayD<T>::operator[](ptrdiff_t index)
     return data[index];
 }
 
-template <class T>
-T ArrayD<T>::operator[](ptrdiff_t index) const
+double ArrayD::operator[](ptrdiff_t index) const
 {
     if (index < 0 || index >= len)
     {
