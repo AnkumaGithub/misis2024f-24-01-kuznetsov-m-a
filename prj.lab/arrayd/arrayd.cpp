@@ -2,13 +2,13 @@
 #include <iostream>
 #include <cstdint>
 
-ArrayD::ArrayD(ptrdiff_t olen) :len(olen), maxlen(olen * 2)
+ArrayD::ArrayD(const ptrdiff_t& olen) :len(olen), maxlen(olen * 2)
 {
     data = new double[maxlen];
     for (ptrdiff_t i = 0; i < len; i++) {data[i] = 0;}
 }
 
-ArrayD::ArrayD(ptrdiff_t olen, double ovalue) :len(olen), maxlen(olen * 2), value(ovalue)
+ArrayD::ArrayD(const ptrdiff_t olen,const double ovalue) :len(olen), maxlen(olen * 2), value(ovalue)
 {
     data = new double[maxlen];
     for (ptrdiff_t i = 0; i < len; i++) {data[i] = value;}
@@ -22,49 +22,57 @@ ArrayD::ArrayD(const ArrayD &other) : len(other.len), maxlen(other.maxlen)
 
 ArrayD::~ArrayD(){ delete[] data; }
 
-void ArrayD::Resize(ptrdiff_t newmaxlen)
+void ArrayD::Resize(const ptrdiff_t newlen)
 {
-    double* newdata = new double[newmaxlen];
+    double* newdata = new double[newlen];
     for (ptrdiff_t i = 0; i < len; i++)
     {
         newdata[i] = data[i];
     }
     delete[] data;
     data = newdata;
-    maxlen = newmaxlen;
+    len = newlen;
+    if (newlen >= maxlen)
+    {
+        maxlen = maxlen * 2;
+    }
 }
 
 ArrayD& ArrayD::operator=(const ArrayD& other)
 {
     if (this != &other)
     {
-        delete[] data;
-        maxlen = other.maxlen;
-        len = other.len;
-        ptrdiff_t* data = new ptrdiff_t[maxlen];
-        for (ptrdiff_t i = 0; i < len; i++)
-        {
-            data[i] = other.data[i];
-        }
+        Resize(other.len);
+        memcpy(data, other.data, len * sizeof(double));
     }
     return *this;
 }
 
-void ArrayD::Push_back(double &value)
+void ArrayD::Insert(const ptrdiff_t index,const double &value)
 {
-    if (maxlen == len)
+    if (index < 0 || index >= len)
     {
-        if (maxlen == 0){ maxlen = 1;}
-        else { maxlen = maxlen * 2;}
+        std::cerr << "index out of range" << std::endl;
     }
-    Resize(maxlen);
-    data[len + 1] = value;
+    else
+    {
+        Resize(len + 1);
+        if (index != len)
+        {
+            std::memmove(data + index + 1, data + index, len * sizeof(double));
+        }
+        data[index] = value;
+    }
 }
 
-void ArrayD::Pop_back()
+void ArrayD::Remove(const ptrdiff_t index)
 {
-    if (len > 0){len-=1;}
-    else { std::cout << "Array is empty!" << std::endl; }
+    if (index < 0 || index >+ len) { std::cout << "Array is empty!" << std::endl;}
+    else
+    {
+        if (index != len - 1) { std::memmove(data + index, data + index + 1, (len - index) * sizeof(double));}
+    }
+    Resize(len - 1);
 }
 
 ptrdiff_t ArrayD::Size() const
@@ -77,7 +85,7 @@ bool ArrayD::Empty() const
     return len == 0;
 }
 
-double& ArrayD::operator[](ptrdiff_t index)
+double& ArrayD::operator[](const ptrdiff_t index)
 {
     if (index < 0 || index >= len)
     {
@@ -86,7 +94,7 @@ double& ArrayD::operator[](ptrdiff_t index)
     return data[index];
 }
 
-double ArrayD::operator[](ptrdiff_t index) const
+double ArrayD::operator[](const ptrdiff_t index) const
 {
     if (index < 0 || index >= len)
     {
