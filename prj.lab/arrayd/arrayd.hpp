@@ -2,6 +2,7 @@
 #define ARRAYD_HPP
 #include <iosfwd>
 #include <cstdint>
+#include <cstring>
 #include <iostream>
 
 class ArrayD

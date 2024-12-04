@@ -1,6 +1,7 @@
 #include <arrayd/arrayd.hpp>
 #include <iostream>
 #include <cstdint>
+#include <cstring>
 
 ArrayD::ArrayD(const ptrdiff_t& olen) :len(olen), maxlen(olen * 2)
 {
@@ -25,10 +26,7 @@ ArrayD::~ArrayD(){ delete[] data; }
 void ArrayD::Resize(const ptrdiff_t newlen)
 {
     double* newdata = new double[newlen];
-    for (ptrdiff_t i = 0; i < len; i++)
-    {
-        newdata[i] = data[i];
-    }
+    memcpy(newdata, data, len * sizeof(double));
     delete[] data;
     data = newdata;
     len = newlen;

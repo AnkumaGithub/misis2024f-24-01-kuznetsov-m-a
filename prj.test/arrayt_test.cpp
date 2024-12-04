@@ -5,5 +5,5 @@ int main(){
   ArrayT<int> a;
   int b = 10;
   a.Insert(0, b);
-  std::cout << a.Size() << " " << a.MaxSize();
+  std::cout << a[0] << " " << a.MaxSize();
 }

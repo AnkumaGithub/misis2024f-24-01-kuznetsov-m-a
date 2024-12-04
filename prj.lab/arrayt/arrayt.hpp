@@ -1,7 +1,8 @@
-#ifndef MARRAY_HPP
-#define MARRAY_HPP
+#ifndef ARRAYT_HPP
+#define ARRAYT_HPP
 #include <iosfwd>
 #include <cstdint>
+#include <cstring>
 #include <iostream>
 
 template<class T>
@@ -11,7 +12,7 @@ private:
     ptrdiff_t len = 0;
     ptrdiff_t maxlen = 0;
     T value = T(0);
-    T *data = nullptr;
+    std::unique_ptr<T[]> data = nullptr;
 public:
     // Constructors
     ArrayT(): data(nullptr), len(0) , maxlen(0), value(0) {}
@@ -32,14 +33,14 @@ public:
         for (ptrdiff_t i = 0; i < len; i++) { data[i] = other.data[i]; }
     }
     // Destructor
-    ~ArrayT(){ delete[] data; }
+    ~ArrayT() = default;
     //
     ArrayT& operator=(const ArrayT& other)
     {
         if (this != &other)
         {
             Resize(other.len);
-            memcpy(data, other.data, len * sizeof(double));
+            std::copy(other.data.get(), other.data.get() + len, data.get());
         }
         return *this;
     }
@@ -47,13 +48,7 @@ public:
     // Functions
     void Resize(const ptrdiff_t newlen)
     {
-        T* newdata = new T[newlen];
-        for (ptrdiff_t i = 0; i < len; i++)
-        {
-            newdata[i] = data[i];
-        }
-        delete[] data;
-        data = newdata;
+        data.reset(new T[newlen]{T()});
         len = newlen;
         if (newlen >= maxlen)
         {
@@ -63,7 +58,7 @@ public:
     //
     void Insert(const ptrdiff_t index,const double &value)
     {
-        if (index < 0 || index >= len)
+        if (index < 0 || index > len)
         {
             std::cerr << "index out of range" << std::endl;
         }
@@ -72,18 +67,18 @@ public:
             Resize(len + 1);
             if (index != len)
             {
-                std::memmove(data + index + 1, data + index, len * sizeof(double));
+                std::memmove(data.get() + index + 1, data.get() + index, len * sizeof(T));
             }
-            data[index] = value;
+            *(data.get() + index) = value;
         }
     }
     //
     void Remove(const ptrdiff_t index)
     {
-        if (index < 0 || index >+ len) { std::cout << "Array is empty!" << std::endl;}
+        if (index < 0 || index >= len) { std::cout << "Array is empty!" << std::endl;}
         else
         {
-            if (index != len - 1) { std::memmove(data + index, data + index + 1, (len - index) * sizeof(double));}
+            if (index != len - 1) { std::memmove(data.get() + index, data.get() + index + 1, (len - index) * sizeof(T));}
         }
         Resize(len - 1);
     }
@@ -103,22 +98,22 @@ public:
         return len == 0;
     }
     //
+    const T& operator[](ptrdiff_t index) const
+    {
+        if (index < 0 || index >= len)
+        {
+            throw std::out_of_range("index out of range");
+        }
+        return *(data.get() + index);
+    }
+    //
     T& operator[](ptrdiff_t index)
     {
         if (index < 0 || index >= len)
         {
             throw std::out_of_range("index out of range");
         }
-        return data[index];
-    }
-    //
-    T operator[](ptrdiff_t index) const
-    {
-        if (index < 0 || index >= len)
-        {
-            throw std::out_of_range("index out of range");
-        }
-        return data[index];
+        return *(data.get() + index);
     }
 };
 #endif
