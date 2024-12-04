@@ -8,7 +8,6 @@ int main() {
     std::cout << A.get_size();
     std::cout << "c2";
     A.Push(a);
-    A.Push(b);
     std::cout << A.get_size();
     //A.Push(2);
     std::cout << "c3";

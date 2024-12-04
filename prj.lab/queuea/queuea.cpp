@@ -80,7 +80,7 @@ void QueueA::Push(std::uint8_t& value){
 std::uint8_t& QueueA::Top(){
   if (not(IsEmpty()))
   {
-    if (head % capacity == tail % capacity - 1)
+    if (head % capacity == tail % capacity)
     {
       capacity = 0;
       head += 1;
