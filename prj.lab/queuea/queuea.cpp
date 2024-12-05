@@ -36,21 +36,17 @@ bool QueueA::IsEnough(){
 void QueueA::Resize(){
   ptrdiff_t sch = 0;
   if (capacity == 0){sch = 1;}
-  std::cout << "???" << std::endl;
   std::uint8_t* new_data = new std::uint8_t[capacity * 2 + sch];
-  std::cout << "!!!" << std::endl;
   for (ptrdiff_t i = head; i < capacity; i++){
     new_data[i - head] = data[i];
   }
   for (ptrdiff_t i = 0; i < head; i++){
     new_data[i + head] = data[i];
   }
-  std::cout << "!!!" << std::endl;
   data = new_data;
   head = 0;
   tail = capacity + sch;
   capacity = capacity * 2 + sch;
-  std::cout << "!!!" << std::endl;
   //delete[] new_data;
 }
 
@@ -58,11 +54,8 @@ void QueueA::Push(std::uint8_t& value){
   if (not(IsEmpty()))
   {
     if (tail % capacity == head % capacity){
-      std::cout << "!!! " << head << " " << capacity << " " << tail << std::endl;
       Resize();
-      std::cout << "!!!" << std::endl;
       data[tail] = value;
-      std::cout << "!!!" << std::endl;
     }
     else
     {
@@ -96,15 +89,13 @@ std::uint8_t& QueueA::Top(){
   else
   {
     std::cout << "queue is empty." << std::endl;
-    std::uint8_t b = 0;
-    return b;
   }
 }
 
 void QueueA::Pop(){
   if (not(IsEmpty()))
   {
-    if (head % capacity == tail % capacity - 1)
+    if (head % capacity == tail % capacity)
     {
       capacity = 0;
       head += 1;
