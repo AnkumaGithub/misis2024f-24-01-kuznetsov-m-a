@@ -60,7 +60,7 @@ void QueueA::Resize(){
 }
 
 void QueueA::Push(std::uint8_t& value){
-  if (not(IsEmpty()))
+  if (IsEmpty() != true)
   {
     if (size == capacity){
       Resize();
@@ -85,7 +85,7 @@ void QueueA::Push(std::uint8_t& value){
 }
 
 std::uint8_t& QueueA::Top(){
-  if (not(IsEmpty()))
+  if (IsEmpty() != true)
   {
     if (size == 0)
     {
@@ -107,12 +107,12 @@ std::uint8_t& QueueA::Top(){
     head = 0;
     Resize();
     capacity = 0;
-    std::cout << "queue is empty." << std::endl;
+    throw std::out_of_range("Zero denumenator in Rational ctor");
   }
 }
 
 void QueueA::Pop(){
-  if (not(IsEmpty()))
+  if (IsEmpty() != true)
   {
     if (size == 0)
     {
@@ -133,6 +133,5 @@ void QueueA::Pop(){
     head = 0;
     Resize();
     capacity = 0;
-    std::cout << "queue is empty." << std::endl;
   }
 }
