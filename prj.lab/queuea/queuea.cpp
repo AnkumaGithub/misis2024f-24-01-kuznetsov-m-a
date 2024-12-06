@@ -13,7 +13,8 @@ bool QueueA::IsEmpty() const {
   return capacity == 0;
 }
 
-ptrdiff_t QueueA::get_size() const { return capacity; }
+ptrdiff_t QueueA::get_capacity() const { return capacity; }
+ptrdiff_t QueueA::get_size() const { return size; }
 
 void QueueA::move_head(){
   head += 1;
@@ -31,6 +32,14 @@ void QueueA::move_tail(){
 bool QueueA::IsEnough(){
   if ((head % capacity) == (tail % capacity) || capacity == 0){ return true; }
   else { return false; }
+}
+
+void QueueA::show_queue()
+{
+  for (ptrdiff_t i = head % capacity; i < (tail - 1) % capacity + 1; i++)
+  {
+    std::cout << unsigned(data[i]) << " ";
+  }
 }
 
 void QueueA::Resize(){
@@ -53,19 +62,24 @@ void QueueA::Resize(){
 void QueueA::Push(std::uint8_t& value){
   if (not(IsEmpty()))
   {
-    if (tail % capacity == head % capacity){
+    if (size == capacity){
       Resize();
       data[tail] = value;
+      tail = (tail + 1) % capacity;
+      std::cout << head << " " << tail << " " << unsigned(value) << std::endl;
     }
     else
     {
       data[tail] = value;
       tail += 1;
+      std::cout << head << " " << tail << " " << unsigned(value) << std::endl;
     }
+    size += 1;
   }
   else
   {
     Resize();
+    size += 1;
     data[0] = value;
   }
 }
@@ -73,21 +87,26 @@ void QueueA::Push(std::uint8_t& value){
 std::uint8_t& QueueA::Top(){
   if (not(IsEmpty()))
   {
-    if (head % capacity == tail % capacity)
+    if (size == 0)
     {
       capacity = 0;
-      head += 1;
-      return data[head - 1];
+      Resize();
     }
     else
     {
+      ptrdiff_t old_head = head;
       head += 1;
       head = head % capacity;
-      return data[head - 1];
+      size -= 1;
+      return data[old_head];
     }
   }
   else
   {
+    capacity = 0;
+    head = 0;
+    Resize();
+    capacity = 0;
     std::cout << "queue is empty." << std::endl;
   }
 }
@@ -95,19 +114,25 @@ std::uint8_t& QueueA::Top(){
 void QueueA::Pop(){
   if (not(IsEmpty()))
   {
-    if (head % capacity == tail % capacity)
+    if (size == 0)
     {
       capacity = 0;
-      head += 1;
+      Resize();
     }
     else
     {
+      ptrdiff_t old_head = head;
       head += 1;
       head = head % capacity;
+      size -= 1;
     }
   }
   else
   {
+    capacity = 0;
+    head = 0;
+    Resize();
+    capacity = 0;
     std::cout << "queue is empty." << std::endl;
   }
 }
