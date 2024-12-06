@@ -16,8 +16,8 @@ public:
     Rational() = default;
     Rational(const Rational&) = default;
     Rational(Rational&&) = default;
-    explicit Rational(const int32_t lhs) : integ(lhs) {}
-    Rational(const int32_t lhs, const int32_t rhs) : integ(lhs), nat(rhs) {}
+    explicit Rational(const int32_t lhs);
+    Rational(const int32_t lhs, const int32_t rhs);
 
     ~Rational() = default;
 

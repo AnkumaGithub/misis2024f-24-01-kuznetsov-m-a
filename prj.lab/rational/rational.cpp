@@ -3,6 +3,15 @@
 #include <sstream>
 #include <cstdint>
 
+Rational::Rational(const int32_t lhs) : integ(lhs) {sokrin();}
+
+Rational::Rational(const int32_t lhs, const int32_t rhs) : integ(lhs), nat(rhs)
+{
+    if (0 == nat) {
+        throw std::invalid_argument("Zero denumenator in Rational ctor");
+    }
+    sokrin();
+}
 
 int32_t NOD(int32_t up, int32_t low)
 {
