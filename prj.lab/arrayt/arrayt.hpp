@@ -45,6 +45,16 @@ public:
         return *this;
     }
 
+    ArrayT& operator=(const ArrayT* other)
+    {
+        if (this != &other)
+        {
+            Resize(other.len);
+            std::copy(other.data.get(), other.data.get() + len, data.get());
+        }
+        return *this;
+    }
+
     // Functions
     void Resize(const ptrdiff_t newlen)
     {
