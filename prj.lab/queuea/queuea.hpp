@@ -15,7 +15,7 @@ class QueueA {
 
   public:
     QueueA();
-    ~QueueA() = default;
+    ~QueueA();
 
     ptrdiff_t get_size() const;
     ptrdiff_t get_capacity() const;

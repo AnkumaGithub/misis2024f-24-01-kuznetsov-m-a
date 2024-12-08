@@ -5,30 +5,25 @@
 
 ArrayD::ArrayD(const ptrdiff_t& olen) :len(olen), maxlen(olen * 2)
 {
-    data = new double[maxlen];
+    data.reset(new double[maxlen]{double()});
     for (ptrdiff_t i = 0; i < len; i++) {data[i] = 0;}
 }
 
 ArrayD::ArrayD(const ptrdiff_t olen,const double ovalue) :len(olen), maxlen(olen * 2), value(ovalue)
 {
-    data = new double[maxlen];
+    data.reset(new double[maxlen]{double()});
     for (ptrdiff_t i = 0; i < len; i++) {data[i] = value;}
 }
 
 ArrayD::ArrayD(const ArrayD &other) : len(other.len), maxlen(other.maxlen)
 {
-    data = new double[maxlen];
+    data.reset(new double[maxlen]{double()});
     for (ptrdiff_t i = 0; i < len; i++) { data[i] = other.data[i]; }
 }
 
-ArrayD::~ArrayD(){ delete[] data; }
-
 void ArrayD::Resize(const ptrdiff_t newlen)
 {
-    double* newdata = new double[newlen];
-    memcpy(newdata, data, len * sizeof(double));
-    delete[] data;
-    data = newdata;
+    data.reset(new double[newlen]{double()});
     len = newlen;
     if (newlen >= maxlen)
     {
@@ -41,14 +36,14 @@ ArrayD& ArrayD::operator=(const ArrayD& other)
     if (this != &other)
     {
         Resize(other.len);
-        memcpy(data, other.data, len * sizeof(double));
+        std::copy(other.data.get(), other.data.get() + len, data.get());
     }
     return *this;
 }
 
 void ArrayD::Insert(const ptrdiff_t index,const double &value)
 {
-    if (index < 0 || index >= len)
+    if (index < 0 || index > len)
     {
         std::cerr << "index out of range" << std::endl;
     }
@@ -57,18 +52,18 @@ void ArrayD::Insert(const ptrdiff_t index,const double &value)
         Resize(len + 1);
         if (index != len)
         {
-            std::memmove(data + index + 1, data + index, len * sizeof(double));
+            std::memmove(data.get() + index + 1, data.get() + index, len * sizeof(double));
         }
-        data[index] = value;
+        *(data.get() + index) = value;
     }
 }
 
 void ArrayD::Remove(const ptrdiff_t index)
 {
-    if (index < 0 || index >+ len) { std::cout << "Array is empty!" << std::endl;}
+    if (index < 0 || index >= len) { std::cout << "Array is empty!" << std::endl;}
     else
     {
-        if (index != len - 1) { std::memmove(data + index, data + index + 1, (len - index) * sizeof(double));}
+        if (index != len - 1) { std::memmove(data.get() + index, data.get() + index + 1, (len - index) * sizeof(double));}
     }
     Resize(len - 1);
 }

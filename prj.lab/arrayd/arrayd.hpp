@@ -11,7 +11,7 @@ private:
   ptrdiff_t len = 0;
   ptrdiff_t maxlen = 0;
   double value = 0.0;
-  double *data = nullptr;
+  std::unique_ptr<double[]> data = nullptr;
 public:
   // Constructors
   ArrayD(): data(nullptr), len(0) , maxlen(0), value(0) {}
@@ -22,7 +22,7 @@ public:
   //
   ArrayD& operator=(const ArrayD &other);
   // Destructor
-  ~ArrayD();
+  ~ArrayD() = default;
 
   // Functions
   void Resize(const ptrdiff_t newmaxlen);
