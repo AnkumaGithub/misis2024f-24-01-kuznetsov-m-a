@@ -18,18 +18,18 @@ public:
     ArrayT(): data(nullptr), len(0) , maxlen(0), value(0) {}
     ArrayT(const ptrdiff_t olen) :len(olen), maxlen(olen * 2)
     {
-        data = new T[maxlen];
+        data.reset(new T[maxlen]{T()});
         for (ptrdiff_t i = 0; i < len; i++) {data[i] = 0;}
     }
     ArrayT(const ptrdiff_t olen,const T& ovalue) :len(olen), maxlen(olen * 2), value(ovalue)
     {
-        data = new T[maxlen];
+        data.reset(new T[maxlen]{T()});
         for (ptrdiff_t i = 0; i < len; i++) {data[i] = value;}
     }
     // Copy constructor
     ArrayT(const ArrayT &other) : len(other.len), maxlen(other.maxlen)
     {
-        data = new T[maxlen];
+        data.reset(new T[maxlen]{T()});
         for (ptrdiff_t i = 0; i < len; i++) { data[i] = other.data[i]; }
     }
     // Destructor
@@ -47,11 +47,7 @@ public:
 
     ArrayT& operator=(const ArrayT* other)
     {
-        if (this != &other)
-        {
-            Resize(other.len);
-            std::copy(other.data.get(), other.data.get() + len, data.get());
-        }
+        data = other->data;
         return *this;
     }
 

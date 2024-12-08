@@ -1,5 +1,11 @@
 #include <queuea/queuea.hpp>
 #include <iostream>
+#include <queue>
+
+QueueA::~QueueA()
+{
+  delete[] data;
+}
 
 QueueA::QueueA()
 {
@@ -31,7 +37,7 @@ void QueueA::move_tail(){
 
 bool QueueA::IsEnough(){
   if ((head % capacity) == (tail % capacity) || capacity == 0){ return true; }
-  else { return false; }
+  return false;
 }
 
 void QueueA::show_queue()
@@ -56,7 +62,7 @@ void QueueA::Resize(){
   head = 0;
   tail = capacity + sch;
   capacity = capacity * 2 + sch;
-  //delete[] new_data;
+  //std::free(new_data);
 }
 
 void QueueA::Push(std::uint8_t& value){
