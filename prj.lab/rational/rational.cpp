@@ -38,18 +38,18 @@ Rational sokrout(int32_t up, int32_t low)
 // bool operators
 // ==
 bool Rational::operator==(const Rational &rhs) const noexcept{
-    return integ == rhs.integ && nat == rhs.nat;
+    return std::fabs(integ / nat - rhs.integ / rhs.nat) <= std::numeric_limits<double>::epsilon();
 }
 bool Rational::operator==(const int32_t &rhs) const noexcept{
-    return integ == rhs && nat == 1;
+    return std::fabs(integ / nat - rhs) <= std::numeric_limits<double>::epsilon();
 }
 
 // !=
 bool Rational::operator!=(const Rational &rhs) const noexcept{
-    return integ != rhs.integ || nat != rhs.nat;
+    return std::fabs(integ / nat - rhs.integ / rhs.nat) > std::numeric_limits<double>::epsilon();
 }
 bool Rational::operator!=(const int32_t &rhs) const noexcept{
-    return integ != rhs || nat != 1;
+    return std::fabs(integ / nat - rhs) > std::numeric_limits<double>::epsilon();
 }
 
 Rational Rational::operator-() const noexcept

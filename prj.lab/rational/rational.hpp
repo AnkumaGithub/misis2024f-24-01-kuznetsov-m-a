@@ -9,6 +9,7 @@ class Rational {
 private:
     int32_t integ = 0;
     int32_t nat = 1;
+    // integ / nat
 
     inline void sokrin();
 
