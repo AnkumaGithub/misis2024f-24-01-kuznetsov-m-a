@@ -8,13 +8,13 @@
 class ArrayD
 {
 private:
-  ptrdiff_t len = 0;
-  ptrdiff_t maxlen = 0;
-  double value = 0.0;
-  double *data = nullptr;
+  ptrdiff_t len_ = 0;
+  ptrdiff_t capacity_ = 0;
+  double value_ = 0.0;
+  double *data_ = nullptr;
 public:
   // Constructors
-  ArrayD(): data(nullptr), len(0) , maxlen(0), value(0) {}
+  ArrayD() = default;
   ArrayD(const ptrdiff_t& olen);
   ArrayD(const ptrdiff_t olen,const double ovalue);
   // Copy constructor

@@ -10,26 +10,26 @@ class ArrayT
 {
 private:
     ptrdiff_t len = 0;
-    ptrdiff_t maxlen = 0;
+    ptrdiff_t capacity = 0;
     T value = T(0);
     std::unique_ptr<T[]> data = nullptr;
 public:
     // Constructors
-    ArrayT(): data(nullptr), len(0) , maxlen(0), value(0) {}
-    ArrayT(const ptrdiff_t olen) :len(olen), maxlen(olen * 2)
+    ArrayT(): data(nullptr), len(0) , capacity(0), value(0) {}
+    ArrayT(const ptrdiff_t olen) :len(olen), capacity(olen * 2)
     {
-        data.reset(new T[maxlen]{T()});
+        data.reset(new T[capacity]{T()});
         for (ptrdiff_t i = 0; i < len; i++) {data[i] = 0;}
     }
-    ArrayT(const ptrdiff_t olen,const T& ovalue) :len(olen), maxlen(olen * 2), value(ovalue)
+    ArrayT(const ptrdiff_t olen,const T& ovalue) :len(olen), capacity(olen * 2), value(ovalue)
     {
-        data.reset(new T[maxlen]{T()});
+        data.reset(new T[capacity]{T()});
         for (ptrdiff_t i = 0; i < len; i++) {data[i] = value;}
     }
     // Copy constructor
-    ArrayT(const ArrayT &other) : len(other.len), maxlen(other.maxlen)
+    ArrayT(const ArrayT &other) : len(other.len), capacity(other.capacity)
     {
-        data.reset(new T[maxlen]{T()});
+        data.reset(new T[capacity]{T()});
         for (ptrdiff_t i = 0; i < len; i++) { data[i] = other.data[i]; }
     }
     // Destructor
@@ -56,9 +56,9 @@ public:
     {
         data.reset(new T[newlen]{T()});
         len = newlen;
-        if (newlen >= maxlen)
+        if (newlen >= capacity)
         {
-            maxlen = maxlen * 2;
+            capacity = capacity * 2;
         }
     }
     //
