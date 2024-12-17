@@ -128,6 +128,7 @@ Rational& Rational::operator+=(const int32_t &rhs) noexcept{
 }
 Rational operator+=(const int32_t &lhs, const Rational &rhs) noexcept{
     Rational buf = rhs;
+    std::cout << "!!!!";
     buf += lhs;
     return sokrout(buf.get_integ(), buf.get_nat());
 }
@@ -145,7 +146,8 @@ Rational& Rational::operator-=(const int32_t &rhs) noexcept{
     return *this;
 }
 Rational operator-=(const int32_t lhs, const Rational &rhs) noexcept{
-    Rational buf = rhs;
+    Rational buf = rhs, d{-1,1};
+    std::cout << "!!!!";
     buf -= lhs;
     return sokrout(buf.get_integ(), buf.get_nat());
 }
@@ -164,6 +166,7 @@ Rational& Rational::operator*=(const int32_t &rhs) noexcept{
 }
 Rational operator*=(const int32_t &lhs, const Rational &rhs) noexcept{
     Rational buf = rhs;
+    std::cout << "!!!!";
     buf *= lhs;
     return sokrout(buf.get_integ(), buf.get_nat());
 }
@@ -181,9 +184,9 @@ Rational& Rational::operator/=(const int32_t &rhs) noexcept{
     return *this;
 }
 Rational operator/=(const int32_t &lhs, const Rational &rhs) noexcept{
-    Rational buf = rhs;
+    Rational buf = rhs, d;
     buf /= lhs;
-    return sokrout(buf.get_integ(), buf.get_nat());
+    return sokrout(buf.get_nat(), buf.get_integ());
 }
 
 //+ - * / operators
@@ -218,7 +221,7 @@ Rational operator-(const Rational &lhs, const int32_t &rhs) noexcept{
 Rational operator-(const int32_t &lhs, const Rational &rhs) noexcept{
     Rational buf = rhs;
     buf -= lhs;
-    return sokrout(buf.get_integ(), buf.get_nat());
+    return sokrout(-buf.get_integ(), buf.get_nat());
 }
 
 // *
@@ -252,13 +255,13 @@ Rational operator/(const Rational &lhs, const int32_t &rhs) noexcept{
 Rational operator/(const int32_t &lhs, const Rational &rhs) noexcept{
     Rational buf = rhs;
     buf /= lhs;
-    return sokrout(buf.get_integ(), buf.get_nat());
+    return sokrout(buf.get_nat(), buf.get_integ());
 }
 
 std::ostream& Rational::Writeto(std::ostream& out) const noexcept {
     if (integ == 0 || nat == 1)
     {
-        out << integ;
+        out << integ << Separator << "1";
     }
     else
     {

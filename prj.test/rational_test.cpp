@@ -14,6 +14,7 @@ bool test(std::string st){
     return istr.good();
 }
 int main(){
+    Rational r;
     Rational z, g, b1, b2, b3, b4;
     std::cout << "Cin and Cout test:" << std::endl;
     std::cin >> z >> g;

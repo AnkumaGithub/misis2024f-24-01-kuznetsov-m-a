@@ -10,7 +10,12 @@ int main() {
     A.Pop();
     A.Push(b);
     A.Push(a);
+    A.Push(b);
+    A.Push(a);
+    A.Push(b);
+    A.Push(a);
+    A.Push(b);
     std::cout << " -> " << unsigned(A.Top()) << std::endl;
-    StackL C = A;
+    StackL C(A);
     std::cout << " -> " << unsigned(C.Top()) << std::endl;
 }
