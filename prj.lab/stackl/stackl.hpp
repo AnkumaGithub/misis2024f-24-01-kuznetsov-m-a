@@ -1,3 +1,4 @@
+#pragma once
 #ifndef STACKL_H
 #define STACKL_H
 #include <cstring>
@@ -6,20 +7,29 @@
 #include <memory>
 
 struct StackL{
-  private:
-    struct Node{
-      std::unique_ptr<Node> next;
-      std::uint8_t value;
+public:
+    using T = std::uint8_t;
+    StackL(): head(nullptr){}
+    ~StackL() = default;
 
-      Node(std::uint8_t& v): value(v), next(nullptr){}
+    void Push(T& v);
+    void Pop();
+
+    StackL(const StackL& other);
+    StackL(StackL&& other) noexcept;
+
+    [[nodiscard]] T& Top() &;
+    [[nodiscard]] const T& Top() const &;
+    StackL& operator=(const StackL& other);
+    StackL& operator=(StackL&& other) noexcept;
+    void Clear() noexcept;
+    bool IsEmpty() const noexcept;
+private:
+    struct Node{
+        std::unique_ptr<Node> next;
+        T value;
+        Node(T& v): value(v), next(nullptr){}
     };
     std::unique_ptr<Node> head;
-   public:
-     StackL(): head(nullptr){}
-     ~StackL() = default;
-
-     void Push(std::uint8_t& v);
-     void Pop();
-     std::uint8_t& Top();
 };
-#endif
+#endif //STACKL_H

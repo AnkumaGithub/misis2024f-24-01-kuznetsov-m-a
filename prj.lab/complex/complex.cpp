@@ -10,13 +10,13 @@ double im = 0.0;
 // bool operators definition
 bool Complex::operator==(const Complex& rhs) const noexcept
 {
-    return fabs(re - rhs.re) <= std::numeric_limits<double>::epsilon()  &&
-        fabs(im - rhs.im) <= std::numeric_limits<double>::epsilon();
+    return abs(re - rhs.re) <= 2 * std::numeric_limits<double>::epsilon()  &&
+        abs(im - rhs.im) <= 2 * std::numeric_limits<double>::epsilon();
 };
 bool Complex::operator!=(const Complex& rhs) const noexcept
 {
-    return fabs(re - rhs.re) > std::numeric_limits<double>::epsilon()  &&
-        fabs(im - rhs.im) > std::numeric_limits<double>::epsilon();
+    return abs(re - rhs.re) > 2 * std::numeric_limits<double>::epsilon()  &&
+        abs(im - rhs.im) > 2 * std::numeric_limits<double>::epsilon();
 };
 
 // += -= *= /= operators definition

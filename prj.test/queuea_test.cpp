@@ -14,7 +14,15 @@ int main() {
     std::cout << "abcd -> " << A.get_size() << std::endl;
     A.show_queue();
     std::cout << " -> " << A.get_size() << " " <<  unsigned(A.Top()) << " " << A.get_size() << std::endl;
+    A.Pop();
+    std::cout << " -> " << A.get_size() << " " <<  unsigned(A.Top()) << " " << A.get_size() << std::endl;
+    A.Pop();
     std::cout << " -> " << A.get_size() << " " <<  unsigned(A.Top()) << " " << A.get_size() << std::endl;
     std::cout << " -> " << A.get_size() << " " <<  unsigned(A.Top()) << " " << A.get_size() << std::endl;
-    std::cout << " -> " << A.get_size() << " " <<  unsigned(A.Top()) << " " << A.get_size() << std::endl;
+    QueueA Q = A;
+    Q.Pop();
+    Q.Pop();
+    Q.Push(a);
+    Q.Push(a);
+    std::cout << " -> " << Q.get_size() << " " <<  unsigned(Q.Top()) << " " << Q.get_size() << std::endl;
 }

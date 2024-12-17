@@ -6,30 +6,43 @@
 
 
 class QueueA {
-  private:
-    ptrdiff_t capacity = 1;
-    ptrdiff_t size = 0;
-    ptrdiff_t head = 0;
-    ptrdiff_t tail = 0;
-    std::uint8_t *data = nullptr;
-
   public:
+    using T = std::uint8_t;
     QueueA();
     ~QueueA();
 
-    ptrdiff_t get_size() const;
-    ptrdiff_t get_capacity() const;
     bool IsEmpty() const;
-
-    void show_queue();
-    void move_head();
-    void move_tail();
-    bool IsEnough();
     void Resize();
 
-    void Push(std::uint8_t &value);
+    QueueA(const QueueA& other);
+    QueueA(QueueA&& other) noexcept;
+
+    std::ptrdiff_t get_size() const;
+    std::ptrdiff_t get_capacity() const;
+
+    void show_queue();
+
+    std::ptrdiff_t Count_size() const;
+
+    QueueA& operator=(const QueueA& other);
+    QueueA& operator=(QueueA&& other);
+
+    void Push(const T &value);
     void Pop();
 
-    std::uint8_t& Top();
+    T& Top();
+    const T& Top() const;
+  private:
+    std::ptrdiff_t capacity = 1;
+    std::ptrdiff_t size = 0;
+    std::ptrdiff_t head = 0;
+    std::ptrdiff_t tail = 0;
+    T *data = nullptr;
+
+    void move_head();
+    void move_tail();
+
+    void Swap(QueueA&& other) noexcept;
+    bool IsEnough();
 };
 #endif

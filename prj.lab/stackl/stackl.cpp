@@ -1,10 +1,12 @@
+#include <memory>
 #include <stackl/stackl.hpp>
 #include <memory>
 #include <cstring>
+#include <stdexcept>
 #include <iostream>
 
-void StackL::Push(std::uint8_t& v){
-  auto nn = std::unique_ptr<Node>(new Node(v));
+void StackL::Push(T& v){
+  auto nn = std::make_unique<Node>(v);
   nn -> next = std::move(head);
   head = std::move(nn);
 }
@@ -16,13 +18,69 @@ void StackL::Pop(){
   }
 }
 
-std::uint8_t& StackL::Top()
-{
-  if (head != nullptr)
+StackL::T& StackL::Top() &{
+  if (!IsEmpty())
   {
-    std::uint8_t buf = head -> value;
-    head = std::move(head -> next);
+    T& buf = head -> value;
     return buf;
   }
-  std::cout << "BRO STACK AS EMPTY AS YOUR BRAINS";
+  throw std::logic_error("StackL - try get top form empty stack.");
+}
+
+const StackL::T& StackL::Top() const&
+{
+  if (!IsEmpty())
+  {
+    const T& buf = head -> value;
+    return buf;
+  }
+  throw std::logic_error("StackL - try get top form empty stack.");
+}
+
+StackL::StackL(const StackL& other)
+{
+  Clear();
+  auto nn = std::make_unique<Node>(other.head -> value);
+  nn -> next = std::move(head);
+  head = std::move(nn);
+  while(head -> next)
+  {
+    head -> next = std::make_unique<Node>(head -> next -> value);
+    nn -> next = std::move(head);
+    head = std::move(nn);
+  }
+}
+
+StackL& StackL::operator=(StackL&& other) noexcept {
+  std::swap(head, other.head);
+  return *this;
+}
+
+StackL& StackL::operator=(const StackL& other)
+{
+  if (this != &other)
+  {
+    Clear();
+    auto nn = std::make_unique<Node>(other.head -> value);
+    nn -> next = std::move(head);
+    head = std::move(nn);
+    while(head -> next)
+    {
+      head -> next = std::make_unique<Node>(head -> next -> value);
+      nn -> next = std::move(head);
+      head = std::move(nn);
+    }
+  }
+  return *this;
+}
+
+bool StackL::IsEmpty() const noexcept{ return head == nullptr;}
+
+
+void StackL::Clear() noexcept
+{
+  while(!IsEmpty())
+  {
+    Pop();
+  }
 }

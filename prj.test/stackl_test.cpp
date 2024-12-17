@@ -11,4 +11,6 @@ int main() {
     A.Push(b);
     A.Push(a);
     std::cout << " -> " << unsigned(A.Top()) << std::endl;
+    StackL C = A;
+    std::cout << " -> " << unsigned(C.Top()) << std::endl;
 }
