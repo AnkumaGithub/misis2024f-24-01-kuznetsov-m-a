@@ -291,7 +291,7 @@ std::istream& Rational::Readfrom(std::istream& in) noexcept {
 
     in >> integin >> Separatorin >> natin;
 
-    if (in.good()){
+    if (in.good() || in.eof()){
         if (Separatorin==Rational::Separator){
             integ = integin;
             nat = natin;
