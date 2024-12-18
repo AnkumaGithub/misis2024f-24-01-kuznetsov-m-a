@@ -6,7 +6,7 @@
 #include <cstddef>
 #include <memory>
 
-struct StackL{
+class StackL{
 public:
     using T = std::uint8_t;
     StackL(): head(nullptr){}

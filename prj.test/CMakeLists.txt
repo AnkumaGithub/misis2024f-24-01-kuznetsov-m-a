@@ -14,6 +14,8 @@ add_executable(queuea_test queuea_test.cpp)
 
 add_executable(stackl_test stackl_test.cpp)
 
+add_executable(stacka_test stacka_test.cpp)
+
 
 
 target_link_libraries(complex_test complex)
@@ -31,4 +33,6 @@ target_link_libraries(arrayt_doctest arrayt)
 target_link_libraries(queuea_test queuea)
 
 target_link_libraries(stackl_test stackl)
+
+target_link_libraries(stacka_test stacka)
 
