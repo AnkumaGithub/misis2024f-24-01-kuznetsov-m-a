@@ -13,6 +13,7 @@ bool StackA::IsFull(){
 void StackA::Resize(){
   capacity_ += 16;
   double* new_data = new double[capacity_]{0.0};
+  //по умнее можно
   for (int i = 0; i < ind_; i++){
     new_data[i] = data_[i];
   }
