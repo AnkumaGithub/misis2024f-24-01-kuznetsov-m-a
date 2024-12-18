@@ -16,7 +16,6 @@ public:
   // Constructors
   ArrayD() = default;
   ArrayD(const std::ptrdiff_t len);
-  ArrayD(const std::ptrdiff_t len,const double value);
   // Copy constructor
   ArrayD(const ArrayD& other);
   //
@@ -28,7 +27,7 @@ public:
   void Resize(const std::ptrdiff_t len);
   void Insert(const std::ptrdiff_t index, const double value);
   void Remove(const std::ptrdiff_t index);
-  std::ptrdiff_t Size() const;
+  [[nodiscard]] std::ptrdiff_t Size() const noexcept { return len_; }
   bool Empty() const;
   [[nodiscard]] double& operator[](const std::ptrdiff_t index);
   [[nodiscard]] double operator[](const std::ptrdiff_t index) const;

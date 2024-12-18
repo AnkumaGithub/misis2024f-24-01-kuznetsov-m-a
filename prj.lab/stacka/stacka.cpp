@@ -3,11 +3,11 @@
 #include <iostream>
 
 bool StackA::IsEmpty(){
-  return capacity_ == 0;
+  return ind_ == 0;
 }
 
 bool StackA::IsFull(){
-  return ind_ == capacity_;
+  return ind_ - 1 == capacity_;
 }
 
 void StackA::Resize(){
@@ -20,6 +20,10 @@ void StackA::Resize(){
   data_ = new_data;
 }
 
+void StackA::Size(){
+  std::cout << ind_ << std::endl;
+}
+
 void StackA::Push(double val){
   if (!IsEmpty()){
     if (IsFull()){
@@ -28,16 +32,18 @@ void StackA::Push(double val){
     data_[ind_] = val;
     ind_ += 1;
   }
-  Resize();
-  data_[ind_] = val;
-  ind_ += 1;
+  else{
+    Resize();
+    data_[ind_] = val;
+    ind_ += 1;
+  }
 }
 
 double StackA::Top(){
   if (IsEmpty()){
     throw std::out_of_range("StackA::Top is empty");
   }
-  return data_[ind_];
+  return data_[ind_ - 1];
 }
 
 void StackA::Pop(){

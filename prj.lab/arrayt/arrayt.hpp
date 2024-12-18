@@ -65,7 +65,7 @@ public:
         len_ = len;
     }
     //
-    void Insert(const std::ptrdiff_t index,const double &value)
+    void Insert(const std::ptrdiff_t index,const T &value)
     {
         if (index < 0 || len_ < index) {
             throw std::invalid_argument("ArrayT::Insert - invalid index");
@@ -80,7 +80,7 @@ public:
     void Remove(const std::ptrdiff_t index)
     {
         if (index < 0 || len_ <= index) {
-            throw std::invalid_argument("ArrayT::Remove - invalid index");
+            throw std::invalid_argument("ArrayD::Remove - invalid index");
         }
         if (index != len_ - 1) {
             std::copy(data_.get() + index + 1,data_.get() + len_, data_.get() + index);
@@ -88,10 +88,7 @@ public:
         Resize(len_ - 1);
     }
     //
-    std::ptrdiff_t Size()
-    {
-        return len_;
-    }
+    [[nodiscard]] std::ptrdiff_t Size() const noexcept { return len_; }
     //
     std::ptrdiff_t MaxSize()
     {
@@ -103,7 +100,7 @@ public:
         return len_ == 0;
     }
     //
-    const T& operator[](std::ptrdiff_t index) const
+    const T& operator[](const std::ptrdiff_t index) const
     {
         if (index < 0 || len_ <= index) {
             throw std::invalid_argument("ArrayT::operator[] - invalid index");
@@ -111,7 +108,7 @@ public:
         return *(data_.get() + index);
     }
     //
-    T& operator[](std::ptrdiff_t index)
+    T& operator[](const std::ptrdiff_t index)
     {
         if (index < 0 || len_ <= index) {
             throw std::invalid_argument("ArrayT::operator[] - invalid index");

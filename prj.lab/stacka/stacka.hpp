@@ -17,11 +17,13 @@ class StackA{
     ~StackA(){
       delete[] data_;
     };
+    //добавит копирование и =
     void Push(double val);
     bool IsEmpty();
     bool IsFull();
     void Resize();
     void Pop();
     double Top();
+    void Size();
   };
 #endif // STACKA_H

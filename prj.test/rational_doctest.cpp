@@ -5,22 +5,46 @@
 
 #include <iostream>
 
-void test_bool(const int32_t num1, const int32_t det1, const int32_t num2, const int32_t det2)
+void test_rav(const int32_t num1, const int32_t det1, const int32_t num2, const int32_t det2)
 {
   Rational a(num1, det1);
   Rational b(num2, det2);
-  // ==
-  if (num1 == num2 && det1 == det2)
-  {
-    if (a == b) { std::cout << "== is correct" << std::endl;}
-    else { std::cout << "== not is correct" << std::endl;}
-  }
-  // !=
-  if (num1 != num2 || det1 != det2)
-  {
-    if (a != b) { std::cout << "!= is correct" << std::endl;}
-    else { std::cout << "!= not is correct" << std::endl;}
-  }
+  CHECK(a == b);
+}
+
+void test_nerav(const int32_t num1, const int32_t det1, const int32_t num2, const int32_t det2)
+{
+  Rational a(num1, det1);
+  Rational b(num2, det2);
+  CHECK(a != b);
+}
+
+void test_bol(const int32_t num1, const int32_t det1, const int32_t num2, const int32_t det2)
+{
+  Rational a(num1, det1);
+  Rational b(num2, det2);
+  CHECK(a > b);
+}
+
+void test_bolrav(const int32_t num1, const int32_t det1, const int32_t num2, const int32_t det2)
+{
+  Rational a(num1, det1);
+  Rational b(num2, det2);
+  CHECK(a >= b);
+}
+
+void test_men(const int32_t num1, const int32_t det1, const int32_t num2, const int32_t det2)
+{
+  Rational a(num1, det1);
+  Rational b(num2, det2);
+  CHECK(a < b);
+}
+
+void test_menrav(const int32_t num1, const int32_t det1, const int32_t num2, const int32_t det2)
+{
+  Rational a(num1, det1);
+  Rational b(num2, det2);
+  CHECK(a <= b);
 }
 
 void test_plus(const int32_t num1, const int32_t det1, const int32_t num2, const int32_t det2,
@@ -116,10 +140,21 @@ void test_eqdiv(const int32_t num1, const int32_t det1, const int32_t num2, cons
 }
 
 TEST_CASE("[complex] - ctor") {
-  test_bool(1.0, 1.0, 1.0, 1.0);
+  test_rav(1, 2, 1.0, 2.0);
+  test_bol(1, 2, 0, 2.0);
+  test_bolrav(1, 2, 0, 2.0);
+  test_men(-1, 2, 1, 2.0);
+  test_menrav(-1, 2, 1, 2.0);
+  test_rav(-10, 2, -10.0, 2.0);
 
   test_plus(1, 2, 3, 4, 5, 4);
+  test_plus(-1, 4, 3, 4, 1, 2);
+  test_plus(1, 4, 3, 4, 1, 1);
+
   test_minus(1, 2, 3, 4, -1, 4);
+  test_minus(1, 4, 3, 4, -2, 4);
+  test_minus(1, 2, 1, 2, 0, 1.0);
+
   test_mul(2, 3, 5, 6, 5, 9);
   test_div(2, 3, 5, 6, 4, 5);
 

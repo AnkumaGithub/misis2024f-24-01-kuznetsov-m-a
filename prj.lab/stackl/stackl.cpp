@@ -5,7 +5,7 @@
 #include <stdexcept>
 #include <iostream>
 
-void StackL::Push(T& v){
+void StackL::Push(T v){
   auto nn = std::make_unique<Node>(v);
   nn -> next = std::move(head);
   head = std::move(nn);

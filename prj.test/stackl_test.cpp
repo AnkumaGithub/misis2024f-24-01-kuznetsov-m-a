@@ -3,7 +3,7 @@
 
 int main() {
     StackL A;
-    std::uint8_t a = 10, b = 20;
+    const std::uint8_t a = 10, b = 20;
     std::cout << "c1";
     //A.Push(2);
     std::cout << "c3";

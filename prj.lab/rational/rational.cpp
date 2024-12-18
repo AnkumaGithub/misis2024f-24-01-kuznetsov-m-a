@@ -46,10 +46,10 @@ bool Rational::operator==(const int32_t &rhs) const noexcept{
 
 // !=
 bool Rational::operator!=(const Rational &rhs) const noexcept{
-    return abs(double(integ) / double(nat) - double(rhs.integ) / double(rhs.nat)) > 2 * std::numeric_limits<double>::epsilon();
+    return !operator==(rhs);
 }
 bool Rational::operator!=(const int32_t &rhs) const noexcept{
-    return abs(double(integ) / double(nat) - double(rhs)) > 2 * std::numeric_limits<double>::epsilon();
+    return !operator==(rhs);
 }
 
 Rational Rational::operator-() const noexcept
@@ -59,58 +59,58 @@ Rational Rational::operator-() const noexcept
 
 // >=
 bool Rational::operator>=(const Rational &rhs) const noexcept{
-    Rational z = Rational(integ, nat) - rhs;
+    Rational z = Rational(integ, nat) - Rational(rhs);
     z.sokrin();
     if (z.integ >= 0) {return true;}
-    else {return false;}
+    return false;
 }
 bool Rational::operator>=(const int32_t &rhs) const noexcept{
     Rational z = Rational(integ, nat) - Rational(rhs);
     z.sokrin();
     if (z.integ >= 0) {return true;}
-    else {return false;}
+    return false;
 }
 
 // <=
 bool Rational::operator<=(const Rational &rhs) const noexcept{
-    Rational z = Rational(integ, nat) - rhs;
+    Rational z = Rational(integ, nat) - Rational(rhs);
     z.sokrin();
     if (z.integ <= 0) {return true;}
-    else {return false;}
+    return false;
 }
 bool Rational::operator<=(const int32_t &rhs) const noexcept{
-    Rational z = Rational(integ, nat) - rhs;
+    Rational z = Rational(integ, nat) - Rational(rhs);
     z.sokrin();
     if (z.integ <= 0) {return true;}
-    else {return false;}
+    return false;
 }
 
 // >
 bool Rational::operator>(const Rational &rhs) const noexcept{
-    Rational z = Rational(integ, nat) - rhs;
+    Rational z = Rational(integ, nat) - Rational(rhs);
     z.sokrin();
     if (z.integ > 0) {return true;}
-    else {return false;}
+    return false;
 }
 bool Rational::operator>(const int32_t &rhs) const noexcept{
-    Rational z = Rational(integ, nat) - rhs;
+    Rational z = Rational(integ, nat) - Rational(rhs);
     z.sokrin();
     if (z.integ > 0) {return true;}
-    else {return false;}
+    return false;
 }
 
 // <
 bool Rational::operator<(const Rational &rhs) const noexcept{
-    Rational z = Rational(integ, nat) - rhs;
+    Rational z = Rational(integ, nat) - Rational(rhs);
     z.sokrin();
     if (z.integ < 0) {return true;}
-    else {return false;}
+    return false;
 }
 bool Rational::operator<(const int32_t &rhs) const noexcept{
-    Rational z = Rational(integ, nat) - rhs;
+    Rational z = Rational(integ, nat) - Rational(rhs);
     z.sokrin();
     if (z.integ < 0) {return true;}
-    else {return false;}
+    return false;
 }
 
 // += -= *= /= operators 
@@ -122,15 +122,7 @@ Rational& Rational::operator+=(const Rational &rhs) noexcept{
     return *this;
 }
 Rational& Rational::operator+=(const int32_t &rhs) noexcept{
-    integ += rhs * nat;
-    this->sokrin();
-    return *this;
-}
-Rational operator+=(const int32_t &lhs, const Rational &rhs) noexcept{
-    Rational buf = rhs;
-    std::cout << "!!!!";
-    buf += lhs;
-    return sokrout(buf.get_integ(), buf.get_nat());
+    return operator+=(Rational(rhs));
 }
 
 // -=
@@ -141,15 +133,7 @@ Rational& Rational::operator-=(const Rational &rhs) noexcept{
     return *this;
 }
 Rational& Rational::operator-=(const int32_t &rhs) noexcept{
-    integ -= rhs * nat;
-    this->sokrin();
-    return *this;
-}
-Rational operator-=(const int32_t lhs, const Rational &rhs) noexcept{
-    Rational buf = rhs, d{-1,1};
-    std::cout << "!!!!";
-    buf -= lhs;
-    return sokrout(buf.get_integ(), buf.get_nat());
+    return operator-=(Rational(rhs));
 }
 
 // *=
@@ -160,15 +144,7 @@ Rational& Rational::operator*=(const Rational &rhs) noexcept{
     return *this;
 }
 Rational& Rational::operator*=(const int32_t &rhs) noexcept{
-    integ = integ * rhs;
-    this->sokrin();
-    return *this;
-}
-Rational operator*=(const int32_t &lhs, const Rational &rhs) noexcept{
-    Rational buf = rhs;
-    std::cout << "!!!!";
-    buf *= lhs;
-    return sokrout(buf.get_integ(), buf.get_nat());
+    return operator*=(Rational(rhs));
 }
 
 // /=
@@ -179,83 +155,52 @@ Rational& Rational::operator/=(const Rational &rhs) noexcept{
     return *this;
 }
 Rational& Rational::operator/=(const int32_t &rhs) noexcept{
-    nat = nat * rhs;
-    this->sokrin();
-    return *this;
-}
-Rational operator/=(const int32_t &lhs, const Rational &rhs) noexcept{
-    Rational buf = rhs, d;
-    buf /= lhs;
-    return sokrout(buf.get_nat(), buf.get_integ());
+    return operator/=(Rational(rhs));
 }
 
 //+ - * / operators
 // +
 Rational operator+(const Rational &lhs, const Rational &rhs) noexcept{
-    Rational buf = lhs;
-    buf += rhs;
-    return sokrout(buf.get_integ(), buf.get_nat());
+    return Rational(lhs) += rhs;
 }
 Rational operator+(const Rational &lhs, const int32_t &rhs) noexcept{
-    Rational buf = lhs;
-    buf += rhs;
-    return sokrout(buf.get_integ(), buf.get_nat());
+    return Rational(lhs) += rhs;
 }
 Rational operator+(const int32_t &lhs, const Rational &rhs) noexcept{
-    Rational buf = rhs;
-    buf += lhs;
-    return sokrout(buf.get_integ(), buf.get_nat());
+    return Rational(lhs) += rhs;
 }
 
 // -
 Rational operator-(const Rational &lhs, const Rational &rhs) noexcept{
-    Rational buf = lhs;
-    buf -= rhs;
-    return sokrout(buf.get_integ(), buf.get_nat());
+    return Rational(lhs) -= rhs;
 }
 Rational operator-(const Rational &lhs, const int32_t &rhs) noexcept{
-    Rational buf = lhs;
-    buf -= rhs;
-    return sokrout(buf.get_integ(), buf.get_nat());
+    return Rational(lhs) -= rhs;
 }
 Rational operator-(const int32_t &lhs, const Rational &rhs) noexcept{
-    Rational buf = rhs;
-    buf -= lhs;
-    return sokrout(-buf.get_integ(), buf.get_nat());
+    return Rational(lhs) -= rhs;
 }
 
 // *
 Rational operator*(const Rational &lhs, const Rational &rhs) noexcept{
-    Rational buf = lhs;
-    buf *= rhs;
-    return sokrout(buf.get_integ(), buf.get_nat());
+    return Rational(lhs) *= rhs;
 }
 Rational operator*(const Rational &lhs, const int32_t &rhs) noexcept{
-    Rational buf = lhs;
-    buf *= rhs;
-    return sokrout(buf.get_integ(), buf.get_nat());
+    return Rational(lhs) *= rhs;
 }
 Rational operator*(const int32_t &lhs, const Rational &rhs) noexcept{
-    Rational buf = rhs;
-    buf *= lhs;
-    return sokrout(buf.get_integ(), buf.get_nat());
+    return Rational(lhs) *= rhs;
 }
 
 // /
 Rational operator/(const Rational &lhs, const Rational &rhs) noexcept{
-    Rational buf = lhs;
-    buf /= rhs;
-    return sokrout(buf.get_integ(), buf.get_nat());
+    return Rational(lhs) /= rhs;
 }
 Rational operator/(const Rational &lhs, const int32_t &rhs) noexcept{
-    Rational buf = lhs;
-    buf /= rhs;
-    return sokrout(buf.get_integ(), buf.get_nat());
+    return Rational(lhs) /= rhs;
 }
 Rational operator/(const int32_t &lhs, const Rational &rhs) noexcept{
-    Rational buf = rhs;
-    buf /= lhs;
-    return sokrout(buf.get_nat(), buf.get_integ());
+    return Rational(lhs) /= rhs;
 }
 
 std::ostream& Rational::Writeto(std::ostream& out) const noexcept {
@@ -291,16 +236,12 @@ std::istream& Rational::Readfrom(std::istream& in) noexcept {
 
     in >> integin >> Separatorin >> natin;
 
-    if (in.good() || in.eof()){
+    if (in.good()){
         if (Separatorin==Rational::Separator){
             integ = integin;
             nat = natin;
         }
-        else{
-            std::cout << "ERROR! Please write like Z/N" << std::endl;
-            std::cout << "Z - integer numbers" << std::endl;
-            std::cout << "N - natural numbers" << std::endl;
-        }
     }
+    if (!in.good()) {std::cerr << "Invalid input." << std::endl;}
     return in;
 }

@@ -4,10 +4,12 @@
 int main() {
   StackA A;
   A.Push(10);
+  A.Size();
   std::cout << A.Top() << std::endl;
   A.Push(20);
+  A.Size();
   A.Push(30);
-  A.Pop();
-  std::cout << A.Top() << std::endl;
+  std::cout << A.Top() << " " << std::endl;
+  A.Size();
   // После Pop() выводит 30, а должно 20
 }

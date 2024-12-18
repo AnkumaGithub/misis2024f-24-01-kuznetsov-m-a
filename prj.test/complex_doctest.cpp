@@ -5,22 +5,11 @@
 
 #include <iostream>
 
-void test_bool(const double nat1, const double imag1, const double nat2, const double imag2)
+void test_rav(const double nat1, const double imag1, const double nat2, const double imag2)
 {
   Complex a(nat1, imag1);
   Complex b(nat2, imag2);
-  // ==
-  if (nat1 == nat2 && imag1 == imag2)
-  {
-    if (a == b) { std::cout << "== is correct" << std::endl;}
-    else { std::cout << "== not is correct" << std::endl;}
-  }
-  // !=
-  else
-  {
-    if (a != b) { std::cout << "!= is correct" << std::endl;}
-    else { std::cout << "!= not is correct" << std::endl;}
-  }
+  CHECK(a == b);
 }
 
 void test_plus(const double nat1, const double imag1, const double nat2, const double imag2,
@@ -116,7 +105,7 @@ void test_eqdiv(const double nat1, const double imag1, const double nat2, const 
 }
 
 TEST_CASE("[complex] - ctor") {
-  test_bool(1.0, 1.0, 1.0, 1.0);
+  test_rav(1.0, 1.0, 1.0, 1.0);
 
   test_plus(1, 2, 3, 4, 4, 6);
   test_minus(1, 2, 3, 4, -2, -2);

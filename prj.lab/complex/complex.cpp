@@ -15,8 +15,7 @@ bool Complex::operator==(const Complex& rhs) const noexcept
 };
 bool Complex::operator!=(const Complex& rhs) const noexcept
 {
-    return abs(re - rhs.re) > 2 * std::numeric_limits<double>::epsilon()  &&
-        abs(im - rhs.im) > 2 * std::numeric_limits<double>::epsilon();
+    return !operator==(rhs);
 };
 
 // += -= *= /= operators definition
@@ -28,8 +27,7 @@ Complex& Complex::operator+=(const Complex& rhs) noexcept {
     return *this;
 }
 Complex& Complex::operator+=(const double rhs) noexcept {
-    re += rhs;
-    return *this;
+    return operator+=(Complex(rhs));
 }
  
 Complex& Complex::operator-=(const Complex& rhs) noexcept {
@@ -38,8 +36,7 @@ Complex& Complex::operator-=(const Complex& rhs) noexcept {
     return *this;
 }
 Complex& Complex::operator-=(const double rhs) noexcept {
-    re -= rhs;
-    return *this;
+    return operator-=(Complex(rhs));
 }
  
 Complex& Complex::operator*=(const Complex& rhs) noexcept {
@@ -49,61 +46,65 @@ Complex& Complex::operator*=(const Complex& rhs) noexcept {
     return *this;
 }
 Complex& Complex::operator*=(const double rhs) noexcept {
-    re *= rhs;
-    return *this;
+    return operator*=(Complex(rhs));
 }
 
 Complex& Complex::operator/=(const Complex& rhs){
+    double s = pow(rhs.re, 2) + pow(rhs.im, 2);
+    if (s == 0)
+    {
+        re = 0.0;
+        im = 0.0;
+        throw std::invalid_argument("divide by zero");
+    }
     double zre = re;
-    re = (re * rhs.re + im * rhs.im) / (rhs.re * rhs.re + rhs.im * rhs.im);
-    im =  (im * rhs.re - zre * rhs.im) / (rhs.re * rhs.re + rhs.im * rhs.im);
+    re = (re * rhs.re + im * rhs.im) / (s);
+    im =  (im * rhs.re - zre * rhs.im) / (s);
     return *this;
 }
 Complex& Complex::operator/=(const double rhs){
-    re /= rhs;
-    return *this;
+    return operator/=(Complex(rhs));
 }
 
 // + - * / operators definition
 Complex operator+(const Complex& lhs, const Complex& rhs) noexcept {
-    return Complex(lhs.re + rhs.re, lhs.im + rhs.im);
+    return Complex(lhs) += rhs;
 }
 Complex operator+(const Complex& lhs, const double rhs) noexcept {
-    return Complex(lhs.re + rhs, lhs.im);
+    return Complex(lhs) += rhs;
 }
 Complex operator+(const double rhs, const Complex& lhs) noexcept {
-    return Complex(lhs.re + rhs, lhs.im);
+    return Complex(lhs) += rhs;
 }
 
 Complex operator-(const Complex& lhs, const Complex& rhs) noexcept {
-    return Complex(lhs.re - rhs.re, lhs.im - rhs.im);
+    return Complex(lhs) -= rhs;
 }
 Complex operator-(const Complex& lhs, const double rhs) noexcept {
-    return Complex(lhs.re - rhs, lhs.im);
+    return Complex(lhs) -= rhs;
 }
 Complex operator-(const double rhs, const Complex& lhs) noexcept {
-    return Complex(rhs - lhs.re, -lhs.im);
+    return Complex(lhs) -= rhs;
 }
 
 Complex operator*(const Complex& lhs, const Complex& rhs) noexcept {
-    return Complex(lhs.re * rhs.re - lhs.im * rhs.im, lhs.re * rhs.im + rhs.re * lhs.im);
+    return Complex(lhs) *= rhs;
 }
 Complex operator*(const Complex& lhs, const double rhs) noexcept {
-    return Complex(lhs.re * rhs, lhs.im * rhs);
+    return Complex(lhs) *= rhs;
 }
 Complex operator*(const double rhs, const Complex& lhs) noexcept {
-    return Complex(lhs.re * rhs, lhs.im * rhs);
+    return Complex(lhs) *= rhs;
 }
 
 Complex operator/(const Complex& lhs, const Complex& rhs){
-    return Complex((lhs.re * rhs.re + lhs.im * rhs.im) / (rhs.re * rhs.re + rhs.im * rhs.im),
-    (lhs.im * rhs.re - lhs.re * rhs.im) / (rhs.re * rhs.re + rhs.im * rhs.im));
+    return Complex(lhs) /= rhs;
 }
 Complex operator/(const Complex& lhs, const double rhs){
-    return Complex(lhs.re / rhs, lhs.im / rhs);
+    return Complex(lhs) /= rhs;
 }
 Complex operator/(const double rhs, const Complex& lhs){
-    return Complex(rhs / lhs.re, rhs / lhs.im);
+    return Complex(lhs) /= rhs;
 }
 
 // streams sdefinition

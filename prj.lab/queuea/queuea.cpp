@@ -82,19 +82,6 @@ bool QueueA::IsEmpty() const {
 std::ptrdiff_t QueueA::get_capacity() const { return capacity; }
 std::ptrdiff_t QueueA::get_size() const { return size; }
 
-void QueueA::move_head(){
-  head += 1;
-  if (head >= capacity){
-    head = 0;
-  }
-}
-void QueueA::move_tail(){
-  tail += 1;
-  if (tail > capacity){
-    tail = 0;
-  }
-}
-
 bool QueueA::IsEnough(){
   if ((head % capacity) == (tail % capacity) || capacity == 0){ return true; }
   return false;
@@ -107,6 +94,15 @@ void QueueA::show_queue()
     std::cout << unsigned(data[i]) << " ";
   }
 }
+
+void QueueA::Clear()
+{
+  std::ptrdiff_t capacity = 0;
+  std::ptrdiff_t size = 0;
+  std::ptrdiff_t head = 0;
+  std::ptrdiff_t tail = 1;
+}
+
 
 void QueueA::Resize(){
   ptrdiff_t sch = 0;

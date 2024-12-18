@@ -12,7 +12,7 @@ public:
     StackL(): head(nullptr){}
     ~StackL() = default;
 
-    void Push(T& v);
+    void Push(T v);
     void Pop();
 
     StackL(const StackL& other);

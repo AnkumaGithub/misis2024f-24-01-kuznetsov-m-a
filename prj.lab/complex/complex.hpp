@@ -6,6 +6,10 @@
 #include <sstream>
 #include <cstdint>
 struct Complex {
+    // numbers initialization
+    double re = 0.0;
+    double im = 0.0;
+
     // Struct initialization
     Complex() = default;
     //copy constructor
@@ -40,10 +44,6 @@ struct Complex {
 
     Complex& operator/=(const Complex& rhs);
     Complex& operator/=(const double rhs);
-
-    // numbers initialization
-    double re = 0.0;
-    double im = 0.0;
 
     // separators initialization
     static const char LeftPart{'{'};

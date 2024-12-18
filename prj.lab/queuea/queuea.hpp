@@ -28,15 +28,16 @@ class QueueA {
     QueueA& operator=(QueueA&& other);
 
     void Push(const T &value);
+    void Clear();
     void Pop();
 
     T& Top();
     const T& Top() const;
   private:
-    std::ptrdiff_t capacity = 1;
+    std::ptrdiff_t capacity = 0;
     std::ptrdiff_t size = 0;
     std::ptrdiff_t head = 0;
-    std::ptrdiff_t tail = 0;
+    std::ptrdiff_t tail = 1;
     T *data = nullptr;
 
     void move_head();

@@ -15,7 +15,8 @@ bool test(std::string st){
 }
 int main(){
     Rational r;
-    Rational z, g, b1, b2, b3, b4;
+    Rational z, g, b1{1, 1}, b2, b3, b4;
+    double L = 1.0;
     std::cout << "Cin and Cout test:" << std::endl;
     std::cin >> z >> g;
     std::cout << z << std::endl;
