@@ -17,6 +17,7 @@ class StackA{
     ~StackA(){
       delete[] data_;
     };
+    //добавит копирование и =
     void Push(double val);
     bool IsEmpty();
     bool IsFull();

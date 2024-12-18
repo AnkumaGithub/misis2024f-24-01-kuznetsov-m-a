@@ -37,7 +37,7 @@ double StackA::Top(){
   if (IsEmpty()){
     throw std::out_of_range("StackA::Top is empty");
   }
-  return data_[ind_];
+  return data_[ind_ - 1];
 }
 
 void StackA::Pop(){
