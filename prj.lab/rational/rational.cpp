@@ -38,18 +38,18 @@ Rational sokrout(int32_t up, int32_t low)
 // bool operators
 // ==
 bool Rational::operator==(const Rational &rhs) const noexcept{
-    return abs(integ / nat - rhs.integ / rhs.nat) <= 2 * std::numeric_limits<double>::epsilon();
+    return abs(double(integ) / double(nat) - double(rhs.integ) / double(rhs.nat)) <= 2 * std::numeric_limits<double>::epsilon();
 }
 bool Rational::operator==(const int32_t &rhs) const noexcept{
-    return abs(integ / nat - rhs) <= 2 * std::numeric_limits<double>::epsilon();
+    return abs(double(integ) / double(nat) - double(rhs)) <= 2 * std::numeric_limits<double>::epsilon();
 }
 
 // !=
 bool Rational::operator!=(const Rational &rhs) const noexcept{
-    return abs(integ / nat - rhs.integ / rhs.nat) > 2 * std::numeric_limits<double>::epsilon();
+    return abs(double(integ) / double(nat) - double(rhs.integ) / double(rhs.nat)) > 2 * std::numeric_limits<double>::epsilon();
 }
 bool Rational::operator!=(const int32_t &rhs) const noexcept{
-    return abs(integ / nat - rhs) > 2 * std::numeric_limits<double>::epsilon();
+    return abs(double(integ) / double(nat) - double(rhs)) > 2 * std::numeric_limits<double>::epsilon();
 }
 
 Rational Rational::operator-() const noexcept
