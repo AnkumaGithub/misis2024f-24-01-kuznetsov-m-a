@@ -9,7 +9,10 @@ int main() {
   A.Push(20);
   A.Size();
   A.Push(30);
-  std::cout << A.Top() << " " << std::endl;
+  StackA B;
+  //B.Push(10);
+  B = A;
+  //std::cout << B.Top() << " " << std::endl;
   A.Size();
   // После Pop() выводит 30, а должно 20
 }

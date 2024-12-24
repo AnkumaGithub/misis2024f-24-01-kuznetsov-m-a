@@ -13,6 +13,7 @@ class StackA{
     StackA() : data_(nullptr), ind_(0), capacity_(0) {};
     //copy constructor
     StackA(const StackA& stack);
+    StackA& operator=(StackA& stack);
     //destructor
     ~StackA(){
       delete[] data_;
@@ -21,7 +22,8 @@ class StackA{
     void Push(double val);
     bool IsEmpty();
     bool IsFull();
-    void Resize();
+    void Clear();
+    void Resize(std::ptrdiff_t len);
     void Pop();
     double Top();
     void Size();
