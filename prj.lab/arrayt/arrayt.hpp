@@ -51,11 +51,11 @@ public:
             throw std::invalid_argument("ArrayT::Resize - negative size");
         }
         if (capacity_ < len) {
-            auto buf = std::make_unique<T[]>(len);
+            auto data = std::make_unique<T[]>(len);
             if (len_ > 0) {
-                std::copy(data_.get(), data_.get() + len_, buf.get());
+                std::copy(data_.get(), data_.get() + len_, data.get());
             }
-            std::swap(data_, buf);
+            std::swap(data_, data);
             capacity_ = len;
         } else {
             if (len_ < len) {

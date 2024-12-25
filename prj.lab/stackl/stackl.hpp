@@ -28,7 +28,7 @@ private:
     struct Node{
         std::unique_ptr<Node> next;
         T value;
-        Node(T& v): value(v), next(nullptr){}
+        explicit Node(T& v): value(v), next(nullptr){}
     };
     std::unique_ptr<Node> head;
 };

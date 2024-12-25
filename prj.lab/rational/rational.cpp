@@ -212,7 +212,7 @@ std::ostream& Rational::Writeto(std::ostream& out) const noexcept {
     {
         if (nat == -1)
         {
-            out << -integ;
+            out << -integ << Separator << "1";
         }
         else
         {
@@ -240,6 +240,7 @@ std::istream& Rational::Readfrom(std::istream& in) noexcept {
         if (Separatorin==Rational::Separator){
             integ = integin;
             nat = natin;
+            this->sokrin();
         }
     }
     if (!in.good()) {std::cerr << "Invalid input." << std::endl;}

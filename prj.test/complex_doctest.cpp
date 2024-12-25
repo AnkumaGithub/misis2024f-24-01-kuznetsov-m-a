@@ -105,6 +105,8 @@ void test_eqdiv(const double nat1, const double imag1, const double nat2, const 
 }
 
 TEST_CASE("[complex] - ctor") {
+  Complex a(1, 2), b(2, 3), c(3, 4);
+
   test_rav(1.0, 1.0, 1.0, 1.0);
 
   test_plus(1, 2, 3, 4, 4, 6);

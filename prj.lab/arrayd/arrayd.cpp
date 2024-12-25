@@ -15,7 +15,7 @@ ArrayD::ArrayD(const std::ptrdiff_t len) :len_(len), capacity_(len)
 ArrayD::ArrayD(const ArrayD &other) : len_(other.len_), capacity_(other.len_)
 {
     data_ = new double[other.len_];
-    std::memcpy(data_, other.data_, capacity_ * sizeof(*data_));
+    std::memcpy(data_, other.data_, len_ * sizeof(*data_));
 }
 
 ArrayD::~ArrayD(){ delete[] data_; }
@@ -27,7 +27,7 @@ void ArrayD::Resize(const std::ptrdiff_t len)
     }
     if (capacity_ < len) {
         auto data = new double[len]{0.0};
-        if (len_ > 0) {
+        if (len > 0) {
             std::memcpy(data, data_, len_ * sizeof(*data_));
         }
         std::swap(data_, data);
@@ -60,7 +60,7 @@ void ArrayD::Insert(const std::ptrdiff_t index,const double value)
     Resize(len_ + 1);
     if (index != len_ - 1)
     {
-        std::memmove(data_ + index + 1, data_ + index, (len_ - index) * sizeof(double));
+        std::memmove(data_ + index + 1, data_ + index, (len_ - index - 1) * sizeof(double));
     }
     data_[index] = value;
 }
@@ -73,7 +73,7 @@ void ArrayD::Remove(const std::ptrdiff_t index)
     }
     if (index != len_ - 1)
     {
-        std::memmove(data_ + index, data_ + index + 1, (len_ - index - 1) * sizeof(double));
+        std::memmove(data_ + index, data_ + index + 1, (len_ - index) * sizeof(double));
     }
     Resize(len_ - 1);
 }
