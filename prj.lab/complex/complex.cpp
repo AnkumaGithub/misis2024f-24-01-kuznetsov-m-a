@@ -10,8 +10,8 @@ double im = 0.0;
 // bool operators definition
 bool Complex::operator==(const Complex& rhs) const noexcept
 {
-    return abs(re - rhs.re) <= 2 * std::numeric_limits<double>::epsilon()  &&
-        abs(im - rhs.im) <= 2 * std::numeric_limits<double>::epsilon();
+    return abs(re - rhs.re) < 2 * std::numeric_limits<double>::epsilon()  &&
+        abs(im - rhs.im) < 2 * std::numeric_limits<double>::epsilon();
 };
 bool Complex::operator!=(const Complex& rhs) const noexcept
 {
@@ -19,7 +19,7 @@ bool Complex::operator!=(const Complex& rhs) const noexcept
 };
 
 // += -= *= /= operators definition
-Complex Complex::operator-() const noexcept { return Complex(-re, -im); }
+Complex Complex::operator-() const noexcept { return {-re, -im}; }
 
 Complex& Complex::operator+=(const Complex& rhs) noexcept {
     re += rhs.re;
@@ -40,7 +40,7 @@ Complex& Complex::operator-=(const double rhs) noexcept {
 }
  
 Complex& Complex::operator*=(const Complex& rhs) noexcept {
-    double zre = re;
+    const double zre = re;
     re = re * rhs.re - im * rhs.im;
     im = zre * rhs.im + rhs.re * im;
     return *this;
@@ -50,14 +50,12 @@ Complex& Complex::operator*=(const double rhs) noexcept {
 }
 
 Complex& Complex::operator/=(const Complex& rhs){
-    double s = pow(rhs.re, 2) + pow(rhs.im, 2);
+    const double s = pow(rhs.re, 2) + pow(rhs.im, 2);
     if (s == 0)
     {
-        re = 0.0;
-        im = 0.0;
-        throw std::invalid_argument("divide by zero");
+        throw std::invalid_argument("devide by zero");
     }
-    double zre = re;
+    const double zre = re;
     re = (re * rhs.re + im * rhs.im) / (s);
     im =  (im * rhs.re - zre * rhs.im) / (s);
     return *this;
@@ -129,5 +127,6 @@ std::istream& Complex::ReadFrom(std::istream& in) noexcept {
             in.setstate(std::ios_base::failbit);
         }
     }
+    if (!in.good() && !in.eof()) {std::cerr << "Invalid input." << std::endl;}
     return in;
 }

@@ -27,21 +27,25 @@ void Rational::sokrin()
     int32_t nod = NOD(abs(integ), abs(nat));
     integ = integ / nod;
     nat = nat / nod;
-}
-
-Rational sokrout(int32_t up, int32_t low)
-{
-    int32_t nod = NOD(abs(up), abs(low));
-    return {up / nod, low / nod};
+    if (integ < 0 && nat < 0)
+    {
+        integ *= -1;
+        nat *= -1;
+    }
+    if (integ > 0 && nat < 0)
+    {
+        integ *= -1;
+        nat *= -1;
+    }
 }
 
 // bool operators
 // ==
 bool Rational::operator==(const Rational &rhs) const noexcept{
-    return abs(double(integ) / double(nat) - double(rhs.integ) / double(rhs.nat)) <= 2 * std::numeric_limits<double>::epsilon();
+    return abs(double(integ) / double(nat) - double(rhs.integ) / double(rhs.nat)) < 2 * std::numeric_limits<double>::epsilon();
 }
 bool Rational::operator==(const int32_t &rhs) const noexcept{
-    return abs(double(integ) / double(nat) - double(rhs)) <= 2 * std::numeric_limits<double>::epsilon();
+    return abs(double(integ) / double(nat) - double(rhs)) < 2 * std::numeric_limits<double>::epsilon();
 }
 
 // !=
@@ -149,6 +153,7 @@ Rational& Rational::operator*=(const int32_t &rhs) noexcept{
 
 // /=
 Rational& Rational::operator/=(const Rational &rhs) noexcept{
+    if (rhs.integ == 0){ throw std::invalid_argument("divide by zero"); }
     integ = integ * rhs.nat;
     nat = nat * rhs.integ;
     this->sokrin();
@@ -216,14 +221,7 @@ std::ostream& Rational::Writeto(std::ostream& out) const noexcept {
         }
         else
         {
-            if ((nat < 0 && integ > 0) || (nat < 0 && integ < 0))
-            {
-                out << -integ << Separator << -nat;
-            }
-            if ((nat > 0 && integ < 0) || (nat > 0 && integ > 0))
-            {
-                out << integ << Separator << nat;
-            }
+            out << integ << Separator << nat;
         }
     }
     return out;
@@ -236,13 +234,13 @@ std::istream& Rational::Readfrom(std::istream& in) noexcept {
 
     in >> integin >> Separatorin >> natin;
 
-    if (in.good()){
+    if (in.good() && natin != 0){
         if (Separatorin==Rational::Separator){
             integ = integin;
             nat = natin;
             this->sokrin();
         }
     }
-    if (!in.good()) {std::cerr << "Invalid input." << std::endl;}
+    if (!in.good() && !in.eof() || natin == 0) {std::cerr << "Invalid input." << std::endl;}
     return in;
 }

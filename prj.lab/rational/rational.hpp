@@ -68,8 +68,6 @@ public:
 
 int32_t NOD(int32_t up, int32_t low);
 
-Rational sokrout(int32_t up, int32_t low);
-
 Rational operator+(const Rational &lhs, const Rational &rhs) noexcept;
 Rational operator+(const Rational &lhs, const int32_t &rhs) noexcept;
 Rational operator+(const int32_t &lhs, const Rational &rhs) noexcept;

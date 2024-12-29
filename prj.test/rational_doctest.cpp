@@ -141,12 +141,9 @@ void test_eqdiv(const int32_t num1, const int32_t det1, const int32_t num2, cons
 
 TEST_CASE("[complex] - ctor") {
   Rational n1(1, 1), n2(1, 2), n3(1, -1);
-  CHECK(n1 == n3);
   CHECK(n1 > n3);
-  CHECK(n1 < n3);
   CHECK(n1 >= n3);
   CHECK(n1 != n3);
-  CHECK(n1 <= n3);
   test_rav(1, 2, 1.0, 2.0);
   test_bol(1, 2, 0, 2.0);
   test_bolrav(1, 2, 0, 2.0);
