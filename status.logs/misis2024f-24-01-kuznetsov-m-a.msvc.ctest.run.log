@@ -8,25 +8,23 @@ Test project D:/projects/2024-misis-fall/misis2024f-24-01-kuznetsov-m-a/build.ch
     Start 6: doctest_rational_io
     Start 7: doctest_queuea
     Start 8: doctest_stackl
-1/8 Test #1: doctest_arrayd ...................***Timeout  12.06 sec
-2/8 Test #2: doctest_arrayt ...................***Timeout  12.03 sec
-3/8 Test #3: doctest_complex ..................***Timeout  11.20 sec
-4/8 Test #4: doctest_complex_io ...............***Timeout  11.14 sec
-5/8 Test #5: doctest_rational .................***Timeout  10.25 sec
-6/8 Test #6: doctest_rational_io ..............***Timeout   2.76 sec
-7/8 Test #7: doctest_queuea ...................***Timeout   0.41 sec
-8/8 Test #8: doctest_stackl ...................***Timeout   0.25 sec
+1/8 Test #1: doctest_arrayd ...................   Passed    2.07 sec
+2/8 Test #2: doctest_arrayt ...................   Passed    2.06 sec
+3/8 Test #3: doctest_complex ..................***Failed    2.04 sec
+4/8 Test #4: doctest_complex_io ...............***Failed    2.03 sec
+5/8 Test #5: doctest_rational .................***Failed    0.50 sec
+6/8 Test #6: doctest_rational_io ..............***Failed    0.45 sec
+7/8 Test #7: doctest_queuea ...................***Failed    0.33 sec
+8/8 Test #8: doctest_stackl ...................***Failed    0.13 sec
 
-0% tests passed, 8 tests failed out of 8
+25% tests passed, 6 tests failed out of 8
 
-Total Test time (real) =  12.07 sec
+Total Test time (real) =   2.08 sec
 
 The following tests FAILED:
-	  1 - doctest_arrayd (Timeout)
-	  2 - doctest_arrayt (Timeout)
-	  3 - doctest_complex (Timeout)
-	  4 - doctest_complex_io (Timeout)
-	  5 - doctest_rational (Timeout)
-	  6 - doctest_rational_io (Timeout)
-	  7 - doctest_queuea (Timeout)
-	  8 - doctest_stackl (Timeout)
+	  3 - doctest_complex (Failed)
+	  4 - doctest_complex_io (Failed)
+	  5 - doctest_rational (Failed)
+	  6 - doctest_rational_io (Failed)
+	  7 - doctest_queuea (Failed)
+	  8 - doctest_stackl (Failed)

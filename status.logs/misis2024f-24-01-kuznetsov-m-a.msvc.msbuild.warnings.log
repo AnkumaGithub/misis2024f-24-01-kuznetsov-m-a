@@ -1,0 +1,1 @@
+    55>D:\projects\2024-misis-fall\misis2024f-24-01-kuznetsov-m-a\prj.lab\rational\rational.cpp(156,26): warning C4297: 'Rational::operator /=': function assumed not to throw an exception but does [D:\projects\2024-misis-fall\misis2024f-24-01-kuznetsov-m-a\build.check\prj.lab\rational\rational.vcxproj]
