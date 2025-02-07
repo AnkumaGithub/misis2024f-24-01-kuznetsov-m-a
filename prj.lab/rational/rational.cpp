@@ -117,7 +117,6 @@ bool Rational::operator<(const int32_t &rhs) const noexcept{
     return false;
 }
 
-// += -= *= /= operators 
 // +=
 Rational& Rational::operator+=(const Rational &rhs) noexcept{
     integ = integ * rhs.nat + rhs.integ * nat;
@@ -163,7 +162,6 @@ Rational& Rational::operator/=(const int32_t &rhs) noexcept{
     return operator/=(Rational(rhs));
 }
 
-//+ - * / operators
 // +
 Rational operator+(const Rational &lhs, const Rational &rhs) noexcept{
     return Rational(lhs) += rhs;
